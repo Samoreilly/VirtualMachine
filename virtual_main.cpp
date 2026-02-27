@@ -43,7 +43,84 @@ void Virtual::add(Instruction opcode) {
 
 void Virtual::mul(Instruction opcode) {
 
+    if(opcode == MUL_STACK) {
 
+        if(cpu.pc >= cpu.sp) {
+            throw std::runtime_error("Stack Overflow");
+        }
+        
+        std::cout << "Before multiplication on stack: " << "\n";
+        std::cout << "First value" << cpu.stack[cpu.sp + 2] << "\n";
+        std::cout << "Second value" << cpu.stack[cpu.sp + 1] << "\n";
+
+        cpu.stack[cpu.sp + 2] *= cpu.stack[cpu.sp + 1];
+        std::cout << "After: " << cpu.stack[cpu.sp + 2];
+
+        cpu.sp++;
+    
+    }else {
+        int first_reg = cpu.stack[cpu.pc++];
+        int second_reg = cpu.stack[cpu.pc++];
+
+        cpu.reg[first_reg] *= cpu.reg[second_reg];
+
+    }
+}
+
+void Virtual::sub(Instruction opcode) {
+
+    if(opcode == Instruction::SUB_STACK) {
+         
+        if(cpu.pc >= cpu.sp) {
+            throw std::runtime_error("Stack Overflow");
+        }
+
+        //stack grows down so larger stack index is first value
+        int firstVal = cpu.stack[cpu.sp + 2];
+        int secVal = cpu.stack[cpu.sp + 1];
+     
+        std::cout << "First value: " << firstVal << "Second value: " << secVal << "\n";
+
+        cpu.stack[cpu.sp + 2] = firstVal - secVal;
+        std::cout << "Subtraction: " << cpu.stack[cpu.sp + 2];
+        cpu.sp++;
+
+    }else {
+    
+        int first_reg = cpu.stack[cpu.pc++];
+        int second_reg = cpu.stack[cpu.pc++];
+
+        cpu.reg[first_reg] -= cpu.reg[second_reg];
+    }
+
+}
+
+void Virtual::div(Instruction opcode) {
+
+    if(opcode == Instruction::DIV_STACK) {
+
+        if(cpu.pc >= cpu.sp) {
+            throw std::runtime_error("Stack Overflow");
+        }
+
+        int firstVal = cpu.stack[cpu.sp + 2];
+        int secondVal = cpu.stack[cpu.sp + 1];
+
+        if(secondVal == 0) {
+            throw std::runtime_error("Dividing by 0 is undefined behaviour");
+        }
+
+        cpu.stack[cpu.sp + 2] = firstVal / secondVal;
+        cpu.sp++;
+
+    }else {
+
+        int first_reg = cpu.stack[cpu.pc++];
+        int second_reg = cpu.stack[cpu.pc++];
+    
+        cpu.reg[first_reg] /= cpu.reg[second_reg];
+    
+    }
 }
 
 
@@ -89,52 +166,24 @@ int Virtual::init_vm() {
 
             case Instruction::SUB_REG:
             case Instruction::SUB_STACK: {
-
-                if(opcode == Instruction::SUB_STACK) {
-                   
-                    //stack grows down so higher stack pointer is first value
-
-                    int secVal = cpu.stack[cpu.sp + 1];
-                    int firstVal = cpu.stack[cpu.sp + 2];
-
-                    std::cout << "First value: " << firstVal << "Second value: " << secVal << "\n";
-
-                    cpu.stack[cpu.sp + 2] = firstVal - secVal;
-                    std::cout << "Subtraction: " << cpu.stack[cpu.sp + 2];
-
-                    cpu.stack[cpu.sp + 1] = 0;
-                    cpu.sp++;
-
-
-                }else {
                 
-                    int first_idx = cpu.stack[cpu.pc++];
-                    int second_idx = cpu.stack[cpu.pc];
-                    
-                    int first_value = cpu.reg[first_idx];
-                    int second_value = cpu.reg[second_idx];
+                sub(opcode);
 
-                    cpu.reg[first_idx] = first_value - second_value;
-                    cpu.reg[second_idx] = 0;
-                    
-
-                }
-
-                int reg_idx = cpu.stack[2];
-                
                 break;
             }
 
             case Instruction::MUL_REG:
             case Instruction::MUL_STACK:
+                
+                mul(opcode);
 
                 break;
             
             case Instruction::DIV_REG:
             case Instruction::DIV_STACK: {
-
-            
-
+                
+                div(opcode);
+    
                 break;
             }
 
@@ -162,10 +211,8 @@ int Virtual::init_vm() {
             case Instruction::POP: {
 
                 int reg_idx = cpu.stack[cpu.pc++];
-
                 int value = cpu.stack[++cpu.sp];
-                cpu.stack[cpu.sp] = 0;//remove value
-                
+
                 std::cout << "Popped value: " << value << "\n";
                 cpu.reg[reg_idx] = value;
 
@@ -205,7 +252,7 @@ int main(void) {
         0x02,             //subtraction on stack
         
         0xFA,             // print
-        0xB2,             //pop
+        0xB2, 0,          //pop
         0xFF              //halt program
     };
 
