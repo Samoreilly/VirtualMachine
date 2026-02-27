@@ -11,6 +11,7 @@ typedef uint16_t Reg;
 //corresponds to registers
 enum Instruction : int {
     HALT = 0xFF,
+    PRINT = 0xFA,
     //operands
     ADD = 0x00,
     SUB = 0x01,
@@ -18,7 +19,9 @@ enum Instruction : int {
     DIV = 0x03,
     //instructions
     LOAD = 0x04,// load into reg
-    PUSH = 0x05 // push onto stack
+    PUSH = 0x05, // push onto stack
+    POP = 0x06
+
 };
 
 struct CPU {
@@ -33,17 +36,15 @@ struct CPU {
 
 
 class Virtual {
-
    
-
 public:
-    
-
 
     CPU cpu; 
     int init_vm();
     
     void add();
+    void mul();
+
     void push(int reg, int value);
     void load(int reg, int value);
    
@@ -51,8 +52,10 @@ public:
 
     //initialize vm with some instructions
     Virtual(int init_program[], std::size_t size) {
-        for(int i = 0;i < size;i++) {
+
+        for(int i = 0; i < MEM_SIZE; i++) cpu.stack[i] = 0;
+
+        for(int i = 0; i < size; i++) {
             cpu.stack[i] = init_program[i];
         }
-    }
-};
+}};
