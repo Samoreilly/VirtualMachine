@@ -10,6 +10,7 @@ typedef uint16_t Reg;
 
 //corresponds to registers
 enum Instruction : int {
+    HALT = 0xFF,
     //operands
     ADD = 0x00,
     SUB = 0x01,
@@ -23,19 +24,35 @@ enum Instruction : int {
 struct CPU {
     int reg[6] = {0};
     int stack[MEM_SIZE] = {0};
+
     int sp = MEM_SIZE - 1;
     int pc = 0;
+
+    bool is_running {true};
 };
 
 
 class Virtual {
 
+   
+
 public:
+    
+
 
     CPU cpu; 
     int init_vm();
+    
     void add();
     void push(int reg, int value);
     void load(int reg, int value);
+   
+    void printStack();
 
+    //initialize vm with some instructions
+    Virtual(int init_program[], std::size_t size) {
+        for(int i = 0;i < size;i++) {
+            cpu.stack[i] = init_program[i];
+        }
+    }
 };

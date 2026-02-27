@@ -10,13 +10,31 @@ void Virtual::add() {
         throw std::runtime_error("Stack Overflow");
     }
 
-    int valA = cpu.stack[cpu.sp];
-    int valB = cpu.stack[cpu.sp + 1];
+    int valA = cpu.stack[cpu.sp + 1];
+    std::cout << "Value here: " << valA << "\n";
+    int valB = cpu.stack[cpu.sp + 2];
+    std::cout << "Value above: " << valB << "\n";
 
+    cpu.stack[cpu.sp + 2] = (valA + valB);
+
+    std::cout << "Added value sp: " << cpu.sp + 2 << "\n";
+        
+    cpu.stack[cpu.sp + 1] = 0;
     cpu.sp++;
+    std::cout << "Printed add value prior: " << cpu.stack[cpu.sp] << "\n";
+    std::cout << "Printed add value: " << cpu.stack[cpu.sp + 1] << "\n";
 
-    cpu.stack[cpu.sp] = (valA + valB);
 
+    printStack();
+}
+
+void Virtual::printStack() {
+
+    std::cout << "Print stack\n";
+
+    for(int i = MEM_SIZE - 1;i > MEM_SIZE - 10;i--) {
+        std::cout << cpu.stack[i] << "\n";
+    }
 }
 
 void Virtual::push(int reg, int value) {
@@ -33,11 +51,18 @@ int Virtual::init_vm() {
 
     for(;;) {
         
+        while(!cpu.is_running) {}
+
+        std::cout << "PC: " << cpu.pc << " SP: " << cpu.sp << "\n\n";
         //get current operation
         Instruction opcode = static_cast<Instruction>(cpu.stack[cpu.pc++]);
     
         switch (opcode) {
-            
+
+            case Instruction::HALT:
+                cpu.is_running = false;
+                break;
+
             case Instruction::ADD:
                 add();  
                 break;
@@ -60,7 +85,7 @@ int Virtual::init_vm() {
                 int value_to_load = cpu.stack[cpu.pc++];
 
                 load(reg_idx, value_to_load);
-
+                
                 break;
             }
             
@@ -73,6 +98,8 @@ int Virtual::init_vm() {
 
                 break;
             }
+            
+            default: throw std::runtime_error("NO OPCODE FOUND");
         };
         
     }
@@ -80,9 +107,16 @@ int Virtual::init_vm() {
 }
 
 int main(void) {
+    
+    constexpr int SIZE {50};
 
-    Virtual vm;
     std::cout << "\nStarting VirtualMachine\n\n";
+    
+    //Loads, push 15 and 20 seperately and adds them
+    int program[SIZE] = {0x04, 0, 15, 0x05, 0, 0x04, 0, 20, 0x05, 0, 0x00, 0xFF
+    };
+
+    Virtual vm(program, SIZE);
 
     vm.init_vm();
 
