@@ -10,18 +10,28 @@ typedef uint16_t Reg;
 
 //corresponds to registers
 enum Instruction : int {
+       
+    //operands
+    ADD_STACK = 0x00,
+    ADD_REG = 0x01,
+
+    SUB_STACK = 0x02,
+    SUB_REG = 0x03,
+    
+    MUL_STACK = 0x04,
+    MUL_REG = 0x05,
+
+    DIV_STACK = 0x06,
+    DIV_REG = 0x07,
+
+    //instructions
+    LOAD = 0xB0,// load into reg
+    PUSH = 0xB1, // push onto stack
+    POP = 0xB2,
+    
     HALT = 0xFF,
     PRINT = 0xFA,
-    //operands
-    ADD = 0x00,
-    SUB = 0x01,
-    MUL = 0x02,
-    DIV = 0x03,
-    //instructions
-    LOAD = 0x04,// load into reg
-    PUSH = 0x05, // push onto stack
-    POP = 0x06
-
+    
 };
 
 struct CPU {
@@ -42,8 +52,10 @@ public:
     CPU cpu; 
     int init_vm();
     
-    void add();
-    void mul();
+    void add(Instruction opcode);
+    void mul(Instruction opcode);
+    void div(Instruction opcode);
+    void sub(Instruction opcode);
 
     void push(int reg, int value);
     void load(int reg, int value);

@@ -4,31 +4,44 @@
 #include <stdexcept>
 
 
-void Virtual::add() {
+void Virtual::add(Instruction opcode) {
 
-    if(cpu.pc >= cpu.sp) {
-        throw std::runtime_error("Stack Overflow");
-    }
+    if(opcode == Instruction::ADD_STACK) {
+   
+        if(cpu.pc >= cpu.sp) {
+            throw std::runtime_error("Stack Overflow");
+        }
 
-    int valA = cpu.stack[cpu.sp + 1];
-    std::cout << "Value here: " << valA << "\n";
 
-    int valB = cpu.stack[cpu.sp + 2];
-    std::cout << "Value above: " << valB << "\n";
+        int valA = cpu.stack[cpu.sp + 1];
+        std::cout << "Value here: " << valA << "\n";
 
-    cpu.stack[cpu.sp + 2] = (valA + valB);
+        int valB = cpu.stack[cpu.sp + 2];
+        std::cout << "Value above: " << valB << "\n";
 
-    std::cout << "Added value sp: " << cpu.sp + 2 << "\n";
+        cpu.stack[cpu.sp + 2] = (valA + valB);
+
+        std::cout << "Added value sp: " << cpu.sp + 2 << "\n";
+            
+        cpu.stack[cpu.sp + 1] = 0;
+        cpu.sp++;
         
-    cpu.stack[cpu.sp + 1] = 0;
-    cpu.sp++;
+        std::cout << "Printed add value prior: " << cpu.stack[cpu.sp] << "\n";
+        std::cout << "Printed add value: " << cpu.stack[cpu.sp + 1] << "\n";
     
-    std::cout << "Printed add value prior: " << cpu.stack[cpu.sp] << "\n";
-    std::cout << "Printed add value: " << cpu.stack[cpu.sp + 1] << "\n";
+    }else {
+        //register addtion - expects two register
+        // e.g. ADD_REG, 0, 1 where those numbers are registers
 
+        int first_reg = cpu.stack[cpu.pc++];
+        int second_reg = cpu.stack[cpu.pc++];
+
+        cpu.reg[first_reg] += cpu.reg[second_reg];
+
+    }
 }
 
-void Virtual::mul() {
+void Virtual::mul(Instruction opcode) {
 
 
 }
@@ -66,22 +79,64 @@ int Virtual::init_vm() {
             case Instruction::HALT:
                 cpu.is_running = false;
                 break;
-
-            case Instruction::ADD:
-                add();  
+ 
+            case Instruction::ADD_REG:
+            case Instruction::ADD_STACK:
+ 
+                add(opcode);
+  
                 break;
 
-            case Instruction::SUB:
+            case Instruction::SUB_REG:
+            case Instruction::SUB_STACK: {
+
+                if(opcode == Instruction::SUB_STACK) {
+                   
+                    //stack grows down so higher stack pointer is first value
+
+                    int secVal = cpu.stack[cpu.sp + 1];
+                    int firstVal = cpu.stack[cpu.sp + 2];
+
+                    std::cout << "First value: " << firstVal << "Second value: " << secVal << "\n";
+
+                    cpu.stack[cpu.sp + 2] = firstVal - secVal;
+                    std::cout << "Subtraction: " << cpu.stack[cpu.sp + 2];
+
+                    cpu.stack[cpu.sp + 1] = 0;
+                    cpu.sp++;
+
+
+                }else {
+                
+                    int first_idx = cpu.stack[cpu.pc++];
+                    int second_idx = cpu.stack[cpu.pc];
+                    
+                    int first_value = cpu.reg[first_idx];
+                    int second_value = cpu.reg[second_idx];
+
+                    cpu.reg[first_idx] = first_value - second_value;
+                    cpu.reg[second_idx] = 0;
+                    
+
+                }
+
+                int reg_idx = cpu.stack[2];
+                
+                break;
+            }
+
+            case Instruction::MUL_REG:
+            case Instruction::MUL_STACK:
 
                 break;
+            
+            case Instruction::DIV_REG:
+            case Instruction::DIV_STACK: {
 
-            case Instruction::MUL:
+            
 
                 break;
-
-            case Instruction::DIV:
-
-                break;
+            }
 
             case Instruction::LOAD: {
 
@@ -103,9 +158,10 @@ int Virtual::init_vm() {
                 break;
             }
 
+            //pops off stack and moves into register
             case Instruction::POP: {
 
-                int reg_idx = cpu.stack[cpu.pc];
+                int reg_idx = cpu.stack[cpu.pc++];
 
                 int value = cpu.stack[++cpu.sp];
                 cpu.stack[cpu.sp] = 0;//remove value
@@ -134,11 +190,25 @@ int main(void) {
 
     std::cout << "\nStarting VirtualMachine\n\n";
     
-    //Loads, push 15 and 20 seperately and adds them
-    int program[] = {0x04, 0, 15, 0x05, 0, 0x04, 0, 20, 0x05, 0, 0x00, 0xFA, 0x06, 0xFA,
-       0x04, 0, 15, 0x05, 0, 0xFA, 0xFF, 0xFF, 0xFF, 0xFF
+    int program[] = {
+        // Program data
+        0xB0, 0, 50,      // load 50 into register 0
+        0xB0, 1, 20,      // load 20 into register 1 
+        
+        0x01, 0, 1,       // add registers 0 and 1
+        
+        0xB1, 0,          // push reg 0 onto stack
+        
+        0xB0, 0, 10,      // load value 10 into reg 0
+        0xB1, 0,          //push onto stack
+        
+        0x02,             //subtraction on stack
+        
+        0xFA,             // print
+        0xB2,             //pop
+        0xFF              //halt program
     };
-    
+
     constexpr std::size_t size = sizeof(program) / sizeof(program[0]);
 
     Virtual vm(program, size);
