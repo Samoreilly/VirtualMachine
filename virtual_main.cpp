@@ -8,7 +8,7 @@ void Virtual::add(Instruction opcode) {
 
     if(opcode == Instruction::ADD_STACK) {
    
-        if(cpu.pc >= cpu.sp) {
+        if(cpu.pc >= cpu.sp || cpu.sp >= MEM_SIZE - 1 ) {
             throw std::runtime_error("Stack Overflow");
         }
 
@@ -45,7 +45,7 @@ void Virtual::mul(Instruction opcode) {
 
     if(opcode == MUL_STACK) {
 
-        if(cpu.pc >= cpu.sp) {
+        if(cpu.pc >= cpu.sp || cpu.sp >= MEM_SIZE - 1 ) {
             throw std::runtime_error("Stack Overflow");
         }
         
@@ -73,7 +73,7 @@ void Virtual::sub(Instruction opcode) {
 
     if(opcode == Instruction::SUB_STACK) {
          
-        if(cpu.pc >= cpu.sp) {
+        if(cpu.pc >= cpu.sp || cpu.sp >= MEM_SIZE - 1) {
             throw std::runtime_error("Stack Overflow");
         }
 
@@ -104,8 +104,8 @@ void Virtual::div(Instruction opcode) {
 
     if(opcode == Instruction::DIV_STACK) {
 
-        if(cpu.pc >= cpu.sp) {
-            throw std::runtime_error("Stack Overflow");
+        if(cpu.pc >= cpu.sp || cpu.sp >= MEM_SIZE - 1) {
+            throw std::runtime_error("Stack Overflow/Underflow");
         }
 
         int firstVal = cpu.stack[cpu.sp + 2];
@@ -152,98 +152,104 @@ void Virtual::load(int reg, int value) {
 
 int Virtual::init_vm() {
 
-    while(cpu.is_running) {
+    try{
+
+        while(cpu.is_running) {
+            
+            std::cout << "PC: " << cpu.pc << " SP: " << cpu.sp << "\n\n";
+            //get current operation
+            Instruction opcode = static_cast<Instruction>(cpu.stack[cpu.pc++]);
         
-        std::cout << "PC: " << cpu.pc << " SP: " << cpu.sp << "\n\n";
-        //get current operation
-        Instruction opcode = static_cast<Instruction>(cpu.stack[cpu.pc++]);
+            switch (opcode) {
+
+                case Instruction::HALT:
+                    cpu.is_running = false;
+                    break;
     
-        switch (opcode) {
-
-            case Instruction::HALT:
-                cpu.is_running = false;
-                break;
- 
-            case Instruction::ADD_REG:
-            case Instruction::ADD_STACK:
- 
-                add(opcode);
-  
-                break;
-
-            case Instruction::SUB_REG:
-            case Instruction::SUB_STACK: {
-                
-                sub(opcode);
-
-                break;
-            }
-
-            case Instruction::MUL_REG:
-            case Instruction::MUL_STACK:
-                
-                mul(opcode);
-
-                break;
-            
-            case Instruction::DIV_REG:
-            case Instruction::DIV_STACK: {
-                
-                div(opcode);
+                case Instruction::ADD_REG:
+                case Instruction::ADD_STACK:
     
-                break;
-            }
+                    add(opcode);
+    
+                    break;
 
-            case Instruction::LOAD: {
-
-                int reg_idx = cpu.stack[cpu.pc++];
-                int value_to_load = cpu.stack[cpu.pc++];
-
-                load(reg_idx, value_to_load);
-                
-                break;
-            }
-            
-            case Instruction::PUSH: {
-
-                int reg_idx = cpu.stack[cpu.pc++];
-                int value_at_reg = cpu.reg[reg_idx];
-
-                cpu.stack[cpu.sp--] = value_at_reg;
-
-                break;
-            }
-
-            //pops off stack and moves into register
-            case Instruction::POP: {
-
-                if(cpu.stack[cpu.pc + 1] >= ADD_STACK &&
-                    cpu.stack[cpu.pc + 1] <= HALT) {
+                case Instruction::SUB_REG:
+                case Instruction::SUB_STACK: {
                     
-                    int reg_idx = cpu.stack[cpu.pc++];
-                    
-                    //get the value to be popped
-                    int value = cpu.stack[++cpu.sp];
+                    sub(opcode);
 
-                    std::cout << "Popped value: " << value << "\n";
-                    cpu.reg[reg_idx] = value;
-
-                }else {
-                    //no register given so just discard value
-                    cpu.sp++;
+                    break;
                 }
 
-                break;
-            }
+                case Instruction::MUL_REG:
+                case Instruction::MUL_STACK:
+                    
+                    mul(opcode);
 
-            case Instruction::PRINT:
-                printStack();
-                break;
-            
-            default: throw std::runtime_error("NO OPCODE FOUND" + std::to_string(opcode));
-        };
+                    break;
+                
+                case Instruction::DIV_REG:
+                case Instruction::DIV_STACK: {
+                    
+                    div(opcode);
         
+                    break;
+                }
+
+                case Instruction::LOAD: {
+
+                    int reg_idx = cpu.stack[cpu.pc++];
+                    int value_to_load = cpu.stack[cpu.pc++];
+
+                    load(reg_idx, value_to_load);
+                    
+                    break;
+                }
+                
+                case Instruction::PUSH: {
+
+                    int reg_idx = cpu.stack[cpu.pc++];
+                    int value_at_reg = cpu.reg[reg_idx];
+
+                    cpu.stack[cpu.sp--] = value_at_reg;
+
+                    break;
+                }
+
+                //pops off stack and moves into register
+                case Instruction::POP_REG:
+                case Instruction::POP_NOREG: {
+
+                    if(opcode == Instruction::POP_REG) {
+                        
+                        int reg_idx = cpu.stack[cpu.pc++];
+                        
+                        //get the value to be popped
+                        int value = cpu.stack[++cpu.sp];
+
+                        std::cout << "Popped value: " << value << "\n";
+                        cpu.reg[reg_idx] = value;
+
+                    }else {
+                        //no register given so just discard value
+                        cpu.sp++;
+                    }
+
+                    break;
+                }
+
+                case Instruction::PRINT:
+                    printStack();
+                    break;
+                
+                default: throw std::runtime_error("NO OPCODE FOUND" + std::to_string(opcode));
+            };
+        }
+
+    }catch(const std::runtime_error& e) {
+        std::cout << "Runtime Error: " << e.what();
     }
+
 
     return 1;
 
@@ -269,7 +275,7 @@ int main(void) {
         0x02,             //subtraction on stack
         
         0xFA,             // print
-        0xB2, 0,          //pop
+        0xB3, 0,          //pop and add to reg 0
         0xFF              //halt program
     };
 

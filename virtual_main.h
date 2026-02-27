@@ -3,10 +3,9 @@
 #include <cstdint>
 #include <type_traits>
 
-#define MEM_SIZE 4096
+constexpr int MEM_SIZE = 4096;
 
 typedef uint16_t Reg;
-
 
 
 //corresponds to registers
@@ -28,7 +27,8 @@ enum Instruction : int {
     //instructions
     LOAD = 0xB0,// load into reg
     PUSH = 0xB1, // push onto stack
-    POP = 0xB2,
+    POP_NOREG = 0xB2,
+    POP_REG = 0xB3,
 
     PRINT = 0xFA,
     HALT = 0xFF
@@ -47,9 +47,10 @@ struct CPU {
 
 class Virtual {
    
+    CPU cpu;
+
 public:
 
-    CPU cpu; 
     int init_vm();
     
     void add(Instruction opcode);
@@ -62,29 +63,11 @@ public:
    
     void printStack();
 
-    bool is_instruction(int value) {
-        switch (value) {
-            case Instruction::HALT:
-            case Instruction::PRINT:
-            case Instruction::ADD_STACK:
-            case Instruction::ADD_REG:
-            case Instruction::SUB_STACK:
-            case Instruction::SUB_REG:
-            case Instruction::LOAD:
-            case Instruction::PUSH:
-            case Instruction::POP:
-                return true;
-            default:
-                return false;
-        }
-    }
-
     //initialize vm with some instructions
-    Virtual(int init_program[], std::size_t size) {
-
-        for(int i = 0; i < MEM_SIZE; i++) cpu.stack[i] = 0;
+    Virtual(const int init_program[], std::size_t size) {
 
         for(int i = 0; i < size; i++) {
             cpu.stack[i] = init_program[i];
         }
-}};
+    }
+};
