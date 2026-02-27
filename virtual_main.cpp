@@ -8,7 +8,7 @@ void Virtual::add(Instruction opcode) {
 
     if(opcode == Instruction::ADD_STACK) {
    
-        if(cpu.pc >= cpu.sp || cpu.sp >= MEM_SIZE - 1 ) {
+        if(cpu.pc >= cpu.sp) {
             throw std::runtime_error("Stack Overflow");
         }
 
@@ -45,7 +45,7 @@ void Virtual::mul(Instruction opcode) {
 
     if(opcode == MUL_STACK) {
 
-        if(cpu.pc >= cpu.sp || cpu.sp >= MEM_SIZE - 1 ) {
+        if(cpu.pc >= cpu.sp) {
             throw std::runtime_error("Stack Overflow");
         }
         
@@ -73,7 +73,7 @@ void Virtual::sub(Instruction opcode) {
 
     if(opcode == Instruction::SUB_STACK) {
          
-        if(cpu.pc >= cpu.sp || cpu.sp >= MEM_SIZE - 1) {
+        if(cpu.pc >= cpu.sp) {
             throw std::runtime_error("Stack Overflow");
         }
 
@@ -104,8 +104,8 @@ void Virtual::div(Instruction opcode) {
 
     if(opcode == Instruction::DIV_STACK) {
 
-        if(cpu.pc >= cpu.sp || cpu.sp >= MEM_SIZE - 1) {
-            throw std::runtime_error("Stack Overflow/Underflow");
+        if(cpu.pc >= cpu.sp) {
+            throw std::runtime_error("Stack Overflow");
         }
 
         int firstVal = cpu.stack[cpu.sp + 2];
@@ -153,7 +153,6 @@ void Virtual::load(int reg, int value) {
 int Virtual::init_vm() {
 
     try{
-
         while(cpu.is_running) {
             
             std::cout << "PC: " << cpu.pc << " SP: " << cpu.sp << "\n\n";
@@ -207,6 +206,7 @@ int Virtual::init_vm() {
                 }
                 
                 case Instruction::PUSH: {
+                    if(cpu.pc >= cpu.sp) throw std::runtime_error("Stack Overflow");
 
                     int reg_idx = cpu.stack[cpu.pc++];
                     int value_at_reg = cpu.reg[reg_idx];
@@ -221,6 +221,8 @@ int Virtual::init_vm() {
                 case Instruction::POP_NOREG: {
 
                     if(opcode == Instruction::POP_REG) {
+
+                        if(cpu.sp >= MEM_SIZE - 1) throw std::runtime_error("Stack Underflow");
                         
                         int reg_idx = cpu.stack[cpu.pc++];
                         
@@ -231,6 +233,9 @@ int Virtual::init_vm() {
                         cpu.reg[reg_idx] = value;
 
                     }else {
+                        if(cpu.sp >= MEM_SIZE - 1) {
+                            throw std::runtime_error("Stack underflow");
+                        }
                         //no register given so just discard value
                         cpu.sp++;
                     }
