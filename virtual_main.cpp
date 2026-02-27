@@ -12,7 +12,6 @@ void Virtual::add(Instruction opcode) {
             throw std::runtime_error("Stack Overflow");
         }
 
-
         int valA = cpu.stack[cpu.sp + 1];
         std::cout << "Value here: " << valA << "\n";
 
@@ -37,6 +36,7 @@ void Virtual::add(Instruction opcode) {
         int second_reg = cpu.stack[cpu.pc++];
 
         cpu.reg[first_reg] += cpu.reg[second_reg];
+        cpu.reg[second_reg] = 0;
 
     }
 }
@@ -55,14 +55,16 @@ void Virtual::mul(Instruction opcode) {
 
         cpu.stack[cpu.sp + 2] *= cpu.stack[cpu.sp + 1];
         std::cout << "After: " << cpu.stack[cpu.sp + 2];
-
+        
+        cpu.stack[cpu.sp + 1] = 0; 
         cpu.sp++;
     
     }else {
         int first_reg = cpu.stack[cpu.pc++];
         int second_reg = cpu.stack[cpu.pc++];
-
+        
         cpu.reg[first_reg] *= cpu.reg[second_reg];
+        cpu.reg[second_reg] = 0;
 
     }
 }
@@ -82,6 +84,8 @@ void Virtual::sub(Instruction opcode) {
         std::cout << "First value: " << firstVal << "Second value: " << secVal << "\n";
 
         cpu.stack[cpu.sp + 2] = firstVal - secVal;
+        cpu.stack[cpu.sp + 1] = 0;
+        
         std::cout << "Subtraction: " << cpu.stack[cpu.sp + 2];
         cpu.sp++;
 
@@ -91,6 +95,7 @@ void Virtual::sub(Instruction opcode) {
         int second_reg = cpu.stack[cpu.pc++];
 
         cpu.reg[first_reg] -= cpu.reg[second_reg];
+        cpu.reg[second_reg] = 0;
     }
 
 }
@@ -111,6 +116,8 @@ void Virtual::div(Instruction opcode) {
         }
 
         cpu.stack[cpu.sp + 2] = firstVal / secondVal;
+        
+        cpu.stack[cpu.sp + 1] = 0; 
         cpu.sp++;
 
     }else {
@@ -119,7 +126,7 @@ void Virtual::div(Instruction opcode) {
         int second_reg = cpu.stack[cpu.pc++];
     
         cpu.reg[first_reg] /= cpu.reg[second_reg];
-    
+        cpu.reg[second_reg] = 0;
     }
 }
 
@@ -210,11 +217,21 @@ int Virtual::init_vm() {
             //pops off stack and moves into register
             case Instruction::POP: {
 
-                int reg_idx = cpu.stack[cpu.pc++];
-                int value = cpu.stack[++cpu.sp];
+                if(cpu.stack[cpu.pc + 1] >= ADD_STACK &&
+                    cpu.stack[cpu.pc + 1] <= HALT) {
+                    
+                    int reg_idx = cpu.stack[cpu.pc++];
+                    
+                    //get the value to be popped
+                    int value = cpu.stack[++cpu.sp];
 
-                std::cout << "Popped value: " << value << "\n";
-                cpu.reg[reg_idx] = value;
+                    std::cout << "Popped value: " << value << "\n";
+                    cpu.reg[reg_idx] = value;
+
+                }else {
+                    //no register given so just discard value
+                    cpu.sp++;
+                }
 
                 break;
             }
@@ -240,15 +257,15 @@ int main(void) {
     int program[] = {
         // Program data
         0xB0, 0, 50,      // load 50 into register 0
-        0xB0, 1, 20,      // load 20 into register 1 
-        
+        0xB0, 1, 20,      // load 20 into register 1  
         0x01, 0, 1,       // add registers 0 and 1
         
-        0xB1, 0,          // push reg 0 onto stack
-        
+        0xB1, 0,          // push reg 0 onto stack (70)
+        0xFA,
         0xB0, 0, 10,      // load value 10 into reg 0
         0xB1, 0,          //push onto stack
         
+        0xFA, 
         0x02,             //subtraction on stack
         
         0xFA,             // print
