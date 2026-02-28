@@ -171,6 +171,7 @@ void Virtual::load(int reg, int value) {
 int Virtual::init_vm() {
 
     try{
+
         while(cpu.is_running) {
             
             std::cout << "PC: " << cpu.pc << " SP: " << cpu.sp << "\n\n";

@@ -39,7 +39,9 @@ enum Instruction : uint8_t {
     HALT = 0xFF
 };
 
+
 struct CPU {
+
     uint8_t memory[MEM_SIZE];
 
     int stack[MEM_SIZE] = {0};
@@ -49,11 +51,12 @@ struct CPU {
     int pc = 0;
     bool is_running {true};
     int last_value {std::numeric_limits<int>::max()};
+
 };
 
 
 class Virtual {
-   
+    
     CPU cpu;
 
 public:

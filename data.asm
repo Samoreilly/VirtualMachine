@@ -1,5 +1,9 @@
+
+=== BLOOMBERG TERMINAL ===
+
 LOAD R0, 0
 LOAD R1, 1
+//0,1,1,2,3,5
 LOAD R2, 46
 LOAD R3, 1
 

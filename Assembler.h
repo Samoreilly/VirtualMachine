@@ -10,6 +10,7 @@
 class Assembler {
 
     static inline const std::unordered_map<std::string, uint8_t> INSTRUCTIONS {
+
         {"ADD_STACK", ADD_STACK},
         {"ADD_REG",   ADD_REG},
         {"SUB_STACK", SUB_STACK},
@@ -25,7 +26,8 @@ class Assembler {
         {"PRINT",     PRINT},
         {"HALT",      HALT},
         {"JUMP",      JUMP},
-        {"JZ",        JZ}// jumps to a location if last result was zero
+        {"JZ",        JZ}       // jumps to a location if last result was zero
+    
     };
     
     static inline const bool is_symbol(char c) {
