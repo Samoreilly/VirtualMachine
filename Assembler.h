@@ -33,7 +33,7 @@ class Assembler {
     }
 
     std::string file_name;
-    std::vector<int> tokens;
+    std::vector<uint8_t> tokens;
     std::string content;
 
     int start_index = 0, end_index = 0;
@@ -48,7 +48,8 @@ public:
 
     void load();
     void lexer();
-
+        
+    std::vector<uint8_t> get_tokens() { return tokens; }
 };
 
 

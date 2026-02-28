@@ -43,7 +43,6 @@ void Virtual::add(Instruction opcode) {
         int second_reg = cpu.stack[cpu.pc++];
 
         cpu.reg[first_reg] += cpu.reg[second_reg];
-        cpu.reg[second_reg] = 0;
         
         cpu.last_value = cpu.reg[first_reg];
     }
@@ -70,12 +69,12 @@ void Virtual::mul(Instruction opcode) {
         cpu.sp++;
     
     }else {
+
         int first_reg = cpu.stack[cpu.pc++];
         int second_reg = cpu.stack[cpu.pc++];
         
         cpu.reg[first_reg] *= cpu.reg[second_reg];
-        cpu.reg[second_reg] = 0;
-
+        
         cpu.last_value = cpu.reg[first_reg];
     }
 }
@@ -108,7 +107,6 @@ void Virtual::sub(Instruction opcode) {
         int second_reg = cpu.stack[cpu.pc++];
 
         cpu.reg[first_reg] -= cpu.reg[second_reg];
-        cpu.reg[second_reg] = 0;
         
         cpu.last_value = cpu.reg[first_reg];
 
@@ -144,7 +142,6 @@ void Virtual::div(Instruction opcode) {
         int second_reg = cpu.stack[cpu.pc++];
 
         cpu.reg[first_reg] /= cpu.reg[second_reg];
-        cpu.reg[second_reg] = 0;
 
         cpu.last_value = cpu.reg[first_reg];
 
@@ -156,7 +153,7 @@ void Virtual::printStack() {
 
     std::cout << "Print stack\n";
 
-    for(int i = MEM_SIZE - 1;i > MEM_SIZE - 10;i--) {
+    for(int i = MEM_SIZE - 1;i >= MEM_SIZE - 46;i--) {
         std::cout << cpu.stack[i] << "\n";
     }
 }
@@ -223,7 +220,6 @@ int Virtual::init_vm() {
 
                     load(reg_idx, value_to_load);
                     
-                    cpu.last_value = value_to_load;
                     break;
                 }
                 
@@ -277,7 +273,7 @@ int Virtual::init_vm() {
                         
                         int dest = cpu.stack[cpu.pc++];
 
-                        //if not zero pc, keeps moving forward
+                        //if not zero, pc keeps moving forward
                         if(cpu.last_value == 0) {
                             cpu.pc = dest;
                         }
@@ -308,7 +304,16 @@ int main(void) {
     Assembler asmblr{file_name};
 
     asmblr.lexer();
+    
+    std::vector<uint8_t> tokens = asmblr.get_tokens();
 
+    Virtual vm{tokens, tokens.size()};
+
+    vm.init_vm();
+
+    return 0;
+
+    
     // std::cout << "\nStarting VirtualMachine\n\n";
     // 
 

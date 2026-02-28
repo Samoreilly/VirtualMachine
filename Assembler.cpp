@@ -107,8 +107,8 @@ void Assembler::lexer() {
 
 void Assembler::print() {
 
-    for(int i : tokens) {
-        std::cout << "0x" << std::hex << i << "\n";
-    }
+    // for(int i : tokens) {
+    //     std::cout << "0x" << std::hex << i << "\n";
+    // }
 
 }

@@ -1,0 +1,18366 @@
+File Content: 
+
+LOAD R0, 0
+LOAD R1, 1
+PUSH R0
+PRINT
+PUSH R1
+PRINT
+LOAD R2, 10
+LOAD R3, 1
+ADD_REG R0, R1
+PUSH R0
+PRINT
+SUB_REG R2, R3
+JZ 25
+JUMP 11
+
+PRINT
+HALT
+
+Debug: Entered lexerPrinted string: [LOAD]
+Printed string: [LOAD]
+Printed string: [PUSH]
+Printed string: [PRINT]
+Printed string: [PUSH]
+Printed string: [PRINT]
+Printed string: [LOAD]
+Printed string: [LOAD]
+Printed string: [ADD_REG]
+Printed string: [PUSH]
+Printed string: [PRINT]
+Printed string: [SUB_REG]
+Printed string: [JZ]
+Printed string: [JUMP]
+Printed string: [PRINT]
+Printed string: [HALT]
+PC: 0 SP: 511
+
+PC: 3 SP: 511
+
+PC: 6 SP: 511
+
+PC: 8 SP: 510
+
+Print stack
+0
+0
+0
+0
+0
+0
+0
+0
+0
+PC: 9 SP: 510
+
+PC: 11 SP: 509
+
+Print stack
+0
+1
+0
+0
+0
+0
+0
+0
+0
+PC: 12 SP: 509
+
+PC: 15 SP: 509
+
+PC: 18 SP: 509
+
+PC: 21 SP: 509
+
+PC: 23 SP: 508
+
+Print stack
+0
+1
+1
+0
+0
+0
+0
+0
+0
+PC: 24 SP: 508
+
+PC: 27 SP: 508
+
+PC: 29 SP: 508
+
+PC: 11 SP: 508
+
+Print stack
+0
+1
+1
+0
+0
+0
+0
+0
+0
+PC: 12 SP: 508
+
+PC: 15 SP: 508
+
+PC: 18 SP: 508
+
+PC: 21 SP: 508
+
+PC: 23 SP: 507
+
+Print stack
+0
+1
+1
+1
+0
+0
+0
+0
+0
+PC: 24 SP: 507
+
+PC: 27 SP: 507
+
+PC: 29 SP: 507
+
+PC: 11 SP: 507
+
+Print stack
+0
+1
+1
+1
+0
+0
+0
+0
+0
+PC: 12 SP: 507
+
+PC: 15 SP: 507
+
+PC: 18 SP: 507
+
+PC: 21 SP: 507
+
+PC: 23 SP: 506
+
+Print stack
+0
+1
+1
+1
+1
+0
+0
+0
+0
+PC: 24 SP: 506
+
+PC: 27 SP: 506
+
+PC: 29 SP: 506
+
+PC: 11 SP: 506
+
+Print stack
+0
+1
+1
+1
+1
+0
+0
+0
+0
+PC: 12 SP: 506
+
+PC: 15 SP: 506
+
+PC: 18 SP: 506
+
+PC: 21 SP: 506
+
+PC: 23 SP: 505
+
+Print stack
+0
+1
+1
+1
+1
+1
+0
+0
+0
+PC: 24 SP: 505
+
+PC: 27 SP: 505
+
+PC: 29 SP: 505
+
+PC: 11 SP: 505
+
+Print stack
+0
+1
+1
+1
+1
+1
+0
+0
+0
+PC: 12 SP: 505
+
+PC: 15 SP: 505
+
+PC: 18 SP: 505
+
+PC: 21 SP: 505
+
+PC: 23 SP: 504
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+0
+0
+PC: 24 SP: 504
+
+PC: 27 SP: 504
+
+PC: 29 SP: 504
+
+PC: 11 SP: 504
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+0
+0
+PC: 12 SP: 504
+
+PC: 15 SP: 504
+
+PC: 18 SP: 504
+
+PC: 21 SP: 504
+
+PC: 23 SP: 503
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+0
+PC: 24 SP: 503
+
+PC: 27 SP: 503
+
+PC: 29 SP: 503
+
+PC: 11 SP: 503
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+0
+PC: 12 SP: 503
+
+PC: 15 SP: 503
+
+PC: 18 SP: 503
+
+PC: 21 SP: 503
+
+PC: 23 SP: 502
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 502
+
+PC: 27 SP: 502
+
+PC: 29 SP: 502
+
+PC: 11 SP: 502
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 502
+
+PC: 15 SP: 502
+
+PC: 18 SP: 502
+
+PC: 21 SP: 502
+
+PC: 23 SP: 501
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 501
+
+PC: 27 SP: 501
+
+PC: 29 SP: 501
+
+PC: 11 SP: 501
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 501
+
+PC: 15 SP: 501
+
+PC: 18 SP: 501
+
+PC: 21 SP: 501
+
+PC: 23 SP: 500
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 500
+
+PC: 27 SP: 500
+
+PC: 29 SP: 500
+
+PC: 11 SP: 500
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 500
+
+PC: 15 SP: 500
+
+PC: 18 SP: 500
+
+PC: 21 SP: 500
+
+PC: 23 SP: 499
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 499
+
+PC: 27 SP: 499
+
+PC: 29 SP: 499
+
+PC: 11 SP: 499
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 499
+
+PC: 15 SP: 499
+
+PC: 18 SP: 499
+
+PC: 21 SP: 499
+
+PC: 23 SP: 498
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 498
+
+PC: 27 SP: 498
+
+PC: 29 SP: 498
+
+PC: 11 SP: 498
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 498
+
+PC: 15 SP: 498
+
+PC: 18 SP: 498
+
+PC: 21 SP: 498
+PC: 23 SP: 497
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 497
+
+PC: 27 SP: 497
+
+PC: 29 SP: 497
+
+PC: 11 SP: 497
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 497
+
+PC: 15 SP: 497
+
+PC: 18 SP: 497
+
+PC: 21 SP: 497
+
+PC: 23 SP: 496
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 496
+
+PC: 27 SP: 496
+
+PC: 29 SP: 496
+
+PC: 11 SP: 496
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 496
+
+PC: 15 SP: 496
+
+PC: 18 SP: 496
+
+PC: 21 SP: 496
+
+PC: 23 SP: 495
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 495
+
+PC: 27 SP: 495
+
+PC: 29 SP: 495
+
+PC: 11 SP: 495
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 495
+
+PC: 15 SP: 495
+
+PC: 18 SP: 495
+
+PC: 21 SP: 495
+
+PC: 23 SP: 494
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 494
+
+PC: 27 SP: 494
+
+PC: 29 SP: 494
+
+PC: 11 SP: 494
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 494
+
+PC: 15 SP: 494
+
+PC: 18 SP: 494
+
+PC: 21 SP: 494
+
+PC: 23 SP: 493
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 493
+
+PC: 27 SP: 493
+
+PC: 29 SP: 493
+
+PC: 11 SP: 493
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 493
+
+PC: 15 SP: 493
+
+PC: 18 SP: 493
+
+PC: 21 SP: 493
+
+PC: 23 SP: 492
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 492
+
+PC: 27 SP: 492
+
+PC: 29 SP: 492
+
+PC: 11 SP: 492
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 492
+
+PC: 15 SP: 492
+
+PC: 18 SP: 492
+
+PC: 21 SP: 492
+
+PC: 23 SP: 491
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 491
+
+PC: 27 SP: 491
+
+PC: 29 SP: 491
+
+PC: 11 SP: 491
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 491
+
+PC: 15 SP: 491
+
+PC: 18 SP: 491
+
+PC: 21 SP: 491
+
+PC: 23 SP: 490
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 490
+
+PC: 27 SP: 490
+
+PC: 29 SP: 490
+
+PC: 11 SP: 490
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 490
+
+PC: 15 SP: 490
+
+PC: 18 SP: 490
+
+PC: 21 SP: 490
+
+PC: 23 SP: 489
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 489
+
+PC: 27 SP: 489
+
+PC: 29 SP: 489
+
+PC: 11 SP: 489
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 489
+
+PC: 15 SP: 489
+
+PC: 18 SP: 489
+
+PC: 21 SP: 489
+
+PC: 23 SP: 488
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 488
+
+PC: 27 SP: 488
+
+PC: 29 SP: 488
+
+PC: 11 SP: 488
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 488
+
+PC: 15 SP: 488
+
+PC: 18 SP: 488
+
+PC: 21 SP: 488
+
+PC: 23 SP: 487
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 487
+
+PC: 27 SP: 487
+
+PC: 29 SP: 487
+
+PC: 11 SP: 487
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 487
+
+PC: 15 SP: 487
+
+PC: 18 SP: 487
+
+PC: 21 SP: 487
+
+PC: 23 SP: 486
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 486
+
+PC: 27 SP: 486
+
+PC: 29 SP: 486
+
+PC: 11 SP: 486
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 486
+
+PC: 15 SP: 486
+
+PC: 18 SP: 486
+
+PC: 21 SP: 486
+
+PC: 23 SP: 485
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 485
+
+PC: 27 SP: 485
+
+PC: 29 SP: 485
+
+PC: 11 SP: 485
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 485
+
+PC: 15 SP: 485
+
+PC: 18 SP: 485
+
+PC: 21 SP: 485
+
+PC: 23 SP: 484
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 484
+
+PC: 27 SP: 484
+
+PC: 29 SP: 484
+
+PC: 11 SP: 484
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 484
+
+PC: 15 SP: 484
+
+PC: 18 SP: 484
+
+PC: 21 SP: 484
+
+PC: 23 SP: 483
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 483
+
+PC: 27 SP: 483
+
+PC: 29 SP: 483
+
+PC: 11 SP: 483
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 483
+
+PC: 15 SP: 483
+
+PC: 18 SP: 483
+
+PC: 21 SP: 483
+
+PC: 23 SP: 482
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 482
+
+PC: 27 SP: 482
+
+PC: 29 SP: 482
+
+PC: 11 SP: 482
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 482
+
+PC: 15 SP: 482
+
+PC: 18 SP: 482
+
+PC: 21 SP: 482
+
+PC: 23 SP: 481
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 481
+
+PC: 27 SP: 481
+
+PC: 29 SP: 481
+
+PC: 11 SP: 481
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 481
+
+PC: 15 SP: 481
+
+PC: 18 SP: 481
+
+PC: 21 SP: 481
+
+PC: 23 SP: 480
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 480
+
+PC: 27 SP: 480
+
+PC: 29 SP: 480
+
+PC: 11 SP: 480
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 480
+
+PC: 15 SP: 480
+
+PC: 18 SP: 480
+
+PC: 21 SP: 480
+
+PC: 23 SP: 479
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 479
+
+PC: 27 SP: 479
+
+PC: 29 SP: 479
+
+PC: 11 SP: 479
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 479
+
+PC: 15 SP: 479
+
+PC: 18 SP: 479
+
+PC: 21 SP: 479
+
+PC: 23 SP: 478
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 478
+
+PC: 27 SP: 478
+
+PC: 29 SP: 478
+
+PC: 11 SP: 478
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 478
+
+PC: 15 SP: 478
+
+PC: 18 SP: 478
+
+PC: 21 SP: 478
+
+PC: 23 SP: 477
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 477
+
+PC: 27 SP: 477
+
+PC: 29 SP: 477
+
+PC: 11 SP: 477
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 477
+
+PC: 15 SP: 477
+
+PC: 18 SP: 477
+
+PC: 21 SP: 477
+
+PC: 23 SP: 476
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 476
+
+PC: 27 SP: 476
+
+PC: 29 SP: 476
+
+PC: 11 SP: 476
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 476
+
+PC: 15 SP: 476
+
+PC: 18 SP: 476
+
+PC: 21 SP: 476
+
+PC: 23 SP: 475
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 475
+
+PC: 27 SP: 475
+
+PC: 29 SP: 475
+
+PC: 11 SP: 475
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 475
+
+PC: 15 SP: 475
+
+PC: 18 SP: 475
+
+PC: 21 SP: 475
+
+PC: 23 SP: 474
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 474
+
+PC: 27 SP: 474
+
+PC: 29 SP: 474
+
+PC: 11 SP: 474
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 474
+
+PC: 15 SP: 474
+
+PC: 18 SP: 474
+
+PC: 21 SP: 474
+
+PC: 23 SP: 473
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 473
+
+PC: 27 SP: 473
+
+PC: 29 SP: 473
+
+PC: 11 SP: 473
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 473
+
+PC: 15 SP: 473
+
+PC: 18 SP: 473
+
+PC: 21 SP: 473
+
+PC: 23 SP: 472
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 472
+
+PC: 27 SP: 472
+
+PC: 29 SP: 472
+
+PC: 11 SP: 472
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 472
+
+PC: 15 SP: 472
+
+PC: 18 SP: 472
+
+PC: 21 SP: 472
+
+PC: 23 SP: 471
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 471
+
+PC: 27 SP: 471
+
+PC: 29 SP: 471
+
+PC: 11 SP: 471
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 471
+
+PC: 15 SP: 471
+
+PC: 18 SP: 471
+
+PC: 21 SP: 471
+
+PC: 23 SP: 470
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 470
+
+PC: 27 SP: 470
+
+PC: 29 SP: 470
+
+PC: 11 SP: 470
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 470
+
+PC: 15 SP: 470
+
+PC: 18 SP: 470
+
+PC: 21 SP: 470
+
+PC: 23 SP: 469
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 469
+
+PC: 27 SP: 469
+
+PC: 29 SP: 469
+
+PC: 11 SP: 469
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 469
+
+PC: 15 SP: 469
+
+PC: 18 SP: 469
+
+PC: 21 SP: 469
+
+PC: 23 SP: 468
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 468
+
+PC: 27 SP: 468
+
+PC: 29 SP: 468
+
+PC: 11 SP: 468
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 468
+
+PC: 15 SP: 468
+
+PC: 18 SP: 468
+
+PC: 21 SP: 468
+
+PC: 23 SP: 467
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 467
+
+PC: 27 SP: 467
+
+PC: 29 SP: 467
+
+PC: 11 SP: 467
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 467
+
+PC: 15 SP: 467
+
+PC: 18 SP: 467
+
+PC: 21 SP: 467
+
+PC: 23 SP: 466
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 466
+
+PC: 27 SP: 466
+
+PC: 29 SP: 466
+
+PC: 11 SP: 466
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 466
+
+PC: 15 SP: 466
+
+PC: 18 SP: 466
+
+PC: 21 SP: 466
+
+PC: 23 SP: 465
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 465
+
+PC: 27 SP: 465
+
+PC: 29 SP: 465
+
+PC: 11 SP: 465
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 465
+
+PC: 15 SP: 465
+
+PC: 18 SP: 465
+
+PC: 21 SP: 465
+
+PC: 23 SP: 464
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 464
+
+PC: 27 SP: 464
+
+PC: 29 SP: 464
+
+PC: 11 SP: 464
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 464
+
+PC: 15 SP: 464
+
+PC: 18 SP: 464
+
+PC: 21 SP: 464
+
+PC: 23 SP: 463
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 463
+
+PC: 27 SP: 463
+
+PC: 29 SP: 463
+
+PC: 11 SP: 463
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 463
+
+PC: 15 SP: 463
+
+PC: 18 SP: 463
+
+PC: 21 SP: 463
+
+PC: 23 SP: 462
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 462
+
+PC: 27 SP: 462
+
+PC: 29 SP: 462
+
+PC: 11 SP: 462
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 462
+
+PC: 15 SP: 462
+
+PC: 18 SP: 462
+
+PC: 21 SP: 462
+
+PC: 23 SP: 461
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 461
+
+PC: 27 SP: 461
+
+PC: 29 SP: 461
+
+PC: 11 SP: 461
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 461
+
+PC: 15 SP: 461
+
+PC: 18 SP: 461
+
+PC: 21 SP: 461
+
+PC: 23 SP: 460
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 460
+
+PC: 27 SP: 460
+
+PC: 29 SP: 460
+
+PC: 11 SP: 460
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 460
+
+PC: 15 SP: 460
+
+PC: 18 SP: 460
+
+PC: 21 SP: 460
+
+PC: 23 SP: 459
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 459
+
+PC: 27 SP: 459
+
+PC: 29 SP: 459
+
+PC: 11 SP: 459
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 459
+
+PC: 15 SP: 459
+
+PC: 18 SP: 459
+
+PC: 21 SP: 459
+
+PC: 23 SP: 458
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 458
+
+PC: 27 SP: 458
+
+PC: 29 SP: 458
+
+PC: 11 SP: 458
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 458
+
+PC: 15 SP: 458
+
+PC: 18 SP: 458
+
+PC: 21 SP: 458
+
+PC: 23 SP: 457
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 457
+
+PC: 27 SP: 457
+
+PC: 29 SP: 457
+
+PC: 11 SP: 457
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 457
+
+PC: 15 SP: 457
+
+PC: 18 SP: 457
+
+PC: 21 SP: 457
+
+PC: 23 SP: 456
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 456
+
+PC: 27 SP: 456
+
+PC: 29 SP: 456
+
+PC: 11 SP: 456
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 456
+
+PC: 15 SP: 456
+
+PC: 18 SP: 456
+
+PC: 21 SP: 456
+
+PC: 23 SP: 455
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 455
+
+PC: 27 SP: 455
+
+PC: 29 SP: 455
+
+PC: 11 SP: 455
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 455
+
+PC: 15 SP: 455
+
+PC: 18 SP: 455
+
+PC: 21 SP: 455
+
+PC: 23 SP: 454
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 454
+
+PC: 27 SP: 454
+
+PC: 29 SP: 454
+
+PC: 11 SP: 454
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 454
+
+PC: 15 SP: 454
+
+PC: 18 SP: 454
+
+PC: 21 SP: 454
+
+PC: 23 SP: 453
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 453
+
+PC: 27 SP: 453
+
+PC: 29 SP: 453
+
+PC: 11 SP: 453
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 453
+
+PC: 15 SP: 453
+
+PC: 18 SP: 453
+
+PC: 21 SP: 453
+
+PC: 23 SP: 452
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 452
+
+PC: 27 SP: 452
+
+PC: 29 SP: 452
+
+PC: 11 SP: 452
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 452
+
+PC: 15 SP: 452
+
+PC: 18 SP: 452
+
+PC: 21 SP: 452
+
+PC: 23 SP: 451
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 451
+
+PC: 27 SP: 451
+
+PC: 29 SP: 451
+
+PC: 11 SP: 451
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 451
+
+PC: 15 SP: 451
+
+PC: 18 SP: 451
+
+PC: 21 SP: 451
+
+PC: 23 SP: 450
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 450
+
+PC: 27 SP: 450
+
+PC: 29 SP: 450
+
+PC: 11 SP: 450
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 450
+
+PC: 15 SP: 450
+
+PC: 18 SP: 450
+
+PC: 21 SP: 450
+
+PC: 23 SP: 449
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 449
+
+PC: 27 SP: 449
+
+PC: 29 SP: 449
+
+PC: 11 SP: 449
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 449
+
+PC: 15 SP: 449
+
+PC: 18 SP: 449
+
+PC: 21 SP: 449
+
+PC: 23 SP: 448
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 448
+
+PC: 27 SP: 448
+
+PC: 29 SP: 448
+
+PC: 11 SP: 448
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 448
+
+PC: 15 SP: 448
+
+PC: 18 SP: 448
+
+PC: 21 SP: 448
+
+PC: 23 SP: 447
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 447
+
+PC: 27 SP: 447
+
+PC: 29 SP: 447
+
+PC: 11 SP: 447
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 447
+
+PC: 15 SP: 447
+
+PC: 18 SP: 447
+
+PC: 21 SP: 447
+
+PC: 23 SP: 446
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 446
+
+PC: 27 SP: 446
+
+PC: 29 SP: 446
+
+PC: 11 SP: 446
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 446
+
+PC: 15 SP: 446
+
+PC: 18 SP: 446
+
+PC: 21 SP: 446
+
+PC: 23 SP: 445
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 445
+
+PC: 27 SP: 445
+
+PC: 29 SP: 445
+
+PC: 11 SP: 445
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 445
+
+PC: 15 SP: 445
+
+PC: 18 SP: 445
+
+PC: 21 SP: 445
+
+PC: 23 SP: 444
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 444
+
+PC: 27 SP: 444
+
+PC: 29 SP: 444
+
+PC: 11 SP: 444
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 444
+
+PC: 15 SP: 444
+
+PC: 18 SP: 444
+
+PC: 21 SP: 444
+
+PC: 23 SP: 443
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 443
+
+PC: 27 SP: 443
+
+PC: 29 SP: 443
+
+PC: 11 SP: 443
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 443
+
+PC: 15 SP: 443
+
+PC: 18 SP: 443
+
+PC: 21 SP: 443
+
+PC: 23 SP: 442
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 442
+
+PC: 27 SP: 442
+
+PC: 29 SP: 442
+
+PC: 11 SP: 442
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 442
+
+PC: 15 SP: 442
+
+PC: 18 SP: 442
+
+PC: 21 SP: 442
+
+PC: 23 SP: 441
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 441
+
+PC: 27 SP: 441
+
+PC: 29 SP: 441
+
+PC: 11 SP: 441
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 441
+
+PC: 15 SP: 441
+
+PC: 18 SP: 441
+
+PC: 21 SP: 441
+
+PC: 23 SP: 440
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 440
+
+PC: 27 SP: 440
+
+PC: 29 SP: 440
+
+PC: 11 SP: 440
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 440
+
+PC: 15 SP: 440
+
+PC: 18 SP: 440
+
+PC: 21 SP: 440
+
+PC: 23 SP: 439
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 439
+
+PC: 27 SP: 439
+
+PC: 29 SP: 439
+
+PC: 11 SP: 439
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 439
+
+PC: 15 SP: 439
+
+PC: 18 SP: 439
+
+PC: 21 SP: 439
+
+PC: 23 SP: 438
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 438
+
+PC: 27 SP: 438
+
+PC: 29 SP: 438
+
+PC: 11 SP: 438
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 438
+
+PC: 15 SP: 438
+
+PC: 18 SP: 438
+
+PC: 21 SP: 438
+
+PC: 23 SP: 437
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 437
+
+PC: 27 SP: 437
+
+PC: 29 SP: 437
+
+PC: 11 SP: 437
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 437
+
+PC: 15 SP: 437
+
+PC: 18 SP: 437
+
+PC: 21 SP: 437
+
+PC: 23 SP: 436
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 436
+
+PC: 27 SP: 436
+
+PC: 29 SP: 436
+
+PC: 11 SP: 436
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 436
+
+PC: 15 SP: 436
+
+PC: 18 SP: 436
+
+PC: 21 SP: 436
+
+PC: 23 SP: 435
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 435
+
+PC: 27 SP: 435
+
+PC: 29 SP: 435
+
+PC: 11 SP: 435
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 435
+
+PC: 15 SP: 435
+
+PC: 18 SP: 435
+
+PC: 21 SP: 435
+
+PC: 23 SP: 434
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 434
+
+PC: 27 SP: 434
+
+PC: 29 SP: 434
+
+PC: 11 SP: 434
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 434
+
+PC: 15 SP: 434
+
+PC: 18 SP: 434
+
+PC: 21 SP: 434
+
+PC: 23 SP: 433
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 433
+
+PC: 27 SP: 433
+
+PC: 29 SP: 433
+
+PC: 11 SP: 433
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 433
+
+PC: 15 SP: 433
+
+PC: 18 SP: 433
+
+PC: 21 SP: 433
+
+PC: 23 SP: 432
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 432
+
+PC: 27 SP: 432
+
+PC: 29 SP: 432
+
+PC: 11 SP: 432
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 432
+
+PC: 15 SP: 432
+
+PC: 18 SP: 432
+
+PC: 21 SP: 432
+
+PC: 23 SP: 431
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 431
+
+PC: 27 SP: 431
+
+PC: 29 SP: 431
+
+PC: 11 SP: 431
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 431
+
+PC: 15 SP: 431
+
+PC: 18 SP: 431
+
+PC: 21 SP: 431
+
+PC: 23 SP: 430
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 430
+
+PC: 27 SP: 430
+
+PC: 29 SP: 430
+
+PC: 11 SP: 430
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 430
+
+PC: 15 SP: 430
+
+PC: 18 SP: 430
+
+PC: 21 SP: 430
+
+PC: 23 SP: 429
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 429
+
+PC: 27 SP: 429
+
+PC: 29 SP: 429
+
+PC: 11 SP: 429
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 429
+
+PC: 15 SP: 429
+
+PC: 18 SP: 429
+
+PC: 21 SP: 429
+
+PC: 23 SP: 428
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 428
+
+PC: 27 SP: 428
+
+PC: 29 SP: 428
+
+PC: 11 SP: 428
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 428
+
+PC: 15 SP: 428
+
+PC: 18 SP: 428
+
+PC: 21 SP: 428
+
+PC: 23 SP: 427
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 427
+
+PC: 27 SP: 427
+
+PC: 29 SP: 427
+
+PC: 11 SP: 427
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 427
+
+PC: 15 SP: 427
+
+PC: 18 SP: 427
+
+PC: 21 SP: 427
+
+PC: 23 SP: 426
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 426
+
+PC: 27 SP: 426
+
+PC: 29 SP: 426
+
+PC: 11 SP: 426
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 426
+
+PC: 15 SP: 426
+
+PC: 18 SP: 426
+
+PC: 21 SP: 426
+
+PC: 23 SP: 425
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 425
+
+PC: 27 SP: 425
+
+PC: 29 SP: 425
+
+PC: 11 SP: 425
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 425
+
+PC: 15 SP: 425
+
+PC: 18 SP: 425
+
+PC: 21 SP: 425
+
+PC: 23 SP: 424
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 424
+
+PC: 27 SP: 424
+
+PC: 29 SP: 424
+
+PC: 11 SP: 424
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 424
+
+PC: 15 SP: 424
+
+PC: 18 SP: 424
+
+PC: 21 SP: 424
+
+PC: 23 SP: 423
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 423
+
+PC: 27 SP: 423
+
+PC: 29 SP: 423
+
+PC: 11 SP: 423
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 423
+
+PC: 15 SP: 423
+
+PC: 18 SP: 423
+
+PC: 21 SP: 423
+
+PC: 23 SP: 422
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 422
+
+PC: 27 SP: 422
+
+PC: 29 SP: 422
+
+PC: 11 SP: 422
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 422
+
+PC: 15 SP: 422
+
+PC: 18 SP: 422
+
+PC: 21 SP: 422
+
+PC: 23 SP: 421
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 421
+
+PC: 27 SP: 421
+
+PC: 29 SP: 421
+
+PC: 11 SP: 421
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 421
+
+PC: 15 SP: 421
+
+PC: 18 SP: 421
+
+PC: 21 SP: 421
+
+PC: 23 SP: 420
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 420
+
+PC: 27 SP: 420
+
+PC: 29 SP: 420
+
+PC: 11 SP: 420
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 420
+
+PC: 15 SP: 420
+
+PC: 18 SP: 420
+
+PC: 21 SP: 420
+
+PC: 23 SP: 419
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 419
+
+PC: 27 SP: 419
+
+PC: 29 SP: 419
+
+PC: 11 SP: 419
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 419
+
+PC: 15 SP: 419
+
+PC: 18 SP: 419
+
+PC: 21 SP: 419
+
+PC: 23 SP: 418
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 418
+
+PC: 27 SP: 418
+
+PC: 29 SP: 418
+
+PC: 11 SP: 418
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 418
+
+PC: 15 SP: 418
+
+PC: 18 SP: 418
+
+PC: 21 SP: 418
+
+PC: 23 SP: 417
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 417
+
+PC: 27 SP: 417
+
+PC: 29 SP: 417
+
+PC: 11 SP: 417
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 417
+
+PC: 15 SP: 417
+
+PC: 18 SP: 417
+
+PC: 21 SP: 417
+
+PC: 23 SP: 416
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 416
+
+PC: 27 SP: 416
+
+PC: 29 SP: 416
+
+PC: 11 SP: 416
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 416
+
+PC: 15 SP: 416
+
+PC: 18 SP: 416
+
+PC: 21 SP: 416
+
+PC: 23 SP: 415
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 415
+
+PC: 27 SP: 415
+
+PC: 29 SP: 415
+
+PC: 11 SP: 415
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 415
+
+PC: 15 SP: 415
+
+PC: 18 SP: 415
+
+PC: 21 SP: 415
+
+PC: 23 SP: 414
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 414
+
+PC: 27 SP: 414
+
+PC: 29 SP: 414
+
+PC: 11 SP: 414
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 414
+
+PC: 15 SP: 414
+
+PC: 18 SP: 414
+
+PC: 21 SP: 414
+
+PC: 23 SP: 413
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 413
+
+PC: 27 SP: 413
+
+PC: 29 SP: 413
+
+PC: 11 SP: 413
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 413
+
+PC: 15 SP: 413
+
+PC: 18 SP: 413
+
+PC: 21 SP: 413
+
+PC: 23 SP: 412
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 412
+
+PC: 27 SP: 412
+
+PC: 29 SP: 412
+
+PC: 11 SP: 412
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 412
+
+PC: 15 SP: 412
+
+PC: 18 SP: 412
+
+PC: 21 SP: 412
+
+PC: 23 SP: 411
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 411
+
+PC: 27 SP: 411
+
+PC: 29 SP: 411
+
+PC: 11 SP: 411
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 411
+
+PC: 15 SP: 411
+
+PC: 18 SP: 411
+
+PC: 21 SP: 411
+
+PC: 23 SP: 410
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 410
+
+PC: 27 SP: 410
+
+PC: 29 SP: 410
+
+PC: 11 SP: 410
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 410
+
+PC: 15 SP: 410
+
+PC: 18 SP: 410
+
+PC: 21 SP: 410
+
+PC: 23 SP: 409
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 409
+
+PC: 27 SP: 409
+
+PC: 29 SP: 409
+
+PC: 11 SP: 409
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 409
+
+PC: 15 SP: 409
+
+PC: 18 SP: 409
+
+PC: 21 SP: 409
+
+PC: 23 SP: 408
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 408
+
+PC: 27 SP: 408
+
+PC: 29 SP: 408
+
+PC: 11 SP: 408
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 408
+
+PC: 15 SP: 408
+
+PC: 18 SP: 408
+
+PC: 21 SP: 408
+
+PC: 23 SP: 407
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 407
+
+PC: 27 SP: 407
+
+PC: 29 SP: 407
+
+PC: 11 SP: 407
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 407
+
+PC: 15 SP: 407
+
+PC: 18 SP: 407
+
+PC: 21 SP: 407
+
+PC: 23 SP: 406
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 406
+
+PC: 27 SP: 406
+
+PC: 29 SP: 406
+
+PC: 11 SP: 406
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 406
+
+PC: 15 SP: 406
+
+PC: 18 SP: 406
+
+PC: 21 SP: 406
+
+PC: 23 SP: 405
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 405
+
+PC: 27 SP: 405
+
+PC: 29 SP: 405
+
+PC: 11 SP: 405
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 405
+
+PC: 15 SP: 405
+
+PC: 18 SP: 405
+
+PC: 21 SP: 405
+
+PC: 23 SP: 404
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 404
+
+PC: 27 SP: 404
+
+PC: 29 SP: 404
+
+PC: 11 SP: 404
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 404
+
+PC: 15 SP: 404
+
+PC: 18 SP: 404
+
+PC: 21 SP: 404
+
+PC: 23 SP: 403
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 403
+
+PC: 27 SP: 403
+
+PC: 29 SP: 403
+
+PC: 11 SP: 403
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 403
+
+PC: 15 SP: 403
+
+PC: 18 SP: 403
+
+PC: 21 SP: 403
+
+PC: 23 SP: 402
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 402
+
+PC: 27 SP: 402
+
+PC: 29 SP: 402
+
+PC: 11 SP: 402
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 402
+
+PC: 15 SP: 402
+
+PC: 18 SP: 402
+
+PC: 21 SP: 402
+
+PC: 23 SP: 401
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 401
+
+PC: 27 SP: 401
+
+PC: 29 SP: 401
+
+PC: 11 SP: 401
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 401
+
+PC: 15 SP: 401
+
+PC: 18 SP: 401
+
+PC: 21 SP: 401
+
+PC: 23 SP: 400
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 400
+
+PC: 27 SP: 400
+
+PC: 29 SP: 400
+
+PC: 11 SP: 400
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 400
+
+PC: 15 SP: 400
+
+PC: 18 SP: 400
+
+PC: 21 SP: 400
+
+PC: 23 SP: 399
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 399
+
+PC: 27 SP: 399
+
+PC: 29 SP: 399
+
+PC: 11 SP: 399
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 399
+
+PC: 15 SP: 399
+
+PC: 18 SP: 399
+
+PC: 21 SP: 399
+
+PC: 23 SP: 398
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 398
+
+PC: 27 SP: 398
+
+PC: 29 SP: 398
+
+PC: 11 SP: 398
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 398
+
+PC: 15 SP: 398
+
+PC: 18 SP: 398
+
+PC: 21 SP: 398
+
+PC: 23 SP: 397
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 397
+
+PC: 27 SP: 397
+
+PC: 29 SP: 397
+
+PC: 11 SP: 397
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 397
+
+PC: 15 SP: 397
+
+PC: 18 SP: 397
+
+PC: 21 SP: 397
+
+PC: 23 SP: 396
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 396
+
+PC: 27 SP: 396
+
+PC: 29 SP: 396
+
+PC: 11 SP: 396
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 396
+
+PC: 15 SP: 396
+
+PC: 18 SP: 396
+
+PC: 21 SP: 396
+
+PC: 23 SP: 395
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 395
+
+PC: 27 SP: 395
+
+PC: 29 SP: 395
+
+PC: 11 SP: 395
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 395
+
+PC: 15 SP: 395
+
+PC: 18 SP: 395
+
+PC: 21 SP: 395
+
+PC: 23 SP: 394
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 394
+
+PC: 27 SP: 394
+
+PC: 29 SP: 394
+
+PC: 11 SP: 394
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 394
+
+PC: 15 SP: 394
+
+PC: 18 SP: 394
+
+PC: 21 SP: 394
+
+PC: 23 SP: 393
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 393
+
+PC: 27 SP: 393
+
+PC: 29 SP: 393
+
+PC: 11 SP: 393
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 393
+
+PC: 15 SP: 393
+
+PC: 18 SP: 393
+
+PC: 21 SP: 393
+
+PC: 23 SP: 392
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 392
+
+PC: 27 SP: 392
+
+PC: 29 SP: 392
+
+PC: 11 SP: 392
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 392
+
+PC: 15 SP: 392
+
+PC: 18 SP: 392
+
+PC: 21 SP: 392
+
+PC: 23 SP: 391
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 391
+
+PC: 27 SP: 391
+
+PC: 29 SP: 391
+
+PC: 11 SP: 391
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 391
+
+PC: 15 SP: 391
+
+PC: 18 SP: 391
+
+PC: 21 SP: 391
+
+PC: 23 SP: 390
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 390
+
+PC: 27 SP: 390
+
+PC: 29 SP: 390
+
+PC: 11 SP: 390
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 390
+
+PC: 15 SP: 390
+
+PC: 18 SP: 390
+
+PC: 21 SP: 390
+
+PC: 23 SP: 389
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 389
+
+PC: 27 SP: 389
+
+PC: 29 SP: 389
+
+PC: 11 SP: 389
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 389
+
+PC: 15 SP: 389
+
+PC: 18 SP: 389
+
+PC: 21 SP: 389
+
+PC: 23 SP: 388
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 388
+
+PC: 27 SP: 388
+
+PC: 29 SP: 388
+
+PC: 11 SP: 388
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 388
+
+PC: 15 SP: 388
+
+PC: 18 SP: 388
+
+PC: 21 SP: 388
+
+PC: 23 SP: 387
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 387
+
+PC: 27 SP: 387
+
+PC: 29 SP: 387
+
+PC: 11 SP: 387
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 387
+
+PC: 15 SP: 387
+
+PC: 18 SP: 387
+
+PC: 21 SP: 387
+
+PC: 23 SP: 386
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 386
+
+PC: 27 SP: 386
+
+PC: 29 SP: 386
+
+PC: 11 SP: 386
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 386
+
+PC: 15 SP: 386
+
+PC: 18 SP: 386
+
+PC: 21 SP: 386
+
+PC: 23 SP: 385
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 385
+
+PC: 27 SP: 385
+
+PC: 29 SP: 385
+
+PC: 11 SP: 385
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 385
+
+PC: 15 SP: 385
+
+PC: 18 SP: 385
+
+PC: 21 SP: 385
+
+PC: 23 SP: 384
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 384
+
+PC: 27 SP: 384
+
+PC: 29 SP: 384
+
+PC: 11 SP: 384
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 384
+
+PC: 15 SP: 384
+
+PC: 18 SP: 384
+
+PC: 21 SP: 384
+
+PC: 23 SP: 383
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 383
+
+PC: 27 SP: 383
+
+PC: 29 SP: 383
+
+PC: 11 SP: 383
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 383
+
+PC: 15 SP: 383
+
+PC: 18 SP: 383
+
+PC: 21 SP: 383
+
+PC: 23 SP: 382
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 382
+
+PC: 27 SP: 382
+
+PC: 29 SP: 382
+
+PC: 11 SP: 382
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 382
+
+PC: 15 SP: 382
+
+PC: 18 SP: 382
+
+PC: 21 SP: 382
+
+PC: 23 SP: 381
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 381
+
+PC: 27 SP: 381
+
+PC: 29 SP: 381
+
+PC: 11 SP: 381
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 381
+
+PC: 15 SP: 381
+
+PC: 18 SP: 381
+
+PC: 21 SP: 381
+
+PC: 23 SP: 380
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 380
+
+PC: 27 SP: 380
+
+PC: 29 SP: 380
+
+PC: 11 SP: 380
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 380
+
+PC: 15 SP: 380
+
+PC: 18 SP: 380
+
+PC: 21 SP: 380
+
+PC: 23 SP: 379
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 379
+
+PC: 27 SP: 379
+
+PC: 29 SP: 379
+
+PC: 11 SP: 379
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 379
+
+PC: 15 SP: 379
+
+PC: 18 SP: 379
+
+PC: 21 SP: 379
+
+PC: 23 SP: 378
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 378
+
+PC: 27 SP: 378
+
+PC: 29 SP: 378
+
+PC: 11 SP: 378
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 378
+
+PC: 15 SP: 378
+
+PC: 18 SP: 378
+
+PC: 21 SP: 378
+
+PC: 23 SP: 377
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 377
+
+PC: 27 SP: 377
+
+PC: 29 SP: 377
+
+PC: 11 SP: 377
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 377
+
+PC: 15 SP: 377
+
+PC: 18 SP: 377
+
+PC: 21 SP: 377
+
+PC: 23 SP: 376
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 376
+
+PC: 27 SP: 376
+
+PC: 29 SP: 376
+
+PC: 11 SP: 376
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 376
+
+PC: 15 SP: 376
+
+PC: 18 SP: 376
+
+PC: 21 SP: 376
+
+PC: 23 SP: 375
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 375
+
+PC: 27 SP: 375
+
+PC: 29 SP: 375
+
+PC: 11 SP: 375
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 375
+
+PC: 15 SP: 375
+
+PC: 18 SP: 375
+
+PC: 21 SP: 375
+
+PC: 23 SP: 374
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 374
+
+PC: 27 SP: 374
+
+PC: 29 SP: 374
+
+PC: 11 SP: 374
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 374
+
+PC: 15 SP: 374
+
+PC: 18 SP: 374
+
+PC: 21 SP: 374
+
+PC: 23 SP: 373
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 373
+
+PC: 27 SP: 373
+
+PC: 29 SP: 373
+
+PC: 11 SP: 373
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 373
+
+PC: 15 SP: 373
+
+PC: 18 SP: 373
+
+PC: 21 SP: 373
+
+PC: 23 SP: 372
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 372
+
+PC: 27 SP: 372
+
+PC: 29 SP: 372
+
+PC: 11 SP: 372
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 372
+
+PC: 15 SP: 372
+
+PC: 18 SP: 372
+
+PC: 21 SP: 372
+
+PC: 23 SP: 371
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 371
+
+PC: 27 SP: 371
+
+PC: 29 SP: 371
+
+PC: 11 SP: 371
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 371
+
+PC: 15 SP: 371
+
+PC: 18 SP: 371
+
+PC: 21 SP: 371
+
+PC: 23 SP: 370
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 370
+
+PC: 27 SP: 370
+
+PC: 29 SP: 370
+
+PC: 11 SP: 370
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 370
+
+PC: 15 SP: 370
+
+PC: 18 SP: 370
+
+PC: 21 SP: 370
+
+PC: 23 SP: 369
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 369
+
+PC: 27 SP: 369
+
+PC: 29 SP: 369
+
+PC: 11 SP: 369
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 369
+
+PC: 15 SP: 369
+
+PC: 18 SP: 369
+
+PC: 21 SP: 369
+
+PC: 23 SP: 368
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 368
+
+PC: 27 SP: 368
+
+PC: 29 SP: 368
+
+PC: 11 SP: 368
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 368
+
+PC: 15 SP: 368
+
+PC: 18 SP: 368
+
+PC: 21 SP: 368
+
+PC: 23 SP: 367
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 367
+
+PC: 27 SP: 367
+
+PC: 29 SP: 367
+
+PC: 11 SP: 367
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 367
+
+PC: 15 SP: 367
+
+PC: 18 SP: 367
+
+PC: 21 SP: 367
+
+PC: 23 SP: 366
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 366
+
+PC: 27 SP: 366
+
+PC: 29 SP: 366
+
+PC: 11 SP: 366
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 366
+
+PC: 15 SP: 366
+
+PC: 18 SP: 366
+
+PC: 21 SP: 366
+
+PC: 23 SP: 365
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 365
+
+PC: 27 SP: 365
+
+PC: 29 SP: 365
+
+PC: 11 SP: 365
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 365
+
+PC: 15 SP: 365
+
+PC: 18 SP: 365
+
+PC: 21 SP: 365
+
+PC: 23 SP: 364
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 364
+
+PC: 27 SP: 364
+
+PC: 29 SP: 364
+
+PC: 11 SP: 364
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 364
+
+PC: 15 SP: 364
+
+PC: 18 SP: 364
+
+PC: 21 SP: 364
+
+PC: 23 SP: 363
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 363
+
+PC: 27 SP: 363
+
+PC: 29 SP: 363
+
+PC: 11 SP: 363
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 363
+
+PC: 15 SP: 363
+
+PC: 18 SP: 363
+
+PC: 21 SP: 363
+
+PC: 23 SP: 362
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 362
+
+PC: 27 SP: 362
+
+PC: 29 SP: 362
+
+PC: 11 SP: 362
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 362
+
+PC: 15 SP: 362
+
+PC: 18 SP: 362
+
+PC: 21 SP: 362
+
+PC: 23 SP: 361
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 361
+
+PC: 27 SP: 361
+
+PC: 29 SP: 361
+
+PC: 11 SP: 361
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 361
+
+PC: 15 SP: 361
+
+PC: 18 SP: 361
+
+PC: 21 SP: 361
+
+PC: 23 SP: 360
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 360
+
+PC: 27 SP: 360
+
+PC: 29 SP: 360
+
+PC: 11 SP: 360
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 360
+
+PC: 15 SP: 360
+
+PC: 18 SP: 360
+
+PC: 21 SP: 360
+
+PC: 23 SP: 359
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 359
+
+PC: 27 SP: 359
+
+PC: 29 SP: 359
+
+PC: 11 SP: 359
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 359
+
+PC: 15 SP: 359
+
+PC: 18 SP: 359
+
+PC: 21 SP: 359
+
+PC: 23 SP: 358
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 358
+
+PC: 27 SP: 358
+
+PC: 29 SP: 358
+
+PC: 11 SP: 358
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 358
+
+PC: 15 SP: 358
+
+PC: 18 SP: 358
+
+PC: 21 SP: 358
+
+PC: 23 SP: 357
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 357
+
+PC: 27 SP: 357
+
+PC: 29 SP: 357
+
+PC: 11 SP: 357
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 357
+
+PC: 15 SP: 357
+
+PC: 18 SP: 357
+
+PC: 21 SP: 357
+
+PC: 23 SP: 356
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 356
+
+PC: 27 SP: 356
+
+PC: 29 SP: 356
+
+PC: 11 SP: 356
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 356
+
+PC: 15 SP: 356
+
+PC: 18 SP: 356
+
+PC: 21 SP: 356
+
+PC: 23 SP: 355
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 355
+
+PC: 27 SP: 355
+
+PC: 29 SP: 355
+
+PC: 11 SP: 355
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 355
+
+PC: 15 SP: 355
+
+PC: 18 SP: 355
+
+PC: 21 SP: 355
+
+PC: 23 SP: 354
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 354
+
+PC: 27 SP: 354
+
+PC: 29 SP: 354
+
+PC: 11 SP: 354
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 354
+
+PC: 15 SP: 354
+
+PC: 18 SP: 354
+
+PC: 21 SP: 354
+
+PC: 23 SP: 353
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 353
+
+PC: 27 SP: 353
+
+PC: 29 SP: 353
+
+PC: 11 SP: 353
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 353
+
+PC: 15 SP: 353
+
+PC: 18 SP: 353
+
+PC: 21 SP: 353
+
+PC: 23 SP: 352
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 352
+
+PC: 27 SP: 352
+
+PC: 29 SP: 352
+
+PC: 11 SP: 352
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 352
+
+PC: 15 SP: 352
+
+PC: 18 SP: 352
+
+PC: 21 SP: 352
+
+PC: 23 SP: 351
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 351
+
+PC: 27 SP: 351
+
+PC: 29 SP: 351
+
+PC: 11 SP: 351
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 351
+
+PC: 15 SP: 351
+
+PC: 18 SP: 351
+
+PC: 21 SP: 351
+
+PC: 23 SP: 350
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 350
+
+PC: 27 SP: 350
+
+PC: 29 SP: 350
+
+PC: 11 SP: 350
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 350
+
+PC: 15 SP: 350
+
+PC: 18 SP: 350
+
+PC: 21 SP: 350
+
+PC: 23 SP: 349
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 349
+
+PC: 27 SP: 349
+
+PC: 29 SP: 349
+
+PC: 11 SP: 349
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 349
+
+PC: 15 SP: 349
+
+PC: 18 SP: 349
+
+PC: 21 SP: 349
+
+PC: 23 SP: 348
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 348
+
+PC: 27 SP: 348
+
+PC: 29 SP: 348
+
+PC: 11 SP: 348
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 348
+
+PC: 15 SP: 348
+
+PC: 18 SP: 348
+
+PC: 21 SP: 348
+
+PC: 23 SP: 347
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 347
+
+PC: 27 SP: 347
+
+PC: 29 SP: 347
+
+PC: 11 SP: 347
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 347
+
+PC: 15 SP: 347
+
+PC: 18 SP: 347
+
+PC: 21 SP: 347
+
+PC: 23 SP: 346
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 346
+
+PC: 27 SP: 346
+
+PC: 29 SP: 346
+
+PC: 11 SP: 346
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 346
+
+PC: 15 SP: 346
+
+PC: 18 SP: 346
+
+PC: 21 SP: 346
+
+PC: 23 SP: 345
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 345
+
+PC: 27 SP: 345
+
+PC: 29 SP: 345
+
+PC: 11 SP: 345
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 345
+
+PC: 15 SP: 345
+
+PC: 18 SP: 345
+
+PC: 21 SP: 345
+
+PC: 23 SP: 344
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 344
+
+PC: 27 SP: 344
+
+PC: 29 SP: 344
+
+PC: 11 SP: 344
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 344
+
+PC: 15 SP: 344
+
+PC: 18 SP: 344
+
+PC: 21 SP: 344
+
+PC: 23 SP: 343
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 343
+
+PC: 27 SP: 343
+
+PC: 29 SP: 343
+
+PC: 11 SP: 343
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 343
+
+PC: 15 SP: 343
+
+PC: 18 SP: 343
+
+PC: 21 SP: 343
+
+PC: 23 SP: 342
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 342
+
+PC: 27 SP: 342
+
+PC: 29 SP: 342
+
+PC: 11 SP: 342
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 342
+
+PC: 15 SP: 342
+
+PC: 18 SP: 342
+
+PC: 21 SP: 342
+
+PC: 23 SP: 341
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 341
+
+PC: 27 SP: 341
+
+PC: 29 SP: 341
+
+PC: 11 SP: 341
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 341
+
+PC: 15 SP: 341
+
+PC: 18 SP: 341
+
+PC: 21 SP: 341
+
+PC: 23 SP: 340
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 340
+
+PC: 27 SP: 340
+
+PC: 29 SP: 340
+
+PC: 11 SP: 340
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 340
+
+PC: 15 SP: 340
+
+PC: 18 SP: 340
+
+PC: 21 SP: 340
+
+PC: 23 SP: 339
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 339
+
+PC: 27 SP: 339
+
+PC: 29 SP: 339
+
+PC: 11 SP: 339
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 339
+
+PC: 15 SP: 339
+
+PC: 18 SP: 339
+
+PC: 21 SP: 339
+
+PC: 23 SP: 338
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 338
+
+PC: 27 SP: 338
+
+PC: 29 SP: 338
+
+PC: 11 SP: 338
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 338
+
+PC: 15 SP: 338
+
+PC: 18 SP: 338
+
+PC: 21 SP: 338
+
+PC: 23 SP: 337
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 337
+
+PC: 27 SP: 337
+
+PC: 29 SP: 337
+
+PC: 11 SP: 337
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 337
+
+PC: 15 SP: 337
+
+PC: 18 SP: 337
+
+PC: 21 SP: 337
+
+PC: 23 SP: 336
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 336
+
+PC: 27 SP: 336
+
+PC: 29 SP: 336
+
+PC: 11 SP: 336
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 336
+
+PC: 15 SP: 336
+
+PC: 18 SP: 336
+
+PC: 21 SP: 336
+
+PC: 23 SP: 335
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 335
+
+PC: 27 SP: 335
+
+PC: 29 SP: 335
+
+PC: 11 SP: 335
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 335
+
+PC: 15 SP: 335
+
+PC: 18 SP: 335
+
+PC: 21 SP: 335
+
+PC: 23 SP: 334
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 334
+
+PC: 27 SP: 334
+
+PC: 29 SP: 334
+
+PC: 11 SP: 334
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 334
+
+PC: 15 SP: 334
+
+PC: 18 SP: 334
+
+PC: 21 SP: 334
+
+PC: 23 SP: 333
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 333
+
+PC: 27 SP: 333
+
+PC: 29 SP: 333
+
+PC: 11 SP: 333
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 333
+
+PC: 15 SP: 333
+
+PC: 18 SP: 333
+
+PC: 21 SP: 333
+
+PC: 23 SP: 332
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 332
+
+PC: 27 SP: 332
+
+PC: 29 SP: 332
+
+PC: 11 SP: 332
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 332
+
+PC: 15 SP: 332
+
+PC: 18 SP: 332
+
+PC: 21 SP: 332
+
+PC: 23 SP: 331
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 331
+
+PC: 27 SP: 331
+
+PC: 29 SP: 331
+
+PC: 11 SP: 331
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 331
+
+PC: 15 SP: 331
+
+PC: 18 SP: 331
+
+PC: 21 SP: 331
+
+PC: 23 SP: 330
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 330
+
+PC: 27 SP: 330
+
+PC: 29 SP: 330
+
+PC: 11 SP: 330
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 330
+
+PC: 15 SP: 330
+
+PC: 18 SP: 330
+
+PC: 21 SP: 330
+
+PC: 23 SP: 329
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 329
+
+PC: 27 SP: 329
+
+PC: 29 SP: 329
+
+PC: 11 SP: 329
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 329
+
+PC: 15 SP: 329
+
+PC: 18 SP: 329
+
+PC: 21 SP: 329
+
+PC: 23 SP: 328
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 328
+
+PC: 27 SP: 328
+
+PC: 29 SP: 328
+
+PC: 11 SP: 328
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 328
+
+PC: 15 SP: 328
+
+PC: 18 SP: 328
+
+PC: 21 SP: 328
+
+PC: 23 SP: 327
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 327
+
+PC: 27 SP: 327
+
+PC: 29 SP: 327
+
+PC: 11 SP: 327
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 327
+
+PC: 15 SP: 327
+
+PC: 18 SP: 327
+
+PC: 21 SP: 327
+
+PC: 23 SP: 326
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 326
+
+PC: 27 SP: 326
+
+PC: 29 SP: 326
+
+PC: 11 SP: 326
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 326
+
+PC: 15 SP: 326
+
+PC: 18 SP: 326
+
+PC: 21 SP: 326
+
+PC: 23 SP: 325
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 325
+
+PC: 27 SP: 325
+
+PC: 29 SP: 325
+
+PC: 11 SP: 325
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 325
+
+PC: 15 SP: 325
+
+PC: 18 SP: 325
+
+PC: 21 SP: 325
+
+PC: 23 SP: 324
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 324
+
+PC: 27 SP: 324
+
+PC: 29 SP: 324
+
+PC: 11 SP: 324
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 324
+
+PC: 15 SP: 324
+
+PC: 18 SP: 324
+
+PC: 21 SP: 324
+
+PC: 23 SP: 323
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 323
+
+PC: 27 SP: 323
+
+PC: 29 SP: 323
+
+PC: 11 SP: 323
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 323
+
+PC: 15 SP: 323
+
+PC: 18 SP: 323
+
+PC: 21 SP: 323
+
+PC: 23 SP: 322
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 322
+
+PC: 27 SP: 322
+
+PC: 29 SP: 322
+
+PC: 11 SP: 322
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 322
+
+PC: 15 SP: 322
+
+PC: 18 SP: 322
+
+PC: 21 SP: 322
+
+PC: 23 SP: 321
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 321
+
+PC: 27 SP: 321
+
+PC: 29 SP: 321
+
+PC: 11 SP: 321
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 321
+
+PC: 15 SP: 321
+
+PC: 18 SP: 321
+
+PC: 21 SP: 321
+
+PC: 23 SP: 320
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 320
+
+PC: 27 SP: 320
+
+PC: 29 SP: 320
+
+PC: 11 SP: 320
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 320
+
+PC: 15 SP: 320
+
+PC: 18 SP: 320
+
+PC: 21 SP: 320
+
+PC: 23 SP: 319
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 319
+
+PC: 27 SP: 319
+
+PC: 29 SP: 319
+
+PC: 11 SP: 319
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 319
+
+PC: 15 SP: 319
+
+PC: 18 SP: 319
+
+PC: 21 SP: 319
+
+PC: 23 SP: 318
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 318
+
+PC: 27 SP: 318
+
+PC: 29 SP: 318
+
+PC: 11 SP: 318
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 318
+
+PC: 15 SP: 318
+
+PC: 18 SP: 318
+
+PC: 21 SP: 318
+
+PC: 23 SP: 317
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 317
+
+PC: 27 SP: 317
+
+PC: 29 SP: 317
+
+PC: 11 SP: 317
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 317
+
+PC: 15 SP: 317
+
+PC: 18 SP: 317
+
+PC: 21 SP: 317
+
+PC: 23 SP: 316
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 316
+
+PC: 27 SP: 316
+
+PC: 29 SP: 316
+
+PC: 11 SP: 316
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 316
+
+PC: 15 SP: 316
+
+PC: 18 SP: 316
+
+PC: 21 SP: 316
+
+PC: 23 SP: 315
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 315
+
+PC: 27 SP: 315
+
+PC: 29 SP: 315
+
+PC: 11 SP: 315
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 315
+
+PC: 15 SP: 315
+
+PC: 18 SP: 315
+
+PC: 21 SP: 315
+
+PC: 23 SP: 314
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 314
+
+PC: 27 SP: 314
+
+PC: 29 SP: 314
+
+PC: 11 SP: 314
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 314
+
+PC: 15 SP: 314
+
+PC: 18 SP: 314
+
+PC: 21 SP: 314
+
+PC: 23 SP: 313
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 313
+
+PC: 27 SP: 313
+
+PC: 29 SP: 313
+
+PC: 11 SP: 313
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 313
+
+PC: 15 SP: 313
+
+PC: 18 SP: 313
+
+PC: 21 SP: 313
+
+PC: 23 SP: 312
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 312
+
+PC: 27 SP: 312
+
+PC: 29 SP: 312
+
+PC: 11 SP: 312
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 312
+
+PC: 15 SP: 312
+
+PC: 18 SP: 312
+
+PC: 21 SP: 312
+
+PC: 23 SP: 311
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 311
+
+PC: 27 SP: 311
+
+PC: 29 SP: 311
+
+PC: 11 SP: 311
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 311
+
+PC: 15 SP: 311
+
+PC: 18 SP: 311
+
+PC: 21 SP: 311
+
+PC: 23 SP: 310
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 310
+
+PC: 27 SP: 310
+
+PC: 29 SP: 310
+
+PC: 11 SP: 310
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 310
+
+PC: 15 SP: 310
+
+PC: 18 SP: 310
+
+PC: 21 SP: 310
+
+PC: 23 SP: 309
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 309
+
+PC: 27 SP: 309
+
+PC: 29 SP: 309
+
+PC: 11 SP: 309
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 309
+
+PC: 15 SP: 309
+
+PC: 18 SP: 309
+
+PC: 21 SP: 309
+
+PC: 23 SP: 308
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 308
+
+PC: 27 SP: 308
+
+PC: 29 SP: 308
+
+PC: 11 SP: 308
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 308
+
+PC: 15 SP: 308
+
+PC: 18 SP: 308
+
+PC: 21 SP: 308
+
+PC: 23 SP: 307
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 307
+
+PC: 27 SP: 307
+
+PC: 29 SP: 307
+
+PC: 11 SP: 307
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 307
+
+PC: 15 SP: 307
+
+PC: 18 SP: 307
+
+PC: 21 SP: 307
+
+PC: 23 SP: 306
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 306
+
+PC: 27 SP: 306
+
+PC: 29 SP: 306
+
+PC: 11 SP: 306
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 306
+
+PC: 15 SP: 306
+
+PC: 18 SP: 306
+
+PC: 21 SP: 306
+
+PC: 23 SP: 305
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 305
+
+PC: 27 SP: 305
+
+PC: 29 SP: 305
+
+PC: 11 SP: 305
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 305
+
+PC: 15 SP: 305
+
+PC: 18 SP: 305
+
+PC: 21 SP: 305
+
+PC: 23 SP: 304
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 304
+
+PC: 27 SP: 304
+
+PC: 29 SP: 304
+
+PC: 11 SP: 304
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 304
+
+PC: 15 SP: 304
+
+PC: 18 SP: 304
+
+PC: 21 SP: 304
+
+PC: 23 SP: 303
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 303
+
+PC: 27 SP: 303
+
+PC: 29 SP: 303
+
+PC: 11 SP: 303
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 303
+
+PC: 15 SP: 303
+
+PC: 18 SP: 303
+
+PC: 21 SP: 303
+
+PC: 23 SP: 302
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 302
+
+PC: 27 SP: 302
+
+PC: 29 SP: 302
+
+PC: 11 SP: 302
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 302
+
+PC: 15 SP: 302
+
+PC: 18 SP: 302
+
+PC: 21 SP: 302
+
+PC: 23 SP: 301
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 301
+
+PC: 27 SP: 301
+
+PC: 29 SP: 301
+
+PC: 11 SP: 301
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 301
+
+PC: 15 SP: 301
+
+PC: 18 SP: 301
+
+PC: 21 SP: 301
+
+PC: 23 SP: 300
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 300
+
+PC: 27 SP: 300
+
+PC: 29 SP: 300
+
+PC: 11 SP: 300
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 300
+
+PC: 15 SP: 300
+
+PC: 18 SP: 300
+
+PC: 21 SP: 300
+
+PC: 23 SP: 299
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 299
+
+PC: 27 SP: 299
+
+PC: 29 SP: 299
+
+PC: 11 SP: 299
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 299
+
+PC: 15 SP: 299
+
+PC: 18 SP: 299
+
+PC: 21 SP: 299
+
+PC: 23 SP: 298
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 298
+
+PC: 27 SP: 298
+
+PC: 29 SP: 298
+
+PC: 11 SP: 298
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 298
+
+PC: 15 SP: 298
+
+PC: 18 SP: 298
+
+PC: 21 SP: 298
+
+PC: 23 SP: 297
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 297
+
+PC: 27 SP: 297
+
+PC: 29 SP: 297
+
+PC: 11 SP: 297
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 297
+
+PC: 15 SP: 297
+
+PC: 18 SP: 297
+
+PC: 21 SP: 297
+
+PC: 23 SP: 296
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 296
+
+PC: 27 SP: 296
+
+PC: 29 SP: 296
+
+PC: 11 SP: 296
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 296
+
+PC: 15 SP: 296
+
+PC: 18 SP: 296
+
+PC: 21 SP: 296
+
+PC: 23 SP: 295
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 295
+
+PC: 27 SP: 295
+
+PC: 29 SP: 295
+
+PC: 11 SP: 295
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 295
+
+PC: 15 SP: 295
+
+PC: 18 SP: 295
+
+PC: 21 SP: 295
+
+PC: 23 SP: 294
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 294
+
+PC: 27 SP: 294
+
+PC: 29 SP: 294
+
+PC: 11 SP: 294
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 294
+
+PC: 15 SP: 294
+
+PC: 18 SP: 294
+
+PC: 21 SP: 294
+
+PC: 23 SP: 293
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 293
+
+PC: 27 SP: 293
+
+PC: 29 SP: 293
+
+PC: 11 SP: 293
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 293
+
+PC: 15 SP: 293
+
+PC: 18 SP: 293
+
+PC: 21 SP: 293
+
+PC: 23 SP: 292
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 292
+
+PC: 27 SP: 292
+
+PC: 29 SP: 292
+
+PC: 11 SP: 292
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 292
+
+PC: 15 SP: 292
+
+PC: 18 SP: 292
+
+PC: 21 SP: 292
+
+PC: 23 SP: 291
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 291
+
+PC: 27 SP: 291
+
+PC: 29 SP: 291
+
+PC: 11 SP: 291
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 291
+
+PC: 15 SP: 291
+
+PC: 18 SP: 291
+
+PC: 21 SP: 291
+
+PC: 23 SP: 290
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 290
+
+PC: 27 SP: 290
+
+PC: 29 SP: 290
+
+PC: 11 SP: 290
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 290
+
+PC: 15 SP: 290
+
+PC: 18 SP: 290
+
+PC: 21 SP: 290
+
+PC: 23 SP: 289
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 289
+
+PC: 27 SP: 289
+
+PC: 29 SP: 289
+
+PC: 11 SP: 289
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 289
+
+PC: 15 SP: 289
+
+PC: 18 SP: 289
+
+PC: 21 SP: 289
+
+PC: 23 SP: 288
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 288
+
+PC: 27 SP: 288
+
+PC: 29 SP: 288
+
+PC: 11 SP: 288
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 288
+
+PC: 15 SP: 288
+
+PC: 18 SP: 288
+
+PC: 21 SP: 288
+
+PC: 23 SP: 287
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 287
+
+PC: 27 SP: 287
+
+PC: 29 SP: 287
+
+PC: 11 SP: 287
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 287
+
+PC: 15 SP: 287
+
+PC: 18 SP: 287
+
+PC: 21 SP: 287
+
+PC: 23 SP: 286
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 286
+
+PC: 27 SP: 286
+
+PC: 29 SP: 286
+
+PC: 11 SP: 286
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 286
+
+PC: 15 SP: 286
+
+PC: 18 SP: 286
+
+PC: 21 SP: 286
+
+PC: 23 SP: 285
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 285
+
+PC: 27 SP: 285
+
+PC: 29 SP: 285
+
+PC: 11 SP: 285
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 285
+
+PC: 15 SP: 285
+
+PC: 18 SP: 285
+
+PC: 21 SP: 285
+
+PC: 23 SP: 284
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 284
+
+PC: 27 SP: 284
+
+PC: 29 SP: 284
+
+PC: 11 SP: 284
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 284
+
+PC: 15 SP: 284
+
+PC: 18 SP: 284
+
+PC: 21 SP: 284
+
+PC: 23 SP: 283
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 283
+
+PC: 27 SP: 283
+
+PC: 29 SP: 283
+
+PC: 11 SP: 283
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 283
+
+PC: 15 SP: 283
+
+PC: 18 SP: 283
+
+PC: 21 SP: 283
+
+PC: 23 SP: 282
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 282
+
+PC: 27 SP: 282
+
+PC: 29 SP: 282
+
+PC: 11 SP: 282
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 282
+
+PC: 15 SP: 282
+
+PC: 18 SP: 282
+
+PC: 21 SP: 282
+
+PC: 23 SP: 281
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 281
+
+PC: 27 SP: 281
+
+PC: 29 SP: 281
+
+PC: 11 SP: 281
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 281
+
+PC: 15 SP: 281
+
+PC: 18 SP: 281
+
+PC: 21 SP: 281
+
+PC: 23 SP: 280
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 280
+
+PC: 27 SP: 280
+
+PC: 29 SP: 280
+
+PC: 11 SP: 280
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 280
+
+PC: 15 SP: 280
+
+PC: 18 SP: 280
+
+PC: 21 SP: 280
+
+PC: 23 SP: 279
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 279
+
+PC: 27 SP: 279
+
+PC: 29 SP: 279
+
+PC: 11 SP: 279
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 279
+
+PC: 15 SP: 279
+
+PC: 18 SP: 279
+
+PC: 21 SP: 279
+
+PC: 23 SP: 278
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 278
+
+PC: 27 SP: 278
+
+PC: 29 SP: 278
+
+PC: 11 SP: 278
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 278
+
+PC: 15 SP: 278
+
+PC: 18 SP: 278
+
+PC: 21 SP: 278
+
+PC: 23 SP: 277
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 277
+
+PC: 27 SP: 277
+
+PC: 29 SP: 277
+
+PC: 11 SP: 277
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 277
+
+PC: 15 SP: 277
+
+PC: 18 SP: 277
+
+PC: 21 SP: 277
+
+PC: 23 SP: 276
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 276
+
+PC: 27 SP: 276
+
+PC: 29 SP: 276
+
+PC: 11 SP: 276
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 276
+
+PC: 15 SP: 276
+
+PC: 18 SP: 276
+
+PC: 21 SP: 276
+
+PC: 23 SP: 275
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 275
+
+PC: 27 SP: 275
+
+PC: 29 SP: 275
+
+PC: 11 SP: 275
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 275
+
+PC: 15 SP: 275
+
+PC: 18 SP: 275
+
+PC: 21 SP: 275
+
+PC: 23 SP: 274
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 274
+
+PC: 27 SP: 274
+
+PC: 29 SP: 274
+
+PC: 11 SP: 274
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 274
+
+PC: 15 SP: 274
+
+PC: 18 SP: 274
+
+PC: 21 SP: 274
+
+PC: 23 SP: 273
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 273
+
+PC: 27 SP: 273
+
+PC: 29 SP: 273
+
+PC: 11 SP: 273
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 273
+
+PC: 15 SP: 273
+
+PC: 18 SP: 273
+
+PC: 21 SP: 273
+
+PC: 23 SP: 272
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 272
+
+PC: 27 SP: 272
+
+PC: 29 SP: 272
+
+PC: 11 SP: 272
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 272
+
+PC: 15 SP: 272
+
+PC: 18 SP: 272
+
+PC: 21 SP: 272
+
+PC: 23 SP: 271
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 271
+
+PC: 27 SP: 271
+
+PC: 29 SP: 271
+
+PC: 11 SP: 271
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 271
+
+PC: 15 SP: 271
+
+PC: 18 SP: 271
+
+PC: 21 SP: 271
+
+PC: 23 SP: 270
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 270
+
+PC: 27 SP: 270
+
+PC: 29 SP: 270
+
+PC: 11 SP: 270
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 270
+
+PC: 15 SP: 270
+
+PC: 18 SP: 270
+
+PC: 21 SP: 270
+
+PC: 23 SP: 269
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 269
+
+PC: 27 SP: 269
+
+PC: 29 SP: 269
+
+PC: 11 SP: 269
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 269
+
+PC: 15 SP: 269
+
+PC: 18 SP: 269
+
+PC: 21 SP: 269
+
+PC: 23 SP: 268
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 268
+
+PC: 27 SP: 268
+
+PC: 29 SP: 268
+
+PC: 11 SP: 268
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 268
+
+PC: 15 SP: 268
+
+PC: 18 SP: 268
+
+PC: 21 SP: 268
+
+PC: 23 SP: 267
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 267
+
+PC: 27 SP: 267
+
+PC: 29 SP: 267
+
+PC: 11 SP: 267
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 267
+
+PC: 15 SP: 267
+
+PC: 18 SP: 267
+
+PC: 21 SP: 267
+
+PC: 23 SP: 266
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 266
+
+PC: 27 SP: 266
+
+PC: 29 SP: 266
+
+PC: 11 SP: 266
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 266
+
+PC: 15 SP: 266
+
+PC: 18 SP: 266
+
+PC: 21 SP: 266
+
+PC: 23 SP: 265
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 265
+
+PC: 27 SP: 265
+
+PC: 29 SP: 265
+
+PC: 11 SP: 265
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 265
+
+PC: 15 SP: 265
+
+PC: 18 SP: 265
+
+PC: 21 SP: 265
+
+PC: 23 SP: 264
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 264
+
+PC: 27 SP: 264
+
+PC: 29 SP: 264
+
+PC: 11 SP: 264
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 264
+
+PC: 15 SP: 264
+
+PC: 18 SP: 264
+
+PC: 21 SP: 264
+
+PC: 23 SP: 263
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 263
+
+PC: 27 SP: 263
+
+PC: 29 SP: 263
+
+PC: 11 SP: 263
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 263
+
+PC: 15 SP: 263
+
+PC: 18 SP: 263
+
+PC: 21 SP: 263
+
+PC: 23 SP: 262
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 262
+
+PC: 27 SP: 262
+
+PC: 29 SP: 262
+
+PC: 11 SP: 262
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 262
+
+PC: 15 SP: 262
+
+PC: 18 SP: 262
+
+PC: 21 SP: 262
+
+PC: 23 SP: 261
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 261
+
+PC: 27 SP: 261
+
+PC: 29 SP: 261
+
+PC: 11 SP: 261
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 261
+
+PC: 15 SP: 261
+
+PC: 18 SP: 261
+
+PC: 21 SP: 261
+
+PC: 23 SP: 260
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 260
+
+PC: 27 SP: 260
+
+PC: 29 SP: 260
+
+PC: 11 SP: 260
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 260
+
+PC: 15 SP: 260
+
+PC: 18 SP: 260
+
+PC: 21 SP: 260
+
+PC: 23 SP: 259
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 259
+
+PC: 27 SP: 259
+
+PC: 29 SP: 259
+
+PC: 11 SP: 259
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 259
+
+PC: 15 SP: 259
+
+PC: 18 SP: 259
+
+PC: 21 SP: 259
+
+PC: 23 SP: 258
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 258
+
+PC: 27 SP: 258
+
+PC: 29 SP: 258
+
+PC: 11 SP: 258
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 258
+
+PC: 15 SP: 258
+
+PC: 18 SP: 258
+
+PC: 21 SP: 258
+
+PC: 23 SP: 257
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 257
+
+PC: 27 SP: 257
+
+PC: 29 SP: 257
+
+PC: 11 SP: 257
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 257
+
+PC: 15 SP: 257
+
+PC: 18 SP: 257
+
+PC: 21 SP: 257
+
+PC: 23 SP: 256
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 256
+
+PC: 27 SP: 256
+
+PC: 29 SP: 256
+
+PC: 11 SP: 256
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 256
+
+PC: 15 SP: 256
+
+PC: 18 SP: 256
+
+PC: 21 SP: 256
+
+PC: 23 SP: 255
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 255
+
+PC: 27 SP: 255
+
+PC: 29 SP: 255
+
+PC: 11 SP: 255
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 255
+
+PC: 15 SP: 255
+
+PC: 18 SP: 255
+
+PC: 21 SP: 255
+
+PC: 23 SP: 254
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 254
+
+PC: 27 SP: 254
+
+PC: 29 SP: 254
+
+PC: 11 SP: 254
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 254
+
+PC: 15 SP: 254
+
+PC: 18 SP: 254
+
+PC: 21 SP: 254
+
+PC: 23 SP: 253
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 253
+
+PC: 27 SP: 253
+
+PC: 29 SP: 253
+
+PC: 11 SP: 253
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 253
+
+PC: 15 SP: 253
+
+PC: 18 SP: 253
+
+PC: 21 SP: 253
+
+PC: 23 SP: 252
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 252
+
+PC: 27 SP: 252
+
+PC: 29 SP: 252
+
+PC: 11 SP: 252
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 252
+
+PC: 15 SP: 252
+
+PC: 18 SP: 252
+
+PC: 21 SP: 252
+
+PC: 23 SP: 251
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 251
+
+PC: 27 SP: 251
+
+PC: 29 SP: 251
+
+PC: 11 SP: 251
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 251
+
+PC: 15 SP: 251
+
+PC: 18 SP: 251
+
+PC: 21 SP: 251
+
+PC: 23 SP: 250
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 250
+
+PC: 27 SP: 250
+
+PC: 29 SP: 250
+
+PC: 11 SP: 250
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 250
+
+PC: 15 SP: 250
+
+PC: 18 SP: 250
+
+PC: 21 SP: 250
+
+PC: 23 SP: 249
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 249
+
+PC: 27 SP: 249
+
+PC: 29 SP: 249
+
+PC: 11 SP: 249
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 249
+
+PC: 15 SP: 249
+
+PC: 18 SP: 249
+
+PC: 21 SP: 249
+
+PC: 23 SP: 248
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 248
+
+PC: 27 SP: 248
+
+PC: 29 SP: 248
+
+PC: 11 SP: 248
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 248
+
+PC: 15 SP: 248
+
+PC: 18 SP: 248
+
+PC: 21 SP: 248
+
+PC: 23 SP: 247
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 247
+
+PC: 27 SP: 247
+
+PC: 29 SP: 247
+
+PC: 11 SP: 247
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 247
+
+PC: 15 SP: 247
+
+PC: 18 SP: 247
+
+PC: 21 SP: 247
+
+PC: 23 SP: 246
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 246
+
+PC: 27 SP: 246
+
+PC: 29 SP: 246
+
+PC: 11 SP: 246
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 246
+
+PC: 15 SP: 246
+
+PC: 18 SP: 246
+
+PC: 21 SP: 246
+
+PC: 23 SP: 245
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 245
+
+PC: 27 SP: 245
+
+PC: 29 SP: 245
+
+PC: 11 SP: 245
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 245
+
+PC: 15 SP: 245
+
+PC: 18 SP: 245
+
+PC: 21 SP: 245
+
+PC: 23 SP: 244
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 244
+
+PC: 27 SP: 244
+
+PC: 29 SP: 244
+
+PC: 11 SP: 244
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 244
+
+PC: 15 SP: 244
+
+PC: 18 SP: 244
+
+PC: 21 SP: 244
+
+PC: 23 SP: 243
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 243
+
+PC: 27 SP: 243
+
+PC: 29 SP: 243
+
+PC: 11 SP: 243
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 243
+
+PC: 15 SP: 243
+
+PC: 18 SP: 243
+
+PC: 21 SP: 243
+
+PC: 23 SP: 242
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 242
+
+PC: 27 SP: 242
+
+PC: 29 SP: 242
+
+PC: 11 SP: 242
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 242
+
+PC: 15 SP: 242
+
+PC: 18 SP: 242
+
+PC: 21 SP: 242
+
+PC: 23 SP: 241
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 241
+
+PC: 27 SP: 241
+
+PC: 29 SP: 241
+
+PC: 11 SP: 241
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 241
+
+PC: 15 SP: 241
+
+PC: 18 SP: 241
+
+PC: 21 SP: 241
+
+PC: 23 SP: 240
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 240
+
+PC: 27 SP: 240
+
+PC: 29 SP: 240
+
+PC: 11 SP: 240
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 240
+
+PC: 15 SP: 240
+
+PC: 18 SP: 240
+
+PC: 21 SP: 240
+
+PC: 23 SP: 239
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 239
+
+PC: 27 SP: 239
+
+PC: 29 SP: 239
+
+PC: 11 SP: 239
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 239
+
+PC: 15 SP: 239
+
+PC: 18 SP: 239
+
+PC: 21 SP: 239
+
+PC: 23 SP: 238
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 238
+
+PC: 27 SP: 238
+
+PC: 29 SP: 238
+
+PC: 11 SP: 238
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 238
+
+PC: 15 SP: 238
+
+PC: 18 SP: 238
+
+PC: 21 SP: 238
+
+PC: 23 SP: 237
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 237
+
+PC: 27 SP: 237
+
+PC: 29 SP: 237
+
+PC: 11 SP: 237
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 237
+
+PC: 15 SP: 237
+
+PC: 18 SP: 237
+
+PC: 21 SP: 237
+
+PC: 23 SP: 236
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 236
+
+PC: 27 SP: 236
+
+PC: 29 SP: 236
+
+PC: 11 SP: 236
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 236
+
+PC: 15 SP: 236
+
+PC: 18 SP: 236
+
+PC: 21 SP: 236
+
+PC: 23 SP: 235
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 235
+
+PC: 27 SP: 235
+
+PC: 29 SP: 235
+
+PC: 11 SP: 235
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 235
+
+PC: 15 SP: 235
+
+PC: 18 SP: 235
+
+PC: 21 SP: 235
+
+PC: 23 SP: 234
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 234
+
+PC: 27 SP: 234
+
+PC: 29 SP: 234
+
+PC: 11 SP: 234
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 234
+
+PC: 15 SP: 234
+
+PC: 18 SP: 234
+
+PC: 21 SP: 234
+
+PC: 23 SP: 233
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 233
+
+PC: 27 SP: 233
+
+PC: 29 SP: 233
+
+PC: 11 SP: 233
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 233
+
+PC: 15 SP: 233
+
+PC: 18 SP: 233
+
+PC: 21 SP: 233
+
+PC: 23 SP: 232
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 232
+
+PC: 27 SP: 232
+
+PC: 29 SP: 232
+
+PC: 11 SP: 232
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 232
+
+PC: 15 SP: 232
+
+PC: 18 SP: 232
+
+PC: 21 SP: 232
+
+PC: 23 SP: 231
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 231
+
+PC: 27 SP: 231
+
+PC: 29 SP: 231
+
+PC: 11 SP: 231
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 231
+
+PC: 15 SP: 231
+
+PC: 18 SP: 231
+
+PC: 21 SP: 231
+
+PC: 23 SP: 230
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 230
+
+PC: 27 SP: 230
+
+PC: 29 SP: 230
+
+PC: 11 SP: 230
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 230
+
+PC: 15 SP: 230
+
+PC: 18 SP: 230
+
+PC: 21 SP: 230
+
+PC: 23 SP: 229
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 229
+
+PC: 27 SP: 229
+
+PC: 29 SP: 229
+
+PC: 11 SP: 229
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 229
+
+PC: 15 SP: 229
+
+PC: 18 SP: 229
+
+PC: 21 SP: 229
+
+PC: 23 SP: 228
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 228
+
+PC: 27 SP: 228
+
+PC: 29 SP: 228
+
+PC: 11 SP: 228
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 228
+
+PC: 15 SP: 228
+
+PC: 18 SP: 228
+
+PC: 21 SP: 228
+
+PC: 23 SP: 227
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 227
+
+PC: 27 SP: 227
+
+PC: 29 SP: 227
+
+PC: 11 SP: 227
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 227
+
+PC: 15 SP: 227
+
+PC: 18 SP: 227
+
+PC: 21 SP: 227
+
+PC: 23 SP: 226
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 226
+
+PC: 27 SP: 226
+
+PC: 29 SP: 226
+
+PC: 11 SP: 226
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 226
+
+PC: 15 SP: 226
+
+PC: 18 SP: 226
+
+PC: 21 SP: 226
+
+PC: 23 SP: 225
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 225
+
+PC: 27 SP: 225
+
+PC: 29 SP: 225
+
+PC: 11 SP: 225
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 225
+
+PC: 15 SP: 225
+
+PC: 18 SP: 225
+
+PC: 21 SP: 225
+
+PC: 23 SP: 224
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 224
+
+PC: 27 SP: 224
+
+PC: 29 SP: 224
+
+PC: 11 SP: 224
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 224
+
+PC: 15 SP: 224
+
+PC: 18 SP: 224
+
+PC: 21 SP: 224
+
+PC: 23 SP: 223
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 223
+
+PC: 27 SP: 223
+
+PC: 29 SP: 223
+
+PC: 11 SP: 223
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 223
+
+PC: 15 SP: 223
+
+PC: 18 SP: 223
+
+PC: 21 SP: 223
+
+PC: 23 SP: 222
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 222
+
+PC: 27 SP: 222
+
+PC: 29 SP: 222
+
+PC: 11 SP: 222
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 222
+
+PC: 15 SP: 222
+
+PC: 18 SP: 222
+
+PC: 21 SP: 222
+
+PC: 23 SP: 221
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 221
+
+PC: 27 SP: 221
+
+PC: 29 SP: 221
+
+PC: 11 SP: 221
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 221
+
+PC: 15 SP: 221
+
+PC: 18 SP: 221
+
+PC: 21 SP: 221
+
+PC: 23 SP: 220
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 220
+
+PC: 27 SP: 220
+
+PC: 29 SP: 220
+
+PC: 11 SP: 220
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 220
+
+PC: 15 SP: 220
+
+PC: 18 SP: 220
+
+PC: 21 SP: 220
+
+PC: 23 SP: 219
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 219
+
+PC: 27 SP: 219
+
+PC: 29 SP: 219
+
+PC: 11 SP: 219
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 219
+
+PC: 15 SP: 219
+
+PC: 18 SP: 219
+
+PC: 21 SP: 219
+
+PC: 23 SP: 218
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 218
+
+PC: 27 SP: 218
+
+PC: 29 SP: 218
+
+PC: 11 SP: 218
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 218
+
+PC: 15 SP: 218
+
+PC: 18 SP: 218
+
+PC: 21 SP: 218
+
+PC: 23 SP: 217
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 217
+
+PC: 27 SP: 217
+
+PC: 29 SP: 217
+
+PC: 11 SP: 217
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 217
+
+PC: 15 SP: 217
+
+PC: 18 SP: 217
+
+PC: 21 SP: 217
+
+PC: 23 SP: 216
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 216
+
+PC: 27 SP: 216
+
+PC: 29 SP: 216
+
+PC: 11 SP: 216
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 216
+
+PC: 15 SP: 216
+
+PC: 18 SP: 216
+
+PC: 21 SP: 216
+
+PC: 23 SP: 215
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 215
+
+PC: 27 SP: 215
+
+PC: 29 SP: 215
+
+PC: 11 SP: 215
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 215
+
+PC: 15 SP: 215
+
+PC: 18 SP: 215
+
+PC: 21 SP: 215
+
+PC: 23 SP: 214
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 214
+
+PC: 27 SP: 214
+
+PC: 29 SP: 214
+
+PC: 11 SP: 214
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 214
+
+PC: 15 SP: 214
+
+PC: 18 SP: 214
+
+PC: 21 SP: 214
+
+PC: 23 SP: 213
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 213
+
+PC: 27 SP: 213
+
+PC: 29 SP: 213
+
+PC: 11 SP: 213
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 213
+
+PC: 15 SP: 213
+
+PC: 18 SP: 213
+
+PC: 21 SP: 213
+
+PC: 23 SP: 212
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 212
+
+PC: 27 SP: 212
+
+PC: 29 SP: 212
+
+PC: 11 SP: 212
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 212
+
+PC: 15 SP: 212
+
+PC: 18 SP: 212
+
+PC: 21 SP: 212
+
+PC: 23 SP: 211
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 211
+
+PC: 27 SP: 211
+
+PC: 29 SP: 211
+
+PC: 11 SP: 211
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 211
+
+PC: 15 SP: 211
+
+PC: 18 SP: 211
+
+PC: 21 SP: 211
+
+PC: 23 SP: 210
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 210
+
+PC: 27 SP: 210
+
+PC: 29 SP: 210
+
+PC: 11 SP: 210
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 210
+
+PC: 15 SP: 210
+
+PC: 18 SP: 210
+
+PC: 21 SP: 210
+
+PC: 23 SP: 209
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 209
+
+PC: 27 SP: 209
+
+PC: 29 SP: 209
+
+PC: 11 SP: 209
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 209
+
+PC: 15 SP: 209
+
+PC: 18 SP: 209
+
+PC: 21 SP: 209
+
+PC: 23 SP: 208
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 208
+
+PC: 27 SP: 208
+
+PC: 29 SP: 208
+
+PC: 11 SP: 208
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 208
+
+PC: 15 SP: 208
+
+PC: 18 SP: 208
+
+PC: 21 SP: 208
+
+PC: 23 SP: 207
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 207
+
+PC: 27 SP: 207
+
+PC: 29 SP: 207
+
+PC: 11 SP: 207
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 207
+
+PC: 15 SP: 207
+
+PC: 18 SP: 207
+
+PC: 21 SP: 207
+
+PC: 23 SP: 206
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 206
+
+PC: 27 SP: 206
+
+PC: 29 SP: 206
+
+PC: 11 SP: 206
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 206
+
+PC: 15 SP: 206
+
+PC: 18 SP: 206
+
+PC: 21 SP: 206
+
+PC: 23 SP: 205
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 205
+
+PC: 27 SP: 205
+
+PC: 29 SP: 205
+
+PC: 11 SP: 205
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 205
+
+PC: 15 SP: 205
+
+PC: 18 SP: 205
+
+PC: 21 SP: 205
+
+PC: 23 SP: 204
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 204
+
+PC: 27 SP: 204
+
+PC: 29 SP: 204
+
+PC: 11 SP: 204
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 204
+
+PC: 15 SP: 204
+
+PC: 18 SP: 204
+
+PC: 21 SP: 204
+
+PC: 23 SP: 203
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 203
+
+PC: 27 SP: 203
+
+PC: 29 SP: 203
+
+PC: 11 SP: 203
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 203
+
+PC: 15 SP: 203
+
+PC: 18 SP: 203
+
+PC: 21 SP: 203
+
+PC: 23 SP: 202
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 202
+
+PC: 27 SP: 202
+
+PC: 29 SP: 202
+
+PC: 11 SP: 202
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 202
+
+PC: 15 SP: 202
+
+PC: 18 SP: 202
+
+PC: 21 SP: 202
+
+PC: 23 SP: 201
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 201
+
+PC: 27 SP: 201
+
+PC: 29 SP: 201
+
+PC: 11 SP: 201
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 201
+
+PC: 15 SP: 201
+
+PC: 18 SP: 201
+
+PC: 21 SP: 201
+
+PC: 23 SP: 200
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 200
+
+PC: 27 SP: 200
+
+PC: 29 SP: 200
+
+PC: 11 SP: 200
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 200
+
+PC: 15 SP: 200
+
+PC: 18 SP: 200
+
+PC: 21 SP: 200
+
+PC: 23 SP: 199
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 199
+
+PC: 27 SP: 199
+
+PC: 29 SP: 199
+
+PC: 11 SP: 199
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 199
+
+PC: 15 SP: 199
+
+PC: 18 SP: 199
+
+PC: 21 SP: 199
+
+PC: 23 SP: 198
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 198
+
+PC: 27 SP: 198
+
+PC: 29 SP: 198
+
+PC: 11 SP: 198
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 198
+
+PC: 15 SP: 198
+
+PC: 18 SP: 198
+
+PC: 21 SP: 198
+
+PC: 23 SP: 197
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 197
+
+PC: 27 SP: 197
+
+PC: 29 SP: 197
+
+PC: 11 SP: 197
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 197
+
+PC: 15 SP: 197
+
+PC: 18 SP: 197
+
+PC: 21 SP: 197
+
+PC: 23 SP: 196
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 196
+
+PC: 27 SP: 196
+
+PC: 29 SP: 196
+
+PC: 11 SP: 196
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 196
+
+PC: 15 SP: 196
+
+PC: 18 SP: 196
+
+PC: 21 SP: 196
+
+PC: 23 SP: 195
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 195
+
+PC: 27 SP: 195
+
+PC: 29 SP: 195
+
+PC: 11 SP: 195
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 195
+
+PC: 15 SP: 195
+
+PC: 18 SP: 195
+
+PC: 21 SP: 195
+
+PC: 23 SP: 194
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 194
+
+PC: 27 SP: 194
+
+PC: 29 SP: 194
+
+PC: 11 SP: 194
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 194
+
+PC: 15 SP: 194
+
+PC: 18 SP: 194
+
+PC: 21 SP: 194
+
+PC: 23 SP: 193
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 193
+
+PC: 27 SP: 193
+
+PC: 29 SP: 193
+
+PC: 11 SP: 193
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 193
+
+PC: 15 SP: 193
+
+PC: 18 SP: 193
+
+PC: 21 SP: 193
+
+PC: 23 SP: 192
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 192
+
+PC: 27 SP: 192
+
+PC: 29 SP: 192
+
+PC: 11 SP: 192
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 192
+
+PC: 15 SP: 192
+
+PC: 18 SP: 192
+
+PC: 21 SP: 192
+
+PC: 23 SP: 191
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 191
+
+PC: 27 SP: 191
+
+PC: 29 SP: 191
+
+PC: 11 SP: 191
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 191
+
+PC: 15 SP: 191
+
+PC: 18 SP: 191
+
+PC: 21 SP: 191
+
+PC: 23 SP: 190
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 190
+
+PC: 27 SP: 190
+
+PC: 29 SP: 190
+
+PC: 11 SP: 190
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 190
+
+PC: 15 SP: 190
+
+PC: 18 SP: 190
+
+PC: 21 SP: 190
+
+PC: 23 SP: 189
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 189
+
+PC: 27 SP: 189
+
+PC: 29 SP: 189
+
+PC: 11 SP: 189
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 189
+
+PC: 15 SP: 189
+
+PC: 18 SP: 189
+
+PC: 21 SP: 189
+
+PC: 23 SP: 188
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 188
+
+PC: 27 SP: 188
+
+PC: 29 SP: 188
+
+PC: 11 SP: 188
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 188
+
+PC: 15 SP: 188
+
+PC: 18 SP: 188
+
+PC: 21 SP: 188
+
+PC: 23 SP: 187
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 187
+
+PC: 27 SP: 187
+
+PC: 29 SP: 187
+
+PC: 11 SP: 187
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 187
+
+PC: 15 SP: 187
+
+PC: 18 SP: 187
+
+PC: 21 SP: 187
+
+PC: 23 SP: 186
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 186
+
+PC: 27 SP: 186
+
+PC: 29 SP: 186
+
+PC: 11 SP: 186
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 186
+
+PC: 15 SP: 186
+
+PC: 18 SP: 186
+
+PC: 21 SP: 186
+
+PC: 23 SP: 185
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 185
+
+PC: 27 SP: 185
+
+PC: 29 SP: 185
+
+PC: 11 SP: 185
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 185
+
+PC: 15 SP: 185
+
+PC: 18 SP: 185
+
+PC: 21 SP: 185
+
+PC: 23 SP: 184
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 184
+
+PC: 27 SP: 184
+
+PC: 29 SP: 184
+
+PC: 11 SP: 184
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 184
+
+PC: 15 SP: 184
+
+PC: 18 SP: 184
+
+PC: 21 SP: 184
+
+PC: 23 SP: 183
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 183
+
+PC: 27 SP: 183
+
+PC: 29 SP: 183
+
+PC: 11 SP: 183
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 183
+
+PC: 15 SP: 183
+
+PC: 18 SP: 183
+
+PC: 21 SP: 183
+
+PC: 23 SP: 182
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 182
+
+PC: 27 SP: 182
+
+PC: 29 SP: 182
+
+PC: 11 SP: 182
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 182
+
+PC: 15 SP: 182
+
+PC: 18 SP: 182
+
+PC: 21 SP: 182
+
+PC: 23 SP: 181
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 181
+
+PC: 27 SP: 181
+
+PC: 29 SP: 181
+
+PC: 11 SP: 181
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 181
+
+PC: 15 SP: 181
+
+PC: 18 SP: 181
+
+PC: 21 SP: 181
+
+PC: 23 SP: 180
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 180
+
+PC: 27 SP: 180
+
+PC: 29 SP: 180
+
+PC: 11 SP: 180
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 180
+
+PC: 15 SP: 180
+
+PC: 18 SP: 180
+
+PC: 21 SP: 180
+
+PC: 23 SP: 179
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 179
+
+PC: 27 SP: 179
+
+PC: 29 SP: 179
+
+PC: 11 SP: 179
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 179
+
+PC: 15 SP: 179
+
+PC: 18 SP: 179
+
+PC: 21 SP: 179
+
+PC: 23 SP: 178
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 178
+
+PC: 27 SP: 178
+
+PC: 29 SP: 178
+
+PC: 11 SP: 178
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 178
+
+PC: 15 SP: 178
+
+PC: 18 SP: 178
+
+PC: 21 SP: 178
+
+PC: 23 SP: 177
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 177
+
+PC: 27 SP: 177
+
+PC: 29 SP: 177
+
+PC: 11 SP: 177
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 177
+
+PC: 15 SP: 177
+
+PC: 18 SP: 177
+
+PC: 21 SP: 177
+
+PC: 23 SP: 176
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 176
+
+PC: 27 SP: 176
+
+PC: 29 SP: 176
+
+PC: 11 SP: 176
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 176
+
+PC: 15 SP: 176
+
+PC: 18 SP: 176
+
+PC: 21 SP: 176
+
+PC: 23 SP: 175
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 175
+
+PC: 27 SP: 175
+
+PC: 29 SP: 175
+
+PC: 11 SP: 175
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 175
+
+PC: 15 SP: 175
+
+PC: 18 SP: 175
+
+PC: 21 SP: 175
+
+PC: 23 SP: 174
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 174
+
+PC: 27 SP: 174
+
+PC: 29 SP: 174
+
+PC: 11 SP: 174
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 174
+
+PC: 15 SP: 174
+
+PC: 18 SP: 174
+
+PC: 21 SP: 174
+
+PC: 23 SP: 173
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 173
+
+PC: 27 SP: 173
+
+PC: 29 SP: 173
+
+PC: 11 SP: 173
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 173
+
+PC: 15 SP: 173
+
+PC: 18 SP: 173
+
+PC: 21 SP: 173
+
+PC: 23 SP: 172
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 172
+
+PC: 27 SP: 172
+
+PC: 29 SP: 172
+
+PC: 11 SP: 172
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 172
+
+PC: 15 SP: 172
+
+PC: 18 SP: 172
+
+PC: 21 SP: 172
+
+PC: 23 SP: 171
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 171
+
+PC: 27 SP: 171
+
+PC: 29 SP: 171
+
+PC: 11 SP: 171
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 171
+
+PC: 15 SP: 171
+
+PC: 18 SP: 171
+
+PC: 21 SP: 171
+
+PC: 23 SP: 170
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 170
+
+PC: 27 SP: 170
+
+PC: 29 SP: 170
+
+PC: 11 SP: 170
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 170
+
+PC: 15 SP: 170
+
+PC: 18 SP: 170
+
+PC: 21 SP: 170
+
+PC: 23 SP: 169
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 169
+
+PC: 27 SP: 169
+
+PC: 29 SP: 169
+
+PC: 11 SP: 169
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 169
+
+PC: 15 SP: 169
+
+PC: 18 SP: 169
+
+PC: 21 SP: 169
+
+PC: 23 SP: 168
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 168
+
+PC: 27 SP: 168
+
+PC: 29 SP: 168
+
+PC: 11 SP: 168
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 168
+
+PC: 15 SP: 168
+
+PC: 18 SP: 168
+
+PC: 21 SP: 168
+
+PC: 23 SP: 167
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 167
+
+PC: 27 SP: 167
+
+PC: 29 SP: 167
+
+PC: 11 SP: 167
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 167
+
+PC: 15 SP: 167
+
+PC: 18 SP: 167
+
+PC: 21 SP: 167
+
+PC: 23 SP: 166
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 166
+
+PC: 27 SP: 166
+
+PC: 29 SP: 166
+
+PC: 11 SP: 166
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 166
+
+PC: 15 SP: 166
+
+PC: 18 SP: 166
+
+PC: 21 SP: 166
+
+PC: 23 SP: 165
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 165
+
+PC: 27 SP: 165
+
+PC: 29 SP: 165
+
+PC: 11 SP: 165
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 165
+
+PC: 15 SP: 165
+
+PC: 18 SP: 165
+
+PC: 21 SP: 165
+
+PC: 23 SP: 164
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 164
+
+PC: 27 SP: 164
+
+PC: 29 SP: 164
+
+PC: 11 SP: 164
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 164
+
+PC: 15 SP: 164
+
+PC: 18 SP: 164
+
+PC: 21 SP: 164
+
+PC: 23 SP: 163
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 163
+
+PC: 27 SP: 163
+
+PC: 29 SP: 163
+
+PC: 11 SP: 163
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 163
+
+PC: 15 SP: 163
+
+PC: 18 SP: 163
+
+PC: 21 SP: 163
+
+PC: 23 SP: 162
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 162
+
+PC: 27 SP: 162
+
+PC: 29 SP: 162
+
+PC: 11 SP: 162
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 162
+
+PC: 15 SP: 162
+
+PC: 18 SP: 162
+
+PC: 21 SP: 162
+
+PC: 23 SP: 161
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 161
+
+PC: 27 SP: 161
+
+PC: 29 SP: 161
+
+PC: 11 SP: 161
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 161
+
+PC: 15 SP: 161
+
+PC: 18 SP: 161
+
+PC: 21 SP: 161
+
+PC: 23 SP: 160
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 160
+
+PC: 27 SP: 160
+
+PC: 29 SP: 160
+
+PC: 11 SP: 160
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 160
+
+PC: 15 SP: 160
+
+PC: 18 SP: 160
+
+PC: 21 SP: 160
+
+PC: 23 SP: 159
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 159
+
+PC: 27 SP: 159
+
+PC: 29 SP: 159
+
+PC: 11 SP: 159
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 159
+
+PC: 15 SP: 159
+
+PC: 18 SP: 159
+
+PC: 21 SP: 159
+
+PC: 23 SP: 158
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 158
+
+PC: 27 SP: 158
+
+PC: 29 SP: 158
+
+PC: 11 SP: 158
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 158
+
+PC: 15 SP: 158
+
+PC: 18 SP: 158
+
+PC: 21 SP: 158
+
+PC: 23 SP: 157
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 157
+
+PC: 27 SP: 157
+
+PC: 29 SP: 157
+
+PC: 11 SP: 157
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 157
+
+PC: 15 SP: 157
+
+PC: 18 SP: 157
+
+PC: 21 SP: 157
+
+PC: 23 SP: 156
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 156
+
+PC: 27 SP: 156
+
+PC: 29 SP: 156
+
+PC: 11 SP: 156
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 156
+
+PC: 15 SP: 156
+
+PC: 18 SP: 156
+
+PC: 21 SP: 156
+
+PC: 23 SP: 155
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 155
+
+PC: 27 SP: 155
+
+PC: 29 SP: 155
+
+PC: 11 SP: 155
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 155
+
+PC: 15 SP: 155
+
+PC: 18 SP: 155
+
+PC: 21 SP: 155
+
+PC: 23 SP: 154
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 154
+
+PC: 27 SP: 154
+
+PC: 29 SP: 154
+
+PC: 11 SP: 154
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 154
+
+PC: 15 SP: 154
+
+PC: 18 SP: 154
+
+PC: 21 SP: 154
+
+PC: 23 SP: 153
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 153
+
+PC: 27 SP: 153
+
+PC: 29 SP: 153
+
+PC: 11 SP: 153
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 153
+
+PC: 15 SP: 153
+
+PC: 18 SP: 153
+
+PC: 21 SP: 153
+
+PC: 23 SP: 152
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 152
+
+PC: 27 SP: 152
+
+PC: 29 SP: 152
+
+PC: 11 SP: 152
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 152
+
+PC: 15 SP: 152
+
+PC: 18 SP: 152
+
+PC: 21 SP: 152
+
+PC: 23 SP: 151
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 151
+
+PC: 27 SP: 151
+
+PC: 29 SP: 151
+
+PC: 11 SP: 151
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 151
+
+PC: 15 SP: 151
+
+PC: 18 SP: 151
+
+PC: 21 SP: 151
+
+PC: 23 SP: 150
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 150
+
+PC: 27 SP: 150
+
+PC: 29 SP: 150
+
+PC: 11 SP: 150
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 150
+
+PC: 15 SP: 150
+
+PC: 18 SP: 150
+
+PC: 21 SP: 150
+
+PC: 23 SP: 149
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 149
+
+PC: 27 SP: 149
+
+PC: 29 SP: 149
+
+PC: 11 SP: 149
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 149
+
+PC: 15 SP: 149
+
+PC: 18 SP: 149
+
+PC: 21 SP: 149
+
+PC: 23 SP: 148
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 148
+
+PC: 27 SP: 148
+
+PC: 29 SP: 148
+
+PC: 11 SP: 148
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 148
+
+PC: 15 SP: 148
+
+PC: 18 SP: 148
+
+PC: 21 SP: 148
+
+PC: 23 SP: 147
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 147
+
+PC: 27 SP: 147
+
+PC: 29 SP: 147
+
+PC: 11 SP: 147
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 147
+
+PC: 15 SP: 147
+
+PC: 18 SP: 147
+
+PC: 21 SP: 147
+
+PC: 23 SP: 146
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 146
+
+PC: 27 SP: 146
+
+PC: 29 SP: 146
+
+PC: 11 SP: 146
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 146
+
+PC: 15 SP: 146
+
+PC: 18 SP: 146
+
+PC: 21 SP: 146
+
+PC: 23 SP: 145
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 145
+
+PC: 27 SP: 145
+
+PC: 29 SP: 145
+
+PC: 11 SP: 145
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 145
+
+PC: 15 SP: 145
+
+PC: 18 SP: 145
+
+PC: 21 SP: 145
+
+PC: 23 SP: 144
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 144
+
+PC: 27 SP: 144
+
+PC: 29 SP: 144
+
+PC: 11 SP: 144
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 144
+
+PC: 15 SP: 144
+
+PC: 18 SP: 144
+
+PC: 21 SP: 144
+
+PC: 23 SP: 143
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 143
+
+PC: 27 SP: 143
+
+PC: 29 SP: 143
+
+PC: 11 SP: 143
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 143
+
+PC: 15 SP: 143
+
+PC: 18 SP: 143
+
+PC: 21 SP: 143
+
+PC: 23 SP: 142
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 142
+
+PC: 27 SP: 142
+
+PC: 29 SP: 142
+
+PC: 11 SP: 142
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 142
+
+PC: 15 SP: 142
+
+PC: 18 SP: 142
+
+PC: 21 SP: 142
+
+PC: 23 SP: 141
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 141
+
+PC: 27 SP: 141
+
+PC: 29 SP: 141
+
+PC: 11 SP: 141
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 141
+
+PC: 15 SP: 141
+
+PC: 18 SP: 141
+
+PC: 21 SP: 141
+
+PC: 23 SP: 140
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 140
+
+PC: 27 SP: 140
+
+PC: 29 SP: 140
+
+PC: 11 SP: 140
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 140
+
+PC: 15 SP: 140
+
+PC: 18 SP: 140
+
+PC: 21 SP: 140
+
+PC: 23 SP: 139
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 139
+
+PC: 27 SP: 139
+
+PC: 29 SP: 139
+
+PC: 11 SP: 139
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 139
+
+PC: 15 SP: 139
+
+PC: 18 SP: 139
+
+PC: 21 SP: 139
+
+PC: 23 SP: 138
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 138
+
+PC: 27 SP: 138
+
+PC: 29 SP: 138
+
+PC: 11 SP: 138
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 138
+
+PC: 15 SP: 138
+
+PC: 18 SP: 138
+
+PC: 21 SP: 138
+
+PC: 23 SP: 137
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 137
+
+PC: 27 SP: 137
+
+PC: 29 SP: 137
+
+PC: 11 SP: 137
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 137
+
+PC: 15 SP: 137
+
+PC: 18 SP: 137
+
+PC: 21 SP: 137
+
+PC: 23 SP: 136
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 136
+
+PC: 27 SP: 136
+
+PC: 29 SP: 136
+
+PC: 11 SP: 136
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 136
+
+PC: 15 SP: 136
+
+PC: 18 SP: 136
+
+PC: 21 SP: 136
+
+PC: 23 SP: 135
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 135
+
+PC: 27 SP: 135
+
+PC: 29 SP: 135
+
+PC: 11 SP: 135
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 135
+
+PC: 15 SP: 135
+
+PC: 18 SP: 135
+
+PC: 21 SP: 135
+
+PC: 23 SP: 134
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 134
+
+PC: 27 SP: 134
+
+PC: 29 SP: 134
+
+PC: 11 SP: 134
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 134
+
+PC: 15 SP: 134
+
+PC: 18 SP: 134
+
+PC: 21 SP: 134
+
+PC: 23 SP: 133
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 133
+
+PC: 27 SP: 133
+
+PC: 29 SP: 133
+
+PC: 11 SP: 133
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 133
+
+PC: 15 SP: 133
+
+PC: 18 SP: 133
+
+PC: 21 SP: 133
+
+PC: 23 SP: 132
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 132
+
+PC: 27 SP: 132
+
+PC: 29 SP: 132
+
+PC: 11 SP: 132
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 132
+
+PC: 15 SP: 132
+
+PC: 18 SP: 132
+
+PC: 21 SP: 132
+
+PC: 23 SP: 131
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 131
+
+PC: 27 SP: 131
+
+PC: 29 SP: 131
+
+PC: 11 SP: 131
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 131
+
+PC: 15 SP: 131
+
+PC: 18 SP: 131
+
+PC: 21 SP: 131
+
+PC: 23 SP: 130
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 130
+
+PC: 27 SP: 130
+
+PC: 29 SP: 130
+
+PC: 11 SP: 130
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 130
+
+PC: 15 SP: 130
+
+PC: 18 SP: 130
+
+PC: 21 SP: 130
+
+PC: 23 SP: 129
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 129
+
+PC: 27 SP: 129
+
+PC: 29 SP: 129
+
+PC: 11 SP: 129
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 129
+
+PC: 15 SP: 129
+
+PC: 18 SP: 129
+
+PC: 21 SP: 129
+
+PC: 23 SP: 128
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 128
+
+PC: 27 SP: 128
+
+PC: 29 SP: 128
+
+PC: 11 SP: 128
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 128
+
+PC: 15 SP: 128
+
+PC: 18 SP: 128
+
+PC: 21 SP: 128
+
+PC: 23 SP: 127
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 127
+
+PC: 27 SP: 127
+
+PC: 29 SP: 127
+
+PC: 11 SP: 127
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 127
+
+PC: 15 SP: 127
+
+PC: 18 SP: 127
+
+PC: 21 SP: 127
+
+PC: 23 SP: 126
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 126
+
+PC: 27 SP: 126
+
+PC: 29 SP: 126
+
+PC: 11 SP: 126
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 126
+
+PC: 15 SP: 126
+
+PC: 18 SP: 126
+
+PC: 21 SP: 126
+
+PC: 23 SP: 125
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 125
+
+PC: 27 SP: 125
+
+PC: 29 SP: 125
+
+PC: 11 SP: 125
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 125
+
+PC: 15 SP: 125
+
+PC: 18 SP: 125
+
+PC: 21 SP: 125
+
+PC: 23 SP: 124
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 124
+
+PC: 27 SP: 124
+
+PC: 29 SP: 124
+
+PC: 11 SP: 124
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 124
+
+PC: 15 SP: 124
+
+PC: 18 SP: 124
+
+PC: 21 SP: 124
+
+PC: 23 SP: 123
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 123
+
+PC: 27 SP: 123
+
+PC: 29 SP: 123
+
+PC: 11 SP: 123
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 123
+
+PC: 15 SP: 123
+
+PC: 18 SP: 123
+
+PC: 21 SP: 123
+
+PC: 23 SP: 122
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 122
+
+PC: 27 SP: 122
+
+PC: 29 SP: 122
+
+PC: 11 SP: 122
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 122
+
+PC: 15 SP: 122
+
+PC: 18 SP: 122
+
+PC: 21 SP: 122
+
+PC: 23 SP: 121
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 121
+
+PC: 27 SP: 121
+
+PC: 29 SP: 121
+
+PC: 11 SP: 121
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 121
+
+PC: 15 SP: 121
+
+PC: 18 SP: 121
+
+PC: 21 SP: 121
+
+PC: 23 SP: 120
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 120
+
+PC: 27 SP: 120
+
+PC: 29 SP: 120
+
+PC: 11 SP: 120
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 120
+
+PC: 15 SP: 120
+
+PC: 18 SP: 120
+
+PC: 21 SP: 120
+
+PC: 23 SP: 119
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 119
+
+PC: 27 SP: 119
+
+PC: 29 SP: 119
+
+PC: 11 SP: 119
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 119
+
+PC: 15 SP: 119
+
+PC: 18 SP: 119
+
+PC: 21 SP: 119
+
+PC: 23 SP: 118
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 118
+
+PC: 27 SP: 118
+
+PC: 29 SP: 118
+
+PC: 11 SP: 118
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 118
+
+PC: 15 SP: 118
+
+PC: 18 SP: 118
+
+PC: 21 SP: 118
+
+PC: 23 SP: 117
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 117
+
+PC: 27 SP: 117
+
+PC: 29 SP: 117
+
+PC: 11 SP: 117
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 117
+
+PC: 15 SP: 117
+
+PC: 18 SP: 117
+
+PC: 21 SP: 117
+
+PC: 23 SP: 116
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 116
+
+PC: 27 SP: 116
+
+PC: 29 SP: 116
+
+PC: 11 SP: 116
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 116
+
+PC: 15 SP: 116
+
+PC: 18 SP: 116
+
+PC: 21 SP: 116
+
+PC: 23 SP: 115
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 115
+
+PC: 27 SP: 115
+
+PC: 29 SP: 115
+
+PC: 11 SP: 115
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 115
+
+PC: 15 SP: 115
+
+PC: 18 SP: 115
+
+PC: 21 SP: 115
+
+PC: 23 SP: 114
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 114
+
+PC: 27 SP: 114
+
+PC: 29 SP: 114
+
+PC: 11 SP: 114
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 114
+
+PC: 15 SP: 114
+
+PC: 18 SP: 114
+
+PC: 21 SP: 114
+
+PC: 23 SP: 113
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 113
+
+PC: 27 SP: 113
+
+PC: 29 SP: 113
+
+PC: 11 SP: 113
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 113
+
+PC: 15 SP: 113
+
+PC: 18 SP: 113
+
+PC: 21 SP: 113
+
+PC: 23 SP: 112
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 112
+
+PC: 27 SP: 112
+
+PC: 29 SP: 112
+
+PC: 11 SP: 112
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 112
+
+PC: 15 SP: 112
+
+PC: 18 SP: 112
+
+PC: 21 SP: 112
+
+PC: 23 SP: 111
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 111
+
+PC: 27 SP: 111
+
+PC: 29 SP: 111
+
+PC: 11 SP: 111
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 111
+
+PC: 15 SP: 111
+
+PC: 18 SP: 111
+
+PC: 21 SP: 111
+
+PC: 23 SP: 110
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 110
+
+PC: 27 SP: 110
+
+PC: 29 SP: 110
+
+PC: 11 SP: 110
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 110
+
+PC: 15 SP: 110
+
+PC: 18 SP: 110
+
+PC: 21 SP: 110
+
+PC: 23 SP: 109
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 109
+
+PC: 27 SP: 109
+
+PC: 29 SP: 109
+
+PC: 11 SP: 109
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 109
+
+PC: 15 SP: 109
+
+PC: 18 SP: 109
+
+PC: 21 SP: 109
+
+PC: 23 SP: 108
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 108
+
+PC: 27 SP: 108
+
+PC: 29 SP: 108
+
+PC: 11 SP: 108
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 108
+
+PC: 15 SP: 108
+
+PC: 18 SP: 108
+
+PC: 21 SP: 108
+
+PC: 23 SP: 107
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 107
+
+PC: 27 SP: 107
+
+PC: 29 SP: 107
+
+PC: 11 SP: 107
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 107
+
+PC: 15 SP: 107
+
+PC: 18 SP: 107
+
+PC: 21 SP: 107
+
+PC: 23 SP: 106
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 106
+
+PC: 27 SP: 106
+
+PC: 29 SP: 106
+
+PC: 11 SP: 106
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 106
+
+PC: 15 SP: 106
+
+PC: 18 SP: 106
+
+PC: 21 SP: 106
+
+PC: 23 SP: 105
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 105
+
+PC: 27 SP: 105
+
+PC: 29 SP: 105
+
+PC: 11 SP: 105
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 105
+
+PC: 15 SP: 105
+
+PC: 18 SP: 105
+
+PC: 21 SP: 105
+
+PC: 23 SP: 104
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 104
+
+PC: 27 SP: 104
+
+PC: 29 SP: 104
+
+PC: 11 SP: 104
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 104
+
+PC: 15 SP: 104
+
+PC: 18 SP: 104
+
+PC: 21 SP: 104
+
+PC: 23 SP: 103
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 103
+
+PC: 27 SP: 103
+
+PC: 29 SP: 103
+
+PC: 11 SP: 103
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 103
+
+PC: 15 SP: 103
+
+PC: 18 SP: 103
+
+PC: 21 SP: 103
+
+PC: 23 SP: 102
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 102
+
+PC: 27 SP: 102
+
+PC: 29 SP: 102
+
+PC: 11 SP: 102
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 102
+
+PC: 15 SP: 102
+
+PC: 18 SP: 102
+
+PC: 21 SP: 102
+
+PC: 23 SP: 101
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 101
+
+PC: 27 SP: 101
+
+PC: 29 SP: 101
+
+PC: 11 SP: 101
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 101
+
+PC: 15 SP: 101
+
+PC: 18 SP: 101
+
+PC: 21 SP: 101
+
+PC: 23 SP: 100
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 100
+
+PC: 27 SP: 100
+
+PC: 29 SP: 100
+
+PC: 11 SP: 100
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 100
+
+PC: 15 SP: 100
+
+PC: 18 SP: 100
+
+PC: 21 SP: 100
+
+PC: 23 SP: 99
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 99
+
+PC: 27 SP: 99
+
+PC: 29 SP: 99
+
+PC: 11 SP: 99
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 99
+
+PC: 15 SP: 99
+
+PC: 18 SP: 99
+
+PC: 21 SP: 99
+
+PC: 23 SP: 98
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 98
+
+PC: 27 SP: 98
+
+PC: 29 SP: 98
+
+PC: 11 SP: 98
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 98
+
+PC: 15 SP: 98
+
+PC: 18 SP: 98
+
+PC: 21 SP: 98
+
+PC: 23 SP: 97
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 97
+
+PC: 27 SP: 97
+
+PC: 29 SP: 97
+
+PC: 11 SP: 97
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 97
+
+PC: 15 SP: 97
+
+PC: 18 SP: 97
+
+PC: 21 SP: 97
+
+PC: 23 SP: 96
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 96
+
+PC: 27 SP: 96
+
+PC: 29 SP: 96
+
+PC: 11 SP: 96
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 96
+
+PC: 15 SP: 96
+
+PC: 18 SP: 96
+
+PC: 21 SP: 96
+
+PC: 23 SP: 95
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 95
+
+PC: 27 SP: 95
+
+PC: 29 SP: 95
+
+PC: 11 SP: 95
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 95
+
+PC: 15 SP: 95
+
+PC: 18 SP: 95
+
+PC: 21 SP: 95
+
+PC: 23 SP: 94
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 94
+
+PC: 27 SP: 94
+
+PC: 29 SP: 94
+
+PC: 11 SP: 94
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 94
+
+PC: 15 SP: 94
+
+PC: 18 SP: 94
+
+PC: 21 SP: 94
+
+PC: 23 SP: 93
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 93
+
+PC: 27 SP: 93
+
+PC: 29 SP: 93
+
+PC: 11 SP: 93
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 93
+
+PC: 15 SP: 93
+
+PC: 18 SP: 93
+
+PC: 21 SP: 93
+
+PC: 23 SP: 92
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 92
+
+PC: 27 SP: 92
+
+PC: 29 SP: 92
+
+PC: 11 SP: 92
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 92
+
+PC: 15 SP: 92
+
+PC: 18 SP: 92
+
+PC: 21 SP: 92
+
+PC: 23 SP: 91
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 91
+
+PC: 27 SP: 91
+
+PC: 29 SP: 91
+
+PC: 11 SP: 91
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 91
+
+PC: 15 SP: 91
+
+PC: 18 SP: 91
+
+PC: 21 SP: 91
+
+PC: 23 SP: 90
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 90
+
+PC: 27 SP: 90
+
+PC: 29 SP: 90
+
+PC: 11 SP: 90
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 90
+
+PC: 15 SP: 90
+
+PC: 18 SP: 90
+
+PC: 21 SP: 90
+
+PC: 23 SP: 89
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 89
+
+PC: 27 SP: 89
+
+PC: 29 SP: 89
+
+PC: 11 SP: 89
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 89
+
+PC: 15 SP: 89
+
+PC: 18 SP: 89
+
+PC: 21 SP: 89
+
+PC: 23 SP: 88
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 88
+
+PC: 27 SP: 88
+
+PC: 29 SP: 88
+
+PC: 11 SP: 88
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 88
+
+PC: 15 SP: 88
+
+PC: 18 SP: 88
+
+PC: 21 SP: 88
+
+PC: 23 SP: 87
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 87
+
+PC: 27 SP: 87
+
+PC: 29 SP: 87
+
+PC: 11 SP: 87
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 87
+
+PC: 15 SP: 87
+
+PC: 18 SP: 87
+
+PC: 21 SP: 87
+
+PC: 23 SP: 86
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 86
+
+PC: 27 SP: 86
+
+PC: 29 SP: 86
+
+PC: 11 SP: 86
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 86
+
+PC: 15 SP: 86
+
+PC: 18 SP: 86
+
+PC: 21 SP: 86
+
+PC: 23 SP: 85
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 85
+
+PC: 27 SP: 85
+
+PC: 29 SP: 85
+
+PC: 11 SP: 85
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 85
+
+PC: 15 SP: 85
+
+PC: 18 SP: 85
+
+PC: 21 SP: 85
+
+PC: 23 SP: 84
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 84
+
+PC: 27 SP: 84
+
+PC: 29 SP: 84
+
+PC: 11 SP: 84
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 84
+
+PC: 15 SP: 84
+
+PC: 18 SP: 84
+
+PC: 21 SP: 84
+
+PC: 23 SP: 83
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 83
+
+PC: 27 SP: 83
+
+PC: 29 SP: 83
+
+PC: 11 SP: 83
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 83
+
+PC: 15 SP: 83
+
+PC: 18 SP: 83
+
+PC: 21 SP: 83
+
+PC: 23 SP: 82
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 82
+
+PC: 27 SP: 82
+
+PC: 29 SP: 82
+
+PC: 11 SP: 82
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 82
+
+PC: 15 SP: 82
+
+PC: 18 SP: 82
+
+PC: 21 SP: 82
+
+PC: 23 SP: 81
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 81
+
+PC: 27 SP: 81
+
+PC: 29 SP: 81
+
+PC: 11 SP: 81
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 81
+
+PC: 15 SP: 81
+
+PC: 18 SP: 81
+
+PC: 21 SP: 81
+
+PC: 23 SP: 80
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 80
+
+PC: 27 SP: 80
+
+PC: 29 SP: 80
+
+PC: 11 SP: 80
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 80
+
+PC: 15 SP: 80
+
+PC: 18 SP: 80
+
+PC: 21 SP: 80
+
+PC: 23 SP: 79
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 79
+
+PC: 27 SP: 79
+
+PC: 29 SP: 79
+
+PC: 11 SP: 79
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 79
+
+PC: 15 SP: 79
+
+PC: 18 SP: 79
+
+PC: 21 SP: 79
+
+PC: 23 SP: 78
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 78
+
+PC: 27 SP: 78
+
+PC: 29 SP: 78
+
+PC: 11 SP: 78
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 78
+
+PC: 15 SP: 78
+
+PC: 18 SP: 78
+
+PC: 21 SP: 78
+
+PC: 23 SP: 77
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 77
+
+PC: 27 SP: 77
+
+PC: 29 SP: 77
+
+PC: 11 SP: 77
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 77
+
+PC: 15 SP: 77
+
+PC: 18 SP: 77
+
+PC: 21 SP: 77
+
+PC: 23 SP: 76
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 76
+
+PC: 27 SP: 76
+
+PC: 29 SP: 76
+
+PC: 11 SP: 76
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 76
+
+PC: 15 SP: 76
+
+PC: 18 SP: 76
+
+PC: 21 SP: 76
+
+PC: 23 SP: 75
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 75
+
+PC: 27 SP: 75
+
+PC: 29 SP: 75
+
+PC: 11 SP: 75
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 75
+
+PC: 15 SP: 75
+
+PC: 18 SP: 75
+
+PC: 21 SP: 75
+
+PC: 23 SP: 74
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 74
+
+PC: 27 SP: 74
+
+PC: 29 SP: 74
+
+PC: 11 SP: 74
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 74
+
+PC: 15 SP: 74
+
+PC: 18 SP: 74
+
+PC: 21 SP: 74
+
+PC: 23 SP: 73
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 73
+
+PC: 27 SP: 73
+
+PC: 29 SP: 73
+
+PC: 11 SP: 73
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 73
+
+PC: 15 SP: 73
+
+PC: 18 SP: 73
+
+PC: 21 SP: 73
+
+PC: 23 SP: 72
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 72
+
+PC: 27 SP: 72
+
+PC: 29 SP: 72
+
+PC: 11 SP: 72
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 72
+
+PC: 15 SP: 72
+
+PC: 18 SP: 72
+
+PC: 21 SP: 72
+
+PC: 23 SP: 71
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 71
+
+PC: 27 SP: 71
+
+PC: 29 SP: 71
+
+PC: 11 SP: 71
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 71
+
+PC: 15 SP: 71
+
+PC: 18 SP: 71
+
+PC: 21 SP: 71
+
+PC: 23 SP: 70
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 70
+
+PC: 27 SP: 70
+
+PC: 29 SP: 70
+
+PC: 11 SP: 70
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 70
+
+PC: 15 SP: 70
+
+PC: 18 SP: 70
+
+PC: 21 SP: 70
+
+PC: 23 SP: 69
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 69
+
+PC: 27 SP: 69
+
+PC: 29 SP: 69
+
+PC: 11 SP: 69
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 69
+
+PC: 15 SP: 69
+
+PC: 18 SP: 69
+
+PC: 21 SP: 69
+
+PC: 23 SP: 68
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 68
+
+PC: 27 SP: 68
+
+PC: 29 SP: 68
+
+PC: 11 SP: 68
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 68
+
+PC: 15 SP: 68
+
+PC: 18 SP: 68
+
+PC: 21 SP: 68
+
+PC: 23 SP: 67
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 67
+
+PC: 27 SP: 67
+
+PC: 29 SP: 67
+
+PC: 11 SP: 67
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 67
+
+PC: 15 SP: 67
+
+PC: 18 SP: 67
+
+PC: 21 SP: 67
+
+PC: 23 SP: 66
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 66
+
+PC: 27 SP: 66
+
+PC: 29 SP: 66
+
+PC: 11 SP: 66
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 66
+
+PC: 15 SP: 66
+
+PC: 18 SP: 66
+
+PC: 21 SP: 66
+
+PC: 23 SP: 65
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 65
+
+PC: 27 SP: 65
+
+PC: 29 SP: 65
+
+PC: 11 SP: 65
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 65
+
+PC: 15 SP: 65
+
+PC: 18 SP: 65
+
+PC: 21 SP: 65
+
+PC: 23 SP: 64
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 64
+
+PC: 27 SP: 64
+
+PC: 29 SP: 64
+
+PC: 11 SP: 64
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 64
+
+PC: 15 SP: 64
+
+PC: 18 SP: 64
+
+PC: 21 SP: 64
+
+PC: 23 SP: 63
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 63
+
+PC: 27 SP: 63
+
+PC: 29 SP: 63
+
+PC: 11 SP: 63
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 63
+
+PC: 15 SP: 63
+
+PC: 18 SP: 63
+
+PC: 21 SP: 63
+
+PC: 23 SP: 62
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 62
+
+PC: 27 SP: 62
+
+PC: 29 SP: 62
+
+PC: 11 SP: 62
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 62
+
+PC: 15 SP: 62
+
+PC: 18 SP: 62
+
+PC: 21 SP: 62
+
+PC: 23 SP: 61
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 61
+
+PC: 27 SP: 61
+
+PC: 29 SP: 61
+
+PC: 11 SP: 61
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 61
+
+PC: 15 SP: 61
+
+PC: 18 SP: 61
+
+PC: 21 SP: 61
+
+PC: 23 SP: 60
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 60
+
+PC: 27 SP: 60
+
+PC: 29 SP: 60
+
+PC: 11 SP: 60
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 60
+
+PC: 15 SP: 60
+
+PC: 18 SP: 60
+
+PC: 21 SP: 60
+
+PC: 23 SP: 59
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 59
+
+PC: 27 SP: 59
+
+PC: 29 SP: 59
+
+PC: 11 SP: 59
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 59
+
+PC: 15 SP: 59
+
+PC: 18 SP: 59
+
+PC: 21 SP: 59
+
+PC: 23 SP: 58
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 58
+
+PC: 27 SP: 58
+
+PC: 29 SP: 58
+
+PC: 11 SP: 58
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 58
+
+PC: 15 SP: 58
+
+PC: 18 SP: 58
+
+PC: 21 SP: 58
+
+PC: 23 SP: 57
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 57
+
+PC: 27 SP: 57
+
+PC: 29 SP: 57
+
+PC: 11 SP: 57
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 57
+
+PC: 15 SP: 57
+
+PC: 18 SP: 57
+
+PC: 21 SP: 57
+
+PC: 23 SP: 56
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 56
+
+PC: 27 SP: 56
+
+PC: 29 SP: 56
+
+PC: 11 SP: 56
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 56
+
+PC: 15 SP: 56
+
+PC: 18 SP: 56
+
+PC: 21 SP: 56
+
+PC: 23 SP: 55
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 55
+
+PC: 27 SP: 55
+
+PC: 29 SP: 55
+
+PC: 11 SP: 55
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 55
+
+PC: 15 SP: 55
+
+PC: 18 SP: 55
+
+PC: 21 SP: 55
+
+PC: 23 SP: 54
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 54
+
+PC: 27 SP: 54
+
+PC: 29 SP: 54
+
+PC: 11 SP: 54
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 54
+
+PC: 15 SP: 54
+
+PC: 18 SP: 54
+
+PC: 21 SP: 54
+
+PC: 23 SP: 53
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 53
+
+PC: 27 SP: 53
+
+PC: 29 SP: 53
+
+PC: 11 SP: 53
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 53
+
+PC: 15 SP: 53
+
+PC: 18 SP: 53
+
+PC: 21 SP: 53
+
+PC: 23 SP: 52
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 52
+
+PC: 27 SP: 52
+
+PC: 29 SP: 52
+
+PC: 11 SP: 52
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 52
+
+PC: 15 SP: 52
+
+PC: 18 SP: 52
+
+PC: 21 SP: 52
+
+PC: 23 SP: 51
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 51
+
+PC: 27 SP: 51
+
+PC: 29 SP: 51
+
+PC: 11 SP: 51
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 51
+
+PC: 15 SP: 51
+
+PC: 18 SP: 51
+
+PC: 21 SP: 51
+
+PC: 23 SP: 50
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 50
+
+PC: 27 SP: 50
+
+PC: 29 SP: 50
+
+PC: 11 SP: 50
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 50
+
+PC: 15 SP: 50
+
+PC: 18 SP: 50
+
+PC: 21 SP: 50
+
+PC: 23 SP: 49
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 49
+
+PC: 27 SP: 49
+
+PC: 29 SP: 49
+
+PC: 11 SP: 49
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 49
+
+PC: 15 SP: 49
+
+PC: 18 SP: 49
+
+PC: 21 SP: 49
+
+PC: 23 SP: 48
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 48
+
+PC: 27 SP: 48
+
+PC: 29 SP: 48
+
+PC: 11 SP: 48
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 48
+
+PC: 15 SP: 48
+
+PC: 18 SP: 48
+
+PC: 21 SP: 48
+
+PC: 23 SP: 47
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 47
+
+PC: 27 SP: 47
+
+PC: 29 SP: 47
+
+PC: 11 SP: 47
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 47
+
+PC: 15 SP: 47
+
+PC: 18 SP: 47
+
+PC: 21 SP: 47
+
+PC: 23 SP: 46
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 46
+
+PC: 27 SP: 46
+
+PC: 29 SP: 46
+
+PC: 11 SP: 46
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 46
+
+PC: 15 SP: 46
+
+PC: 18 SP: 46
+
+PC: 21 SP: 46
+
+PC: 23 SP: 45
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 45
+
+PC: 27 SP: 45
+
+PC: 29 SP: 45
+
+PC: 11 SP: 45
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 45
+
+PC: 15 SP: 45
+
+PC: 18 SP: 45
+
+PC: 21 SP: 45
+
+PC: 23 SP: 44
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 44
+
+PC: 27 SP: 44
+
+PC: 29 SP: 44
+
+PC: 11 SP: 44
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 44
+
+PC: 15 SP: 44
+
+PC: 18 SP: 44
+
+PC: 21 SP: 44
+
+PC: 23 SP: 43
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 43
+
+PC: 27 SP: 43
+
+PC: 29 SP: 43
+
+PC: 11 SP: 43
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 43
+
+PC: 15 SP: 43
+
+PC: 18 SP: 43
+
+PC: 21 SP: 43
+
+PC: 23 SP: 42
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 42
+
+PC: 27 SP: 42
+
+PC: 29 SP: 42
+
+PC: 11 SP: 42
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 42
+
+PC: 15 SP: 42
+
+PC: 18 SP: 42
+
+PC: 21 SP: 42
+
+PC: 23 SP: 41
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 41
+
+PC: 27 SP: 41
+
+PC: 29 SP: 41
+
+PC: 11 SP: 41
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 41
+
+PC: 15 SP: 41
+
+PC: 18 SP: 41
+
+PC: 21 SP: 41
+
+PC: 23 SP: 40
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 40
+
+PC: 27 SP: 40
+
+PC: 29 SP: 40
+
+PC: 11 SP: 40
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 40
+
+PC: 15 SP: 40
+
+PC: 18 SP: 40
+
+PC: 21 SP: 40
+
+PC: 23 SP: 39
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 39
+
+PC: 27 SP: 39
+
+PC: 29 SP: 39
+
+PC: 11 SP: 39
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 39
+
+PC: 15 SP: 39
+
+PC: 18 SP: 39
+
+PC: 21 SP: 39
+
+PC: 23 SP: 38
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 38
+
+PC: 27 SP: 38
+
+PC: 29 SP: 38
+
+PC: 11 SP: 38
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 38
+
+PC: 15 SP: 38
+
+PC: 18 SP: 38
+
+PC: 21 SP: 38
+
+PC: 23 SP: 37
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 37
+
+PC: 27 SP: 37
+
+PC: 29 SP: 37
+
+PC: 11 SP: 37
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 37
+
+PC: 15 SP: 37
+
+PC: 18 SP: 37
+
+PC: 21 SP: 37
+
+PC: 23 SP: 36
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 36
+
+PC: 27 SP: 36
+
+PC: 29 SP: 36
+
+PC: 11 SP: 36
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 36
+
+PC: 15 SP: 36
+
+PC: 18 SP: 36
+
+PC: 21 SP: 36
+
+PC: 23 SP: 35
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 35
+
+PC: 27 SP: 35
+
+PC: 29 SP: 35
+
+PC: 11 SP: 35
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 35
+
+PC: 15 SP: 35
+
+PC: 18 SP: 35
+
+PC: 21 SP: 35
+
+PC: 23 SP: 34
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 34
+
+PC: 27 SP: 34
+
+PC: 29 SP: 34
+
+PC: 11 SP: 34
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 34
+
+PC: 15 SP: 34
+
+PC: 18 SP: 34
+
+PC: 21 SP: 34
+
+PC: 23 SP: 33
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 33
+
+PC: 27 SP: 33
+
+PC: 29 SP: 33
+
+PC: 11 SP: 33
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 33
+
+PC: 15 SP: 33
+
+PC: 18 SP: 33
+
+PC: 21 SP: 33
+
+PC: 23 SP: 32
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 32
+
+PC: 27 SP: 32
+
+PC: 29 SP: 32
+
+PC: 11 SP: 32
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 32
+
+PC: 15 SP: 32
+
+PC: 18 SP: 32
+
+PC: 21 SP: 32
+
+PC: 23 SP: 31
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 31
+
+PC: 27 SP: 31
+
+PC: 29 SP: 31
+
+PC: 11 SP: 31
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 31
+
+PC: 15 SP: 31
+
+PC: 18 SP: 31
+
+PC: 21 SP: 31
+
+PC: 23 SP: 30
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 30
+
+PC: 27 SP: 30
+
+PC: 29 SP: 30
+
+PC: 11 SP: 30
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 30
+
+PC: 15 SP: 30
+
+PC: 18 SP: 30
+
+PC: 21 SP: 30
+
+PC: 23 SP: 29
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 29
+
+PC: 27 SP: 29
+
+PC: 29 SP: 29
+
+PC: 1 SP: 29
+
+Value here: 1
+Value above: 1
+Added value sp: 31
+Printed add value prior: 0
+Printed add value: 2
+PC: 2 SP: 30
+
+Value here: 2
+Value above: 1
+Added value sp: 32
+Printed add value prior: 0
+Printed add value: 3
+PC: 3 SP: 31
+
+PC: 6 SP: 31
+
+PC: 8 SP: 30
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 9 SP: 30
+
+PC: 11 SP: 29
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 12 SP: 29
+
+PC: 15 SP: 29
+
+PC: 18 SP: 29
+
+PC: 21 SP: 29
+
+PC: 23 SP: 28
+
+Print stack
+0
+1
+1
+1
+1
+1
+1
+1
+1
+PC: 24 SP: 28
+
+PC: 27 SP: 28
+
+PC: 29 SP: 28
+
+Runtime Error: Stack Overflow

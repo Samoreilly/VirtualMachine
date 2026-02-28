@@ -3,8 +3,9 @@
 #include <cstdint>
 #include <limits>
 #include <type_traits>
+#include <vector>
 
-constexpr int MEM_SIZE = 4096;
+constexpr int MEM_SIZE = 65536;
 
 typedef uint16_t Reg;
 
@@ -72,10 +73,10 @@ public:
     void printStack();
 
     //initialize vm with some instructions
-    Virtual(const int init_program[], std::size_t size) {
+    Virtual(const std::vector<uint8_t> tokens, std::size_t size) {
 
         for(int i = 0; i < size; i++) {
-            cpu.stack[i] = init_program[i];
+            cpu.stack[i] = tokens.at(i);
 
         }
     }
