@@ -27,14 +27,16 @@ The machine runs a continuous loop to function.
 
 
 
-# Assembler 
-## (in progress)
-
-1. Take an .asm file that uses my instruction set defined in virtual_main.h
-2. Translate the data to a vector<int> that can be used to pass into the program
-
-
+# Assembler
+The assembler converts a text file into machine code. 
+1. It reads the instructions from an asm file.
+2. it converts the strings into a vector of integers.
+3. The virtual machine then evaluates the vector.
 
 # Lexer
-1. Translate keywords to matching hexadecimal
+The lexer processes the raw text.
+1. It identifies the keywords and numbers.
+2. It maps the keywords to the instruction set.
+3. It ignores whitespace and commas.
 
+4. Then passed onto the Virtual Machine.
