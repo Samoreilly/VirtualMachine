@@ -1,6 +1,7 @@
 #pragma once
 
 #include <cstdint>
+#include <limits>
 #include <type_traits>
 
 constexpr int MEM_SIZE = 4096;
@@ -45,8 +46,8 @@ struct CPU {
     
     int sp = MEM_SIZE - 1;
     int pc = 0;
-
     bool is_running {true};
+    int last_value {std::numeric_limits<int>::max()};
 };
 
 
@@ -65,7 +66,9 @@ public:
 
     void push(int reg, int value);
     void load(int reg, int value);
-   
+
+    bool checkLastOperationJumpZero();
+
     void printStack();
 
     //initialize vm with some instructions

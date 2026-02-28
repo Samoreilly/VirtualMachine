@@ -93,10 +93,10 @@ void Assembler::lexer() {
             std::cout << "Printed string: [" << curr << "]" << std::endl;
             int opcode = INSTRUCTIONS.at(op);
             tokens.push_back(opcode);
-
-            start_index = end_index;
+                        
         }
 
+        start_index = end_index;
 
     }
 

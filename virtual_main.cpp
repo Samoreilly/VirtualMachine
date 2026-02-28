@@ -2,6 +2,7 @@
 #include "virtual_main.h"
 #include "Assembler.h"
 #include <iostream>
+#include <limits>
 #include <stdexcept>
 
 
@@ -23,10 +24,13 @@ void Virtual::add(Instruction opcode) {
 
         cpu.stack[cpu.sp + 2] = (valA + valB);
 
+        cpu.last_value = cpu.stack[cpu.sp + 2];
+
         std::cout << "Added value sp: " << cpu.sp + 2 << "\n";
             
         cpu.stack[cpu.sp + 1] = 0;
         cpu.sp++;
+
         
         std::cout << "Printed add value prior: " << cpu.stack[cpu.sp] << "\n";
         std::cout << "Printed add value: " << cpu.stack[cpu.sp + 1] << "\n";
@@ -40,7 +44,8 @@ void Virtual::add(Instruction opcode) {
 
         cpu.reg[first_reg] += cpu.reg[second_reg];
         cpu.reg[second_reg] = 0;
-
+        
+        cpu.last_value = cpu.reg[first_reg];
     }
 }
 
@@ -59,6 +64,8 @@ void Virtual::mul(Instruction opcode) {
         cpu.stack[cpu.sp + 2] *= cpu.stack[cpu.sp + 1];
         std::cout << "After: " << cpu.stack[cpu.sp + 2];
         
+        cpu.last_value = cpu.stack[cpu.sp + 2];
+
         cpu.stack[cpu.sp + 1] = 0; 
         cpu.sp++;
     
@@ -69,6 +76,7 @@ void Virtual::mul(Instruction opcode) {
         cpu.reg[first_reg] *= cpu.reg[second_reg];
         cpu.reg[second_reg] = 0;
 
+        cpu.last_value = cpu.reg[first_reg];
     }
 }
 
@@ -88,6 +96,8 @@ void Virtual::sub(Instruction opcode) {
 
         cpu.stack[cpu.sp + 2] = firstVal - secVal;
         cpu.stack[cpu.sp + 1] = 0;
+
+        cpu.last_value = cpu.stack[cpu.sp + 2];
         
         std::cout << "Subtraction: " << cpu.stack[cpu.sp + 2];
         cpu.sp++;
@@ -99,6 +109,9 @@ void Virtual::sub(Instruction opcode) {
 
         cpu.reg[first_reg] -= cpu.reg[second_reg];
         cpu.reg[second_reg] = 0;
+        
+        cpu.last_value = cpu.reg[first_reg];
+
     }
 
 }
@@ -120,6 +133,8 @@ void Virtual::div(Instruction opcode) {
 
         cpu.stack[cpu.sp + 2] = firstVal / secondVal;
         
+        cpu.last_value = cpu.stack[cpu.sp + 2];
+
         cpu.stack[cpu.sp + 1] = 0; 
         cpu.sp++;
 
@@ -127,9 +142,12 @@ void Virtual::div(Instruction opcode) {
 
         int first_reg = cpu.stack[cpu.pc++];
         int second_reg = cpu.stack[cpu.pc++];
-    
+
         cpu.reg[first_reg] /= cpu.reg[second_reg];
         cpu.reg[second_reg] = 0;
+
+        cpu.last_value = cpu.reg[first_reg];
+
     }
 }
 
@@ -205,16 +223,18 @@ int Virtual::init_vm() {
 
                     load(reg_idx, value_to_load);
                     
+                    cpu.last_value = value_to_load;
                     break;
                 }
                 
                 case Instruction::PUSH: {
                     if(cpu.pc >= cpu.sp) throw std::runtime_error("Stack Overflow");
-
+                    
                     int reg_idx = cpu.stack[cpu.pc++];
                     int value_at_reg = cpu.reg[reg_idx];
-
+                    
                     cpu.stack[cpu.sp--] = value_at_reg;
+                    cpu.last_value = value_at_reg;
 
                     break;
                 }
@@ -246,6 +266,25 @@ int Virtual::init_vm() {
                     break;
                 }
 
+                case Instruction::JZ:
+                case Instruction::JUMP: {
+
+                    if(opcode == Instruction::JUMP) {
+                        int dest = cpu.stack[cpu.pc];
+                        cpu.pc = dest;
+
+                    }else {
+                        
+                        int dest = cpu.stack[cpu.pc++];
+
+                        //if not zero pc, keeps moving forward
+                        if(cpu.last_value == 0) {
+                            cpu.pc = dest;
+                        }
+                    }
+                    break;
+                }
+                
                 case Instruction::PRINT:
                     printStack();
                     break;
@@ -269,7 +308,6 @@ int main(void) {
     Assembler asmblr{file_name};
 
     asmblr.lexer();
-
 
     // std::cout << "\nStarting VirtualMachine\n\n";
     // 
