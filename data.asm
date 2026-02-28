@@ -1,28 +1,23 @@
 
 
-hello
+LOAD R0, 50
+LOAD R1, 20
+ADD_REG R0, R1
 
+PUSH R0
+PRINT
 
+LOAD R0, 10
+PUSH R0
+PRINT
 
+SUB_STACK
+PRINT
 
+POP_REG R0
+HALT
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-www
+LOAD R2, 0
+JZ 22       
+LOAD R2, 5
+HALT

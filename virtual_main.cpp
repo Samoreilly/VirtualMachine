@@ -5,6 +5,8 @@
 #include <stdexcept>
 
 
+//NOTE: to comment blocks its VISUAL MODE -> Select lines -> G -> B
+
 void Virtual::add(Instruction opcode) {
 
     if(opcode == Instruction::ADD_STACK) {
@@ -265,35 +267,38 @@ int main(void) {
     
     const std::string file_name = "data.asm";
     Assembler asmblr{file_name};
-    asmblr.load();
 
-    std::cout << "\nStarting VirtualMachine\n\n";
-    
-    int program[] = {
-        // Program data
-        0xB0, 0, 50,      // load 50 into register 0
-        0xB0, 1, 20,      // load 20 into register 1  
-        0x01, 0, 1,       // add registers 0 and 1
-        
-        0xB1, 0,          // push reg 0 onto stack (70)
-        0xFA,
-        0xB0, 0, 10,      // load value 10 into reg 0
-        0xB1, 0,          //push onto stack
-        
-        0xFA, 
-        0x02,             //subtraction on stack
-        
-        0xFA,             // print
-        0xB3, 0,          //pop and add to reg 0
-        0xFF              //halt program
-    };
+    asmblr.lexer();
 
-    constexpr std::size_t size = sizeof(program) / sizeof(program[0]);
 
-    Virtual vm(program, size);
+    // std::cout << "\nStarting VirtualMachine\n\n";
+    // 
 
-    vm.init_vm();
+    //  int program[] = {
+    //     // Program data
+    //     0xB0, 0, 50,      // load 50 into register 0
+    //     0xB0, 1, 20,      // load 20 into register 1  
+    //     0x01, 0, 1,       // add registers 0 and 1
+    //     
+    //     0xB1, 0,          // push reg 0 onto stack (70)
+    //     0xFA,
+    //     0xB0, 0, 10,      // load value 10 into reg 0
+    //     0xB1, 0,          //push onto stack
+    //     
+    //     0xFA, 
+    //     0x02,             //subtraction on stack
+    //     
+    //     0xFA,             // print
+    //     0xB3, 0,          //pop and add to reg 0
+    //     0xFF              //halt program
+    // };
 
-    return 0;
+    // constexpr std::size_t size = sizeof(program) / sizeof(program[0]);
+
+    // Virtual vm(program, size);
+
+    // vm.init_vm();
+
+    // return 0;
 
 }

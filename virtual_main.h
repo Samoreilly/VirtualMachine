@@ -9,7 +9,7 @@ typedef uint16_t Reg;
 
 
 //corresponds to registers
-enum Instruction : int {
+enum Instruction : uint8_t {
        
     //operands
     ADD_STACK = 0x00,
@@ -30,14 +30,19 @@ enum Instruction : int {
     POP_NOREG = 0xB2,
     POP_REG = 0xB3,
 
+    JUMP = 0xB4,
+    JZ = 0xB5,
+
     PRINT = 0xFA,
     HALT = 0xFF
 };
 
 struct CPU {
-    int reg[6] = {0};
-    int stack[MEM_SIZE] = {0};
+    uint8_t memory[MEM_SIZE];
 
+    int stack[MEM_SIZE] = {0};
+    int reg[6] = {0};
+    
     int sp = MEM_SIZE - 1;
     int pc = 0;
 
@@ -68,6 +73,7 @@ public:
 
         for(int i = 0; i < size; i++) {
             cpu.stack[i] = init_program[i];
+
         }
-}
+    }
 };
