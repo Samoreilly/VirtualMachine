@@ -24,3 +24,17 @@ The machine runs a continuous loop to function.
 3. Figure out what the instruction means.
 4. Perform the action.
 5. Stop when a halt instruction is read.
+
+
+
+# Assembler 
+## (in progress)
+
+1. Take an .asm file that uses my instruction set defined in virtual_main.h
+2. Translate the data to a vector<int> that can be used to pass into the program
+
+
+
+# Lexer
+1. Translate keywords to matching hexadecimal
+

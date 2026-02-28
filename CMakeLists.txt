@@ -3,4 +3,4 @@ project(VirtualMachine)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(VirtualMachine virtual_main.cpp)
+add_executable(VirtualMachine virtual_main.cpp Assembler.cpp)

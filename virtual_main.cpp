@@ -1,5 +1,6 @@
 
 #include "virtual_main.h"
+#include "Assembler.h"
 #include <iostream>
 #include <stdexcept>
 
@@ -262,6 +263,9 @@ int Virtual::init_vm() {
 
 int main(void) {
     
+    const std::string file_name = "data.asm";
+    Assembler asmblr{file_name};
+    asmblr.load();
 
     std::cout << "\nStarting VirtualMachine\n\n";
     

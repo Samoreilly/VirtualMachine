@@ -69,5 +69,5 @@ public:
         for(int i = 0; i < size; i++) {
             cpu.stack[i] = init_program[i];
         }
-    }
+}
 };
