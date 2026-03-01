@@ -22,7 +22,7 @@ The machine runs a continuous loop to function.
 1. Read the instruction at the program counter.
 2. Move the program counter forward.
 3. Figure out what the instruction means.
-4. Perform the action.
+4. Perform the action.U
 5. Stop when a halt instruction is read.
 
 

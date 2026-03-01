@@ -24,6 +24,7 @@ class Assembler {
         {"POP_NOREG", POP_NOREG},
         {"POP_REG",   POP_REG},
         {"PRINT",     PRINT},
+        {"PRINT_REG", PRINT_REG},
         {"HALT",      HALT},
         {"JUMP",      JUMP},
         {"JZ",        JZ}       // jumps to a location if last result was zero
@@ -31,21 +32,26 @@ class Assembler {
     };
     
     static inline const bool is_symbol(char c) {
-        return c == ',';
+        return c == ',' || c == '[';
     }
 
     std::string file_name;
     std::vector<uint8_t> tokens;
     std::string content;
+    
+    std::unordered_map<std::string, int> label_counter;
+    
 
-    int start_index = 0, end_index = 0;
+    int start_index {0}, end_index {0};
 
     void print();
+    void labels();
 
 public:
 
     Assembler(const std::string& f) : file_name(f) {
         load();
+        labels();
     }
 
     void load();

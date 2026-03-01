@@ -153,7 +153,7 @@ void Virtual::printStack() {
 
     std::cout << "Print stack\n";
 
-    for(int i = MEM_SIZE - 1;i >= MEM_SIZE - 46;i--) {
+    for(int i = MEM_SIZE - 1;i >= MEM_SIZE - 47;i--) {
         std::cout << cpu.stack[i] << "\n";
     }
 }
@@ -174,7 +174,7 @@ int Virtual::init_vm() {
 
         while(cpu.is_running) {
             
-            std::cout << "PC: " << cpu.pc << " SP: " << cpu.sp << "\n\n";
+            //std::cout << "PC: " << cpu.pc << " SP: " << cpu.sp << "\n\n";
             //get current operation
             Instruction opcode = static_cast<Instruction>(cpu.stack[cpu.pc++]);
         
@@ -281,9 +281,21 @@ int Virtual::init_vm() {
                     }
                     break;
                 }
-                
+        
+                case Instruction::PRINT_REG:
                 case Instruction::PRINT:
-                    printStack();
+        
+                    if(opcode == Instruction::PRINT) {
+                        printStack();
+
+                    }else {
+                        int reg_index = cpu.stack[cpu.pc++];
+
+                        int reg_value = cpu.reg[reg_index];
+
+                        std::cout << "Register: " << reg_index << " value: " << reg_value << "\n";
+                    }
+
                     break;
                 
                 default: throw std::runtime_error("NO OPCODE FOUND" + std::to_string(opcode));
@@ -308,41 +320,15 @@ int main(void) {
     
     std::vector<uint8_t> tokens = asmblr.get_tokens();
 
+    int idx {0};
+    for(uint8_t token : tokens) {
+        std::cout << idx++ << ":" << static_cast<int>(token) << "\n";
+    }
+
     Virtual vm{tokens, tokens.size()};
 
     vm.init_vm();
 
     return 0;
-
-    
-    // std::cout << "\nStarting VirtualMachine\n\n";
-    // 
-
-    //  int program[] = {
-    //     // Program data
-    //     0xB0, 0, 50,      // load 50 into register 0
-    //     0xB0, 1, 20,      // load 20 into register 1  
-    //     0x01, 0, 1,       // add registers 0 and 1
-    //     
-    //     0xB1, 0,          // push reg 0 onto stack (70)
-    //     0xFA,
-    //     0xB0, 0, 10,      // load value 10 into reg 0
-    //     0xB1, 0,          //push onto stack
-    //     
-    //     0xFA, 
-    //     0x02,             //subtraction on stack
-    //     
-    //     0xFA,             // print
-    //     0xB3, 0,          //pop and add to reg 0
-    //     0xFF              //halt program
-    // };
-
-    // constexpr std::size_t size = sizeof(program) / sizeof(program[0]);
-
-    // Virtual vm(program, size);
-
-    // vm.init_vm();
-
-    // return 0;
 
 }

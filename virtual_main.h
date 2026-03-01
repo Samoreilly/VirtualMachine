@@ -36,6 +36,7 @@ enum Instruction : uint8_t {
     JZ = 0xB5,
 
     PRINT = 0xFA,
+    PRINT_REG = 0xFB,
     HALT = 0xFF
 };
 
