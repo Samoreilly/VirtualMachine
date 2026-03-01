@@ -158,8 +158,48 @@ void Virtual::printStack() {
     }
 }
 
-void Virtual::push(int reg, int value) {
-    
+void Virtual::push(int return_address) {
+
+    //push frame pointer onto stack
+    if(return_address != -1) {
+        cpu.stack[cpu.sp--] = return_address;
+        return;
+    }
+
+    if(cpu.pc >= cpu.sp) throw std::runtime_error("Stack Overflow");
+        
+    int reg_idx = cpu.stack[cpu.pc++];
+    int value_at_reg = cpu.reg[reg_idx];
+
+    cpu.stack[cpu.sp--] = value_at_reg;
+    cpu.last_value = value_at_reg;
+
+}
+
+int Virtual::pop(Instruction opcode) {
+
+    if(opcode == Instruction::POP_REG) {
+
+        if(cpu.sp >= MEM_SIZE - 1) throw std::runtime_error("Stack Underflow");
+        
+        int reg_idx = cpu.stack[cpu.pc++];
+        
+        //get the value to be popped
+        int value = cpu.stack[++cpu.sp];
+
+        std::cout << "Popped value: " << value << "\n";
+        cpu.reg[reg_idx] = value;
+        return -1;
+    }else {
+
+        if(cpu.sp >= MEM_SIZE - 1) {
+            throw std::runtime_error("Stack underflow");
+        }
+        //values only needed when RET is called and address is needed
+        return cpu.stack[++cpu.sp];
+    }
+
+
 }
 
 //load into register
@@ -225,14 +265,8 @@ int Virtual::init_vm() {
                 }
                 
                 case Instruction::PUSH: {
-                    if(cpu.pc >= cpu.sp) throw std::runtime_error("Stack Overflow");
-                    
-                    int reg_idx = cpu.stack[cpu.pc++];
-                    int value_at_reg = cpu.reg[reg_idx];
-                    
-                    cpu.stack[cpu.sp--] = value_at_reg;
-                    cpu.last_value = value_at_reg;
 
+                    push();
                     break;
                 }
 
@@ -240,25 +274,7 @@ int Virtual::init_vm() {
                 case Instruction::POP_REG:
                 case Instruction::POP_NOREG: {
 
-                    if(opcode == Instruction::POP_REG) {
-
-                        if(cpu.sp >= MEM_SIZE - 1) throw std::runtime_error("Stack Underflow");
-                        
-                        int reg_idx = cpu.stack[cpu.pc++];
-                        
-                        //get the value to be popped
-                        int value = cpu.stack[++cpu.sp];
-
-                        std::cout << "Popped value: " << value << "\n";
-                        cpu.reg[reg_idx] = value;
-
-                    }else {
-                        if(cpu.sp >= MEM_SIZE - 1) {
-                            throw std::runtime_error("Stack underflow");
-                        }
-                        //no register given so just discard value
-                        cpu.sp++;
-                    }
+                    pop(opcode);
 
                     break;
                 }
@@ -281,8 +297,42 @@ int Virtual::init_vm() {
                         }
                     }
                     break;
+                
                 }
-        
+                
+                case Instruction::CALL: {
+                    
+                    int return_address = cpu.stack[cpu.pc++];
+                 
+                    //push frame pointer (start of stack frame)
+                    push(cpu.pc);
+                   
+                    //jump to label
+                    cpu.pc = return_address;
+
+                    break;                
+                }
+                
+                case Instruction::RET: {
+
+                    int return_address = pop(opcode);
+                    cpu.pc = return_address;
+
+                    break;
+                }
+                
+                //moves the RIGHT reg into LEFT reg e.g. MOV R0, R1
+                case Instruction::MOV: {
+
+                    int reg_one = cpu.stack[cpu.pc++];
+                    int reg_two = cpu.stack[cpu.pc++];
+
+                    cpu.reg[reg_one] = cpu.reg[reg_two];
+
+                    break;
+
+                }
+
                 case Instruction::PRINT_REG:
                 case Instruction::PRINT:
         

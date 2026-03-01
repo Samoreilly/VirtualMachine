@@ -40,3 +40,22 @@ The lexer processes the raw text.
 3. It ignores whitespace and commas.
 
 4. Then passed onto the Virtual Machine.
+
+
+
+# Implementing stack frames (to avoid using a seperate call stack)
+
+## allocate a register to store the frame pointer - the pc value when a CALL is made
+## let function run
+## when RET is called, fetch frame pointer - pc = frame pointer + 1, for the next instruction
+
+
+
+
+
+
+
+
+
+
+

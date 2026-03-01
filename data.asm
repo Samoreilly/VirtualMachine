@@ -1,33 +1,24 @@
-
-
 LOAD R0, 0
-PRINT_REG R0
 LOAD R1, 1
-
-LOAD R2, 46
+LOAD R2, 30
 LOAD R3, 1
 
-PUSH R0
-PUSH R1
+PRINT_REG R0
+PRINT_REG R1
 
-[loop]
-LOAD R4, 0
-
-ADD_REG R4, R1
-
-ADD_REG R1, R0
-
-PUSH R1
-LOAD R0, 0
-
-ADD_REG R0, R4
-
+[main_loop]
+CALL fib_step
 SUB_REG R2, R3
+JZ end
+JUMP main_loop
 
-JZ output
-JUMP loop
-
-[output]
+[end]
 PRINT
-PRINT_REG R4
 HALT
+
+[fib_step]
+MOV R4, R1
+ADD_REG R1, R0
+MOV R0, R4
+PRINT_REG R1
+RET

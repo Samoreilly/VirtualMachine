@@ -27,8 +27,10 @@ class Assembler {
         {"PRINT_REG", PRINT_REG},
         {"HALT",      HALT},
         {"JUMP",      JUMP},
-        {"JZ",        JZ}       // jumps to a location if last result was zero
-    
+        {"JZ",        JZ},  // jumps to a location if last result was zero
+        {"CALL",      CALL},// stores location address on stack and jumps to a subroutine
+        {"RET",       RET},  // pops address of stack and jumps there
+        {"MOV",       MOV}
     };
     
     static inline const bool is_symbol(char c) {

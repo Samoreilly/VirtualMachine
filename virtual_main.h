@@ -25,15 +25,20 @@ enum Instruction : uint8_t {
 
     DIV_STACK = 0x06,
     DIV_REG = 0x07,
-
+    
     //instructions
     LOAD = 0xB0,// load into reg
     PUSH = 0xB1, // push onto stack
+    
     POP_NOREG = 0xB2,
     POP_REG = 0xB3,
 
     JUMP = 0xB4,
     JZ = 0xB5,
+
+    CALL = 0xB6,
+    RET = 0xB7,
+    MOV = 0xB8,
 
     PRINT = 0xFA,
     PRINT_REG = 0xFB,
@@ -69,7 +74,9 @@ public:
     void div(Instruction opcode);
     void sub(Instruction opcode);
 
-    void push(int reg, int value);
+    void push(int return_address = -1);
+    //return value for RET
+    int pop(Instruction opcode);
     void load(int reg, int value);
 
     bool checkLastOperationJumpZero();
