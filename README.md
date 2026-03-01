@@ -46,8 +46,8 @@ The lexer processes the raw text.
 # Implementing stack frames (to avoid using a seperate call stack)
 
 ## allocate a register to store the frame pointer - the pc value when a CALL is made
-## let function run
-## when RET is called, fetch frame pointer - pc = frame pointer + 1, for the next instruction
+## let function run, handle operations, RET  | All values from CALL TO RET must be popped off stack
+## when RET is called, fetch frame pointer - pc = frame pointer + 1, for thenext instruction
 
 
 

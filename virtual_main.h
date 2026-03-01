@@ -51,7 +51,7 @@ struct CPU {
     uint8_t memory[MEM_SIZE];
 
     int stack[MEM_SIZE] = {0};
-    int reg[6] = {0};
+    int reg[6] = {0};// reg index 5 is to store frame pointer
     
     int sp = MEM_SIZE - 1;
     int pc = 0;
@@ -88,7 +88,6 @@ public:
 
         for(int i = 0; i < size; i++) {
             cpu.stack[i] = tokens.at(i);
-
         }
     }
 };

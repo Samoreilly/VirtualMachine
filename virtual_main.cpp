@@ -214,7 +214,7 @@ int Virtual::init_vm() {
 
         while(cpu.is_running) {
             
-            //std::cout << "PC: " << cpu.pc << " SP: " << cpu.sp << "\n\n";
+            std::cout << "PC: " << cpu.pc << " SP: " << cpu.sp << " FP: " << cpu.reg[5] << "\n\n";
             //get current operation
             Instruction opcode = static_cast<Instruction>(cpu.stack[cpu.pc++]);
         
@@ -306,7 +306,10 @@ int Virtual::init_vm() {
                  
                     //push frame pointer (start of stack frame)
                     push(cpu.pc);
-                   
+                    push(cpu.reg[5]);
+
+                    cpu.reg[5] = cpu.sp;
+
                     //jump to label
                     cpu.pc = return_address;
 
@@ -315,8 +318,13 @@ int Virtual::init_vm() {
                 
                 case Instruction::RET: {
 
+                    cpu.sp = cpu.reg[5];
+
+                    cpu.reg[5] = pop(opcode);
+
                     int return_address = pop(opcode);
                     cpu.pc = return_address;
+                
 
                     break;
                 }
