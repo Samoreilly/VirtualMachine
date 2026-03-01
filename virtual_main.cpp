@@ -279,11 +279,21 @@ int Virtual::init_vm() {
                     break;
                 }
 
+                case Instruction::JNZ: {
+                    int dest = cpu.stack[cpu.pc++];
+
+                    if(cpu.last_value != 0) {
+                        cpu.pc = dest;
+                    }
+
+                    break;
+                }
+
                 case Instruction::JZ:
                 case Instruction::JUMP: {
 
                     if(opcode == Instruction::JUMP) {
-                        int dest = cpu.stack[cpu.pc];
+                        int dest = cpu.stack[cpu.pc++];
                         cpu.pc = dest;
 
                     }else {
@@ -293,11 +303,21 @@ int Virtual::init_vm() {
                         //if not zero, pc keeps moving forward
                         if(cpu.last_value == 0) {
                             cpu.pc = dest;
-                            std::cout << "JZ->" << dest << "\n";
                         }
                     }
+
                     break;
                 
+                }
+
+                //CMP RO, R1 | This is later used in any jump statement to evaluate last result
+                case Instruction::CMP: {
+                    int reg_one = cpu.stack[cpu.pc++];
+                    int reg_two = cpu.stack[cpu.pc++];
+
+                    cpu.last_value = cpu.reg[reg_one] - cpu.reg[reg_two];
+                    
+                    break;
                 }
                 
                 case Instruction::CALL: {
@@ -378,6 +398,7 @@ int main(void) {
     asmblr.lexer();
     
     std::vector<uint8_t> tokens = asmblr.get_tokens();
+
 
     Virtual vm{tokens, tokens.size()};
 

@@ -30,7 +30,6 @@ void Assembler::load() {
 
 //this function is used to find the index for every function
 //so there is no need to manually count the index for every change made
-
 void Assembler::labels() {
     int index {0};
     int counter {0};
@@ -139,7 +138,6 @@ void Assembler::lexer() {
                 while(end_index < content.length() && content[end_index] != ']') {
                     end_index++;
                 } 
-
             }
 
             end_index++;

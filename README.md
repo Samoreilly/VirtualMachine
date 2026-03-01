@@ -28,10 +28,10 @@ The machine runs a continuous loop to function.
 
 
 # Assembler
-The assembler converts a text file into machine code. 
+The assembler converts a text file into byte code. 
 1. It reads the instructions from an asm file.
-2. it converts the strings into a vector of integers.
-3. The virtual machine then evaluates the vector.
+2. it converts the text to bytes
+3. later will be deassembled and pass into vm
 
 # Lexer
 The lexer processes the raw text.
@@ -48,6 +48,9 @@ The lexer processes the raw text.
 ## allocate a register to store the frame pointer - the pc value when a CALL is made
 ## let function run, handle operations, RET  | All values from CALL TO RET must be popped off stack
 ## when RET is called, fetch frame pointer - pc = frame pointer + 1, for thenext instruction
+
+
+
 
 
 

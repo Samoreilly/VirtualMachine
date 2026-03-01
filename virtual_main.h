@@ -35,14 +35,17 @@ enum Instruction : uint8_t {
 
     JUMP = 0xB4,
     JZ = 0xB5,
+    JNZ = 0xB9,
 
     CALL = 0xB6,
     RET = 0xB7,
     MOV = 0xB8,
+    CMP = 0xC0,
 
     PRINT = 0xFA,
     PRINT_REG = 0xFB,
     HALT = 0xFF
+    
 };
 
 
@@ -56,7 +59,7 @@ struct CPU {
     int sp = MEM_SIZE - 1;
     int pc = 0;
     bool is_running {true};
-    int last_value {std::numeric_limits<int>::max()};
+    int last_value {0};
 
 };
 
@@ -75,6 +78,7 @@ public:
     void sub(Instruction opcode);
 
     void push(int return_address = -1);
+
     //return value for RET
     int pop(Instruction opcode);
     void load(int reg, int value);
