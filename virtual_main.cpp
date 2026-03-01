@@ -214,7 +214,7 @@ int Virtual::init_vm() {
 
         while(cpu.is_running) {
             
-            std::cout << "PC: " << cpu.pc << " SP: " << cpu.sp << " FP: " << cpu.reg[5] << "\n\n";
+           // std::cout << "PC: " << cpu.pc << " SP: " << cpu.sp << " FP: " << cpu.reg[5] << "\n\n";
             //get current operation
             Instruction opcode = static_cast<Instruction>(cpu.stack[cpu.pc++]);
         

@@ -1,24 +1,23 @@
-LOAD R0, 0
+LOAD R0, 5
 LOAD R1, 1
-LOAD R2, 30
-LOAD R3, 1
-
+CALL rec_sum
 PRINT_REG R0
-PRINT_REG R1
-
-[main_loop]
-CALL fib_step
-SUB_REG R2, R3
-JZ end
-JUMP main_loop
-
-[end]
-PRINT
 HALT
 
-[fib_step]
-MOV R4, R1
-ADD_REG R1, R0
-MOV R0, R4
-PRINT_REG R1
+[rec_sum]
+MOV R4, R0
+SUB_REG R4, R1
+
+JZ sum_base
+
+PUSH R0
+SUB_REG R0, R1
+CALL rec_sum
+POP_REG R4
+ADD_REG R0, R4
+RET
+
+[sum_base]
+LOAD R0, 1
+
 RET
