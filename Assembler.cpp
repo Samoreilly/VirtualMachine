@@ -45,7 +45,6 @@ void Assembler::labels() {
 
        if (c == '[') {
 
-            std::cout << "================================";
             index++;
             int s_index = index;
 
@@ -55,8 +54,10 @@ void Assembler::labels() {
 
             if (index < content.length()) {
                 std::string_view func(content.data() + s_index, index - s_index);
+
                 label_counter[std::string(func)] = counter;
                 std::cout << "Label Found: " << func << " at index " << counter << "\n";
+                
                 index++;
             }
 

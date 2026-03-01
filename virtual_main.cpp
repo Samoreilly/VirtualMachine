@@ -277,6 +277,7 @@ int Virtual::init_vm() {
                         //if not zero, pc keeps moving forward
                         if(cpu.last_value == 0) {
                             cpu.pc = dest;
+                            std::cout << "JZ->" << dest << "\n";
                         }
                     }
                     break;
@@ -319,11 +320,6 @@ int main(void) {
     asmblr.lexer();
     
     std::vector<uint8_t> tokens = asmblr.get_tokens();
-
-    int idx {0};
-    for(uint8_t token : tokens) {
-        std::cout << idx++ << ":" << static_cast<int>(token) << "\n";
-    }
 
     Virtual vm{tokens, tokens.size()};
 

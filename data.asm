@@ -24,9 +24,10 @@ ADD_REG R0, R4
 
 SUB_REG R2, R3
 
-JZ 42
+JZ output
 JUMP loop
 
+[output]
 PRINT
 PRINT_REG R4
 HALT
