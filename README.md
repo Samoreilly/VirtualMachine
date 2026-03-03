@@ -51,14 +51,37 @@ The lexer processes the raw text.
 
 
 
+# Compiler for a generic language - java-esque
+## loops
+## variables
+## function
 
 
+### example snippet of what it might look like
+
+```
+
+function mul_by_two(int a) {
+    return a * 2;
+} 
+
+int i = 0;
+
+while(i < 10) {
+    print(mul_by_two(i));
+    i++;
+}
+
+```
 
 
+# Compiler will produce an Abstract Syntax Tree
+## Walk ast and translate it to .asm
+## Pass to virtual machine
+
+# Compiler will double pass, first pass filling out its type
 
 
-
-
-
-
+# Lexer
+1. Building a state machine lexical analyser
 
