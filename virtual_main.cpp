@@ -3,9 +3,8 @@
 #include "Assembler.h"
 #include <fstream>
 #include <iostream>
-#include <limits>
 #include <stdexcept>
-#include "compiler/lexer.h"
+#include "compiler/lexer/lexer.h"
 
 //NOTE: to comment blocks its VISUAL MODE -> Select lines -> G -> B
 

@@ -83,15 +83,28 @@ while(i < 10) {
 
 
 # Lexer
-1. Building a state machine lexical analyser
+1. Building a simple lexical analyser
+
+
+# Abstract Syntax Tree
+1. Nodes for each construct e.g. WhileNode, FunctionNode pointing to eachother
 
 
 
+# My language: explicit, simple
+## for loop will be as basic as possible 
 
-### State machine
-#### When a keyword is detected such as 'function'/'while', state is changed
-#### and we will lex that path. As much as I want to keep limited errors in
-#### lexing, this will allow for finer control and clearer syntax errors
+```
+for(int i = 0;i < 10;i++) {
+    
+}
+for(int i = 0;i < 10 && something is true;i++) {
+    
+}
+```
+```
+int i = 0;
+for(;i < 10;i++) {
 
-#### e.g. function is scanned, state = TokenType::FUNCTION.
-#### Then goes down FUNCTION case in switch statement.
+}
+

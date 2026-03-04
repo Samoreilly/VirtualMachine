@@ -3,7 +3,6 @@
 #include <cctype>
 #include <iostream>
 #include <fstream>
-#include <stdexcept>
 #include <string>
 #include <algorithm>
 #include <cctype>
@@ -186,7 +185,7 @@ void Lexer::skip_whitespace() {
     while(end_index < content.length() && std::isspace(content[end_index])) {
         if(content[end_index] == '\n') {
             line++;
-            col = 0;
+            col = 1;
         } else {
             col++;
         }

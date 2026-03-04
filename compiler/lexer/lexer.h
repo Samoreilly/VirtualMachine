@@ -36,7 +36,7 @@ class Lexer {
         {"Void",   DataType::VOID}        
     };
 
-    int start_index = 0, end_index = 0, line = 0, col = 0;
+    int start_index = 0, end_index = 0, line = 1, col = 1;
 
     std::vector<Token> tokens;
     std::string content;
