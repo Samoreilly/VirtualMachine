@@ -1,0 +1,12 @@
+function int mul_by_two(int a) {
+    return a * 2;
+} 
+
+int i = 0;
+
+while(i < 10) {
+    print(mul_by_two(i));
+    i++;
+}
+
+

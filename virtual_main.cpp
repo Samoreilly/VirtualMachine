@@ -1,10 +1,11 @@
 
 #include "virtual_main.h"
 #include "Assembler.h"
+#include <fstream>
 #include <iostream>
 #include <limits>
 #include <stdexcept>
-
+#include "compiler/lexer.h"
 
 //NOTE: to comment blocks its VISUAL MODE -> Select lines -> G -> B
 
@@ -391,18 +392,27 @@ int Virtual::init_vm() {
 }
 
 int main(void) {
-    
-    const std::string file_name = "data.asm";
-    Assembler asmblr{file_name};
 
-    asmblr.lexer();
-    
-    std::vector<uint8_t> tokens = asmblr.get_tokens();
+    //soon .asm file wont be needed and it will be produced by the compiler
+    // const std::string file_name = "data.asm";
+    // Assembler asmblr{file_name};
+    // 
+    // asmblr.lexer();
+    // 
+    std::ifstream code_file("code.sam");
+    Lexer lexer{code_file};
+
+    lexer.lex();
+    lexer.print_tokens();
 
 
-    Virtual vm{tokens, tokens.size()};
 
-    vm.init_vm();
+    // std::vector<uint8_t> tokens = asmblr.get_tokens();
+
+
+    // Virtual vm{tokens, tokens.size()};
+
+    // vm.init_vm();
 
     return 0;
 

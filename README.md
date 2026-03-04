@@ -61,7 +61,7 @@ The lexer processes the raw text.
 
 ```
 
-function mul_by_two(int a) {
+function int mul_by_two(int a) {
     return a * 2;
 } 
 
@@ -85,3 +85,13 @@ while(i < 10) {
 # Lexer
 1. Building a state machine lexical analyser
 
+
+
+
+### State machine
+#### When a keyword is detected such as 'function'/'while', state is changed
+#### and we will lex that path. As much as I want to keep limited errors in
+#### lexing, this will allow for finer control and clearer syntax errors
+
+#### e.g. function is scanned, state = TokenType::FUNCTION.
+#### Then goes down FUNCTION case in switch statement.
