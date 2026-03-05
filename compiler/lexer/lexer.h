@@ -43,7 +43,6 @@ class Lexer {
     
     void parse_function();
 
-
     void skip_whitespace();
     bool is_symbol(char c);
     bool is_operator(char c);

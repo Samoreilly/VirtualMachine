@@ -1,3 +1,4 @@
+#pragma once
 
 #include "conditions.h"
 
@@ -31,6 +32,18 @@ public:
     virtual ~Node() {}
     virtual void print() const = 0;
 
+};
+
+
+//will the base node
+class MainNode : public Node {
+public:
+    //holds functions, loop and global variables
+    std::vector<std::unique_ptr<Node>> globals;
+
+    void print() const override {
+        
+    }
 };
 
 //block of code e.g. in a function
@@ -83,5 +96,54 @@ public:
     }
 
 };
+
+class DeclareVariable : public Node {
+
+    std::string name;
+    std::string type;
+
+    std::unique_ptr<Condition> init;
+
+    void print() const override {
+
+    }
+};
+
+class InitVariable : public Node {
+
+    std::string name;
+    std::unique_ptr<Condition> init;
+
+    void print() const override {
+
+    }
+};
+
+
+class NumberNode : public Node {
+public:
+    
+    int value;
+    
+    NumberNode(int v) : value(v) {}
+
+    void print() const override {
+
+    }
+
+};
+
+class StringNode : public Node {
+
+    std::string value;
+
+    StringNode(std::string v) : value(v) {}
+
+    void print() const override {
+
+    }
+};
+
+
 
 
