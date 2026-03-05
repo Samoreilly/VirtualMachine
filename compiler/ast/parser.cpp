@@ -58,13 +58,45 @@ void Parser::construct_node() {
 }
 
 std::unique_ptr<BodyNode> Parser::parse_body() {
+    
     consume(SYMBOL, "{");
 
     auto body = std::make_unique<BodyNode>();
 
 
+    while(!check(SYMBOL, "}")) {
+        body->statements.push_back(parse_statement());
+    }
+    
 
-    consume(SYMBOL, "}");
+    return body;
+}
+
+std::unique_ptr<Node> Parser::parse_statement() {
+    
+    if(check(LOOP, "while")) return parse_while();
+    else if(check(LOOP, "for")) return parse_for();
+    else if(is_return_type(peek().value)) return parse_declare();
+
+
+    return parse_assignment();
+}
+
+std::unique_ptr<DeclareVariable> Parser::parse_declare() {
+    
+    auto dec = std::make_unique<DeclareVariable>();
+
+
+    return dec;
+}
+
+std::unique_ptr<InitVariable> Parser::parse_assignment() {
+    
+    auto ass = std::make_unique<InitVariable>();
+
+
+    return ass;
+
 }
 
 std::unique_ptr<WhileNode> Parser::parse_while() {
@@ -173,10 +205,9 @@ std::unique_ptr<FunctionNode> Parser::parse_function() {
 }
 
 std::unique_ptr<BinaryExpression> Parser::parse_condition() {
-    // This is a placeholder for your expression parsing logic
+    
     auto expr = std::make_unique<BinaryExpression>();
     
-    // Move past something for now so it's not an infinite loop
     advance(); 
     
     return expr;

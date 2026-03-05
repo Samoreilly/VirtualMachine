@@ -29,6 +29,9 @@ public:
     std::unique_ptr<Node> parse_global();
     std::unique_ptr<BinaryExpression> parse_condition();
     std::unique_ptr<BodyNode> parse_body();
+    std::unique_ptr<Node> parse_statement();
+    std::unique_ptr<DeclareVariable> parse_declare();
+    std::unique_ptr<InitVariable> parse_assignment();
 
     bool in_bounds() const { return t_index < tokens.size(); }
 
