@@ -25,15 +25,23 @@ public:
     
     std::unique_ptr<FunctionNode> parse_function();
     std::unique_ptr<ForNode> parse_for();
+    std::unique_ptr<WhileNode> parse_while();
+    std::unique_ptr<Node> parse_global();
+    std::unique_ptr<BinaryExpression> parse_condition();
+    std::unique_ptr<BodyNode> parse_body();
 
-
-    bool in_bounds() const {
-        return t_index < tokens.size();
-    }
+    bool in_bounds() const { return t_index < tokens.size(); }
 
     Token peek() const {
-        if (!in_bounds()) return tokens.back();
-        return tokens[t_index];
+        return in_bounds() ? tokens[t_index] : tokens.back();
+    }
+
+    std::optional<Token> peek_next() const {
+        if(t_index + 1 < tokens.size()) {
+            return tokens[t_index + 1];
+        }
+
+        return std::nullopt;
     }
 
     Token advance() {
@@ -41,24 +49,26 @@ public:
         return tokens.back();
     }
 
-    bool match(TokenType type, const std::string& expected = "") {
+    bool check(TokenType type, const std::string& val = "") const {
         if (!in_bounds()) return false;
-        if (tokens[t_index].type == type) {
-            if (expected.empty() || tokens[t_index].value == expected) {
-                t_index++;
-                return true;
-            }
+        if (tokens[t_index].type != type) return false;
+        if (!val.empty() && tokens[t_index].value != val) return false;
+        return true;
+    }
+
+    bool match(TokenType type, const std::string& val = "") {
+        if (check(type, val)) {
+            advance();
+            return true;
         }
         return false;
     }
 
-    Token expect(TokenType type, const std::string& expected = "", const std::string& errMsg = "") {
-        if (match(type, expected)) {
-            return tokens[t_index - 1];
-        }
-
-        std::string msg = errMsg.empty() ? "Unexpected token: " + peek().value : errMsg;
-        throw std::runtime_error(msg + " at line " + std::to_string(peek().line));
+    Token consume(TokenType type, const std::string& val = "", const std::string& msg = "") {
+        if (check(type, val)) return advance();
+        
+        std::string err = msg.empty() ? "Expected " + val : msg;
+        throw std::runtime_error(err + " at line " + std::to_string(peek().line));
     }
 
     bool is_return_type(const std::string& type) {

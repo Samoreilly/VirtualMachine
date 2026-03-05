@@ -1,3 +1,4 @@
+#include "../lexer/lexer.h"
 
 #include <string>
 #include <memory>
@@ -19,4 +20,28 @@ public:
     void print() const override {
 
     }
+};
+
+class ValueCondition : public Condition {
+public:
+    Token token;
+    ValueCondition(Token t) : token(t) {}
+
+    void print() const override {
+        std::cout << token.value;
+    }
+    
+    ~ValueCondition() override = default;
+};
+
+class BooleanCondition : public Condition {
+public:
+    Token token;
+    BooleanCondition(Token t) : token(t) {}
+
+    void print() const override {
+        std::cout << token.value;
+    }
+    
+    ~BooleanCondition() override = default;
 };

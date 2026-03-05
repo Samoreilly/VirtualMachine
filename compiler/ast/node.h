@@ -51,6 +51,10 @@ class BodyNode : public Node {
 public:
 
     std::vector<std::unique_ptr<Node>> statements;
+    
+    void print() const override {
+
+    }
 };
 
 class FunctionNode : public Node {
@@ -133,16 +137,16 @@ public:
 
 };
 
-class StringNode : public Node {
+// class StringNode : public Node {
 
-    std::string value;
+//     std::string value;
 
-    StringNode(std::string v) : value(v) {}
+//     StringNode(std::string v) : value(v) {}
 
-    void print() const override {
+//     void print() const override {
 
-    }
-};
+//     }
+// };
 
 
 
