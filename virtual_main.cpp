@@ -445,6 +445,7 @@ int main(void) {
 
     Assembler asmblr{"", gen.get_bytecode()};
     asmblr.lexer();
+    
 
     Virtual vm{asmblr.get_tokens(), asmblr.get_tokens().size()};
 

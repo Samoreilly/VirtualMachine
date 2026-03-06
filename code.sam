@@ -1,19 +1,15 @@
-function int mul_by_two(int a) {
-    return a * 2;
-} 
-
-int i = 0;
-int j = 2;
-
-while(i < 10) {
-    print(mul_by_two(i));
-    print(mul_by_two(j));
-    j++;
-    i++;
+function int square(int x) {
+    return x * x;
 }
 
-for(int k = 0;k < 50;k++) {
-    print(k);
+function int add_five(int n) {
+    return n + 5;
+}
+
+int count = 10;
+
+for (int i = 8; i < count; i++) {
+    print(square(i));
 }
 
 
