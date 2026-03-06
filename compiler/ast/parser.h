@@ -27,11 +27,13 @@ public:
     std::unique_ptr<ForNode> parse_for();
     std::unique_ptr<WhileNode> parse_while();
     std::unique_ptr<Node> parse_global();
-    std::unique_ptr<BinaryExpression> parse_condition();
+    std::unique_ptr<Condition> parse_condition();
     std::unique_ptr<BodyNode> parse_body();
     std::unique_ptr<Node> parse_statement();
     std::unique_ptr<DeclareVariable> parse_declare();
     std::unique_ptr<InitVariable> parse_assignment();
+
+    bool string_of_digits(std::string_view) const;    
 
     bool in_bounds() const { return t_index < tokens.size(); }
 

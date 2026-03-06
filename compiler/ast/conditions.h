@@ -1,3 +1,5 @@
+#pragma once
+
 #include "../lexer/lexer.h"
 
 #include <string>
@@ -24,6 +26,7 @@ public:
 
 class ValueCondition : public Condition {
 public:
+
     Token token;
     ValueCondition(Token t) : token(t) {}
 
@@ -36,6 +39,7 @@ public:
 
 class BooleanCondition : public Condition {
 public:
+
     Token token;
     BooleanCondition(Token t) : token(t) {}
 

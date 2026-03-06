@@ -102,6 +102,7 @@ public:
 };
 
 class DeclareVariable : public Node {
+public:
 
     std::string name;
     std::string type;
@@ -114,6 +115,7 @@ class DeclareVariable : public Node {
 };
 
 class InitVariable : public Node {
+public:
 
     std::string name;
     std::unique_ptr<Condition> init;

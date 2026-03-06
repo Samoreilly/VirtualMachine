@@ -1,8 +1,10 @@
 
 #include "parser.h"
 #include "node.h"
+#include "conditions.h"
 #include "../lexer/lexer.h"
 
+#include <cctype>
 #include <memory>
 #include <stdexcept>
 
@@ -85,7 +87,32 @@ std::unique_ptr<Node> Parser::parse_statement() {
 std::unique_ptr<DeclareVariable> Parser::parse_declare() {
     
     auto dec = std::make_unique<DeclareVariable>();
+    
+    std::string type = peek().value;
+    std::string name = advance().value;
 
+    dec->type = type;
+    dec->name = name;
+    
+    advance();
+
+    if(check(OPERATOR, "=")) {
+        advance();
+        
+        std::unique_ptr<Condition> init;
+    
+        Token curr = peek();
+
+        if(curr.value == "true" || curr.value == "false") {
+            init = std::make_unique<BooleanCondition>(curr);
+            dec->init = std::move(init);
+
+        }else {
+
+            init = std::make_unique<ValueCondition>(curr);
+            dec->init = std::move(init);
+        }        
+    }
 
     return dec;
 }
@@ -94,6 +121,39 @@ std::unique_ptr<InitVariable> Parser::parse_assignment() {
     
     auto ass = std::make_unique<InitVariable>();
 
+    Token name_token = peek();
+    ass->name = name_token.value;
+    
+    advance();
+
+    if(check(OPERATOR)) {
+        auto bin = std::make_unique<BinaryExpression>();
+
+        bool no_second_value {false};//for e.g. if val++;  there shouldn't be a value after ++
+        Token op = peek();
+
+
+        bin->left = std::make_unique<ValueCondition>(name_token);
+        bin->op = op.value;
+        
+        advance();
+
+        Token right = peek();
+        
+        if(right.value != ";") {
+            
+            if((op.value == "++" || op.value == "--")) {
+                throw std::runtime_error("Increments and Decrements must not be followed by a value");
+            }
+
+            bin->right = std::make_unique<ValueCondition>(right);
+
+        }
+        
+        consume(SYMBOL, ";");
+
+        ass->init = std::move(bin);
+    } 
 
     return ass;
 
@@ -107,12 +167,14 @@ std::unique_ptr<WhileNode> Parser::parse_while() {
 
     consume(SYMBOL, "(");
 
-    if(!check(SYMBOL, ")")) {
-        auto b = std::make_unique<BinaryExpression>();
- 
-    }
+    w->condition = parse_condition();
 
+    consume(SYMBOL, ")");
 
+    w->body = parse_body();
+
+    return w;
+    
 }
 
 std::unique_ptr<ForNode> Parser::parse_for() {
@@ -204,11 +266,68 @@ std::unique_ptr<FunctionNode> Parser::parse_function() {
     return function_node;
 }
 
-std::unique_ptr<BinaryExpression> Parser::parse_condition() {
+//will handle single condition for now.. for e.g. i < 10
+std::unique_ptr<Condition> Parser::parse_condition() {
     
     auto expr = std::make_unique<BinaryExpression>();
     
-    advance(); 
+    Token var = peek();
+
+    bool string_of_digit = string_of_digits(var.value);
+   
+    //single condition
+    if(peek_next() && peek_next()->value == ")") {
+        advance();
+
+        if(string_of_digit) {
+            return std::make_unique<BooleanCondition>(var);
+        }else {
+            return std::make_unique<ValueCondition>(var);
+        }
+        
+    }
+
+    advance();
+
+    auto bin = std::make_unique<BinaryExpression>();
+
+    if(string_of_digit) {
+        bin->left = std::make_unique<BooleanCondition>(var);
+    }else {
+        bin->left = std::make_unique<ValueCondition>(var);  
+    }
+    
+    bin->op = peek().value;
+    advance();
+
+    Token right = peek();
+    
+    if(string_of_digits(right.value)) {
+        bin->right = std::make_unique<BooleanCondition>(right);
+    }else {
+        bin->right = std::make_unique<ValueCondition>(right);  
+    }
+
+    advance();
     
     return expr;
 }
+
+bool Parser::string_of_digits(std::string_view str) const {
+    
+    for(char c : str) {
+        if(!std::isdigit(c)) {
+            return false;
+        }
+    }
+    return true;
+}
+
+
+
+
+
+
+
+
+
