@@ -9,53 +9,18 @@
 #include <stdexcept>
 
 void Parser::construct_node() {
-
-    std::unique_ptr<MainNode> node = std::make_unique<MainNode>();
+    root = std::make_unique<MainNode>();
     
     while(in_bounds()) {
+        root->globals.push_back(parse_statement());
+    }
 
-        Token t = peek();
+    print_ast();
+}
 
-        switch (t.type) {
-
-            case FUNCTION: {
-
-                auto fn = parse_function();
-            
-                node->globals.push_back(std::move(fn));
-
-                break;
-            } 
-
-            case LOOP: {
-                break;
-            } 
-            
-            case KEYWORD: {
-                break;
-            }
-
-            case NUMBER: {
-                break;
-            }
-            
-            case SYMBOL: {
-                break;
-            }
-
-            case OPERATOR: {
-                break;
-            }
-            
-            case IDENTIFIER: {
-                break;
-            }
-
-            default: {
-                advance();
-                break;
-            }
-        };
+void Parser::print_ast() const {
+    if (root) {
+        root->print();
     }
 }
 
@@ -70,18 +35,33 @@ std::unique_ptr<BodyNode> Parser::parse_body() {
         body->statements.push_back(parse_statement());
     }
     
-
+    consume(SYMBOL, "}");
     return body;
 }
 
 std::unique_ptr<Node> Parser::parse_statement() {
-    
-    if(check(LOOP, "while")) return parse_while();
+   
+    if(check(FUNCTION)) return parse_function();
+    else if(check(LOOP, "while")) return parse_while();
     else if(check(LOOP, "for")) return parse_for();
     else if(is_return_type(peek().value)) return parse_declare();
-
+    else if(peek().value == "print") return parse_print();
+    else if(check(KEYWORD, "return")) return parse_return();
+    else if(check(IDENTIFIER) && peek_next() && peek_next()->value == "(") return parse_function_call();
 
     return parse_assignment();
+}
+
+std::unique_ptr<Node> Parser::parse_return() {
+    consume(KEYWORD, "return");
+    auto r = std::make_unique<ReturnNode>();
+
+    if (!check(SYMBOL, ";")) {
+        r->expression = parse_condition();
+    }
+
+    consume(SYMBOL, ";");
+    return r;
 }
 
 std::unique_ptr<DeclareVariable> Parser::parse_declare() {
@@ -89,42 +69,54 @@ std::unique_ptr<DeclareVariable> Parser::parse_declare() {
     auto dec = std::make_unique<DeclareVariable>();
     
     std::string type = peek().value;
-    std::string name = advance().value;
+    advance();
+    std::string name = peek().value;
 
     dec->type = type;
     dec->name = name;
     
     advance();
 
-    if(check(OPERATOR, "=")) {
-        advance();
+    if(match(OPERATOR, "=")) {
+        Token curr = advance();
         
         std::unique_ptr<Condition> init;
     
-        Token curr = peek();
-
         if(curr.value == "true" || curr.value == "false") {
             init = std::make_unique<BooleanCondition>(curr);
             dec->init = std::move(init);
-
         }else {
-
             init = std::make_unique<ValueCondition>(curr);
             dec->init = std::move(init);
         }        
     }
+    consume(SYMBOL, ";");
 
     return dec;
+}
+
+std::unique_ptr<Condition> Parser::parse_function_call() {
+    auto call = std::make_unique<FunctionCallNode>();
+    call->function_name = consume(IDENTIFIER).value;
+    consume(SYMBOL, "(");
+    if (!check(SYMBOL, ")")) {
+        do {
+            call->arguments.push_back(parse_condition());
+        } while (match(SYMBOL, ","));
+    }
+    consume(SYMBOL, ")");
+    if (check(SYMBOL, ";")) {
+        consume(SYMBOL, ";");
+    }
+    return call;
 }
 
 std::unique_ptr<InitVariable> Parser::parse_assignment() {
     
     auto ass = std::make_unique<InitVariable>();
 
-    Token name_token = peek();
+    Token name_token = consume(IDENTIFIER, "", "You cannot assign a number to another value");
     ass->name = name_token.value;
-    
-    advance();
 
     if(check(OPERATOR)) {
         auto bin = std::make_unique<BinaryExpression>();
@@ -140,17 +132,18 @@ std::unique_ptr<InitVariable> Parser::parse_assignment() {
 
         Token right = peek();
         
-        if(right.value != ";") {
+        if(right.value != ";" && right.value != ")") {
             
             if((op.value == "++" || op.value == "--")) {
                 throw std::runtime_error("Increments and Decrements must not be followed by a value");
             }
-
-            bin->right = std::make_unique<ValueCondition>(right);
+        
+            bin->right = std::move(parse_condition());
 
         }
+
         
-        consume(SYMBOL, ";");
+        if(check(SYMBOL, ";")) consume(SYMBOL, ";");
 
         ass->init = std::move(bin);
     } 
@@ -178,22 +171,20 @@ std::unique_ptr<WhileNode> Parser::parse_while() {
 }
 
 std::unique_ptr<ForNode> Parser::parse_for() {
-    
     consume(LOOP, "for");
-   
     auto f = std::make_unique<ForNode>();
 
     consume(SYMBOL, "(");
 
     if (!check(SYMBOL, ";")) {
-    
         if (is_return_type(peek().value)) {
-            std::string type = advance().value;
-            f->init = consume(IDENTIFIER, "", "Expected loop variable name").value;
+            f->initialization = parse_declare();
+        } else {
+            f->initialization = parse_assignment();
         }
+    } else {
+        consume(SYMBOL, ";");
     }
-    
-    consume(SYMBOL, ";");
 
     if (!check(SYMBOL, ";")) {
         f->condition = parse_condition();
@@ -201,28 +192,12 @@ std::unique_ptr<ForNode> Parser::parse_for() {
     consume(SYMBOL, ";");
 
     if (!check(SYMBOL, ")")) {
-        auto b = std::make_unique<BinaryExpression>();
-        
-        Token t = consume(IDENTIFIER, "", "Expected increment variable");
-
-        b->left = std::make_unique<ValueCondition>(t);
-        
-        if(match(OPERATOR)) {
-            b->op = peek().value;
-            
-            Token token = consume(IDENTIFIER);
-
-            b->right = std::make_unique<ValueCondition>(token);
-            
-            
-        }else {
-            throw std::runtime_error("You dont how know how to for loop");
-        }
-
-        f->incr = std::move(b); 
+        f->increment = parse_assignment();
     }
 
     consume(SYMBOL, ")");
+    
+    f->body = parse_body();
 
     return f;
 }
@@ -263,7 +238,19 @@ std::unique_ptr<FunctionNode> Parser::parse_function() {
         consume(SYMBOL, ")");
     }
 
+    function_node->body = parse_body();
+
     return function_node;
+}
+
+std::unique_ptr<Node> Parser::parse_print() {
+    advance();
+    consume(SYMBOL, "(");
+    auto p = std::make_unique<PrintNode>();
+    p->expression = parse_condition();
+    consume(SYMBOL, ")");
+    consume(SYMBOL, ";");
+    return p;
 }
 
 //will handle single condition for now.. for e.g. i < 10
@@ -273,9 +260,12 @@ std::unique_ptr<Condition> Parser::parse_condition() {
     
     Token var = peek();
 
+    if (peek_next() && peek_next()->value == "(") {
+        return parse_function_call();
+    }
+   
     bool string_of_digit = string_of_digits(var.value);
    
-    //single condition
     if(peek_next() && peek_next()->value == ")") {
         advance();
 
@@ -310,7 +300,7 @@ std::unique_ptr<Condition> Parser::parse_condition() {
 
     advance();
     
-    return expr;
+    return bin;
 }
 
 bool Parser::string_of_digits(std::string_view str) const {

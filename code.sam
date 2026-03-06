@@ -3,10 +3,17 @@ function int mul_by_two(int a) {
 } 
 
 int i = 0;
+int j = 2;
 
 while(i < 10) {
     print(mul_by_two(i));
+    print(mul_by_two(j));
+    j++;
     i++;
+}
+
+for(int k = 0;k < 50;k++) {
+    print(k);
 }
 
 

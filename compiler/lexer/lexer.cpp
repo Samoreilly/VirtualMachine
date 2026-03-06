@@ -72,14 +72,12 @@ void Lexer::lex() {
             }else if(c == '-') {
                 tokens.push_back({TokenType::OPERATOR, std::string(1, c), line, col});
                 end_index++;
-
             }else if(c == '*' && next == "=") {
                 tokens.push_back({TokenType::OPERATOR, std::string(1, c) + next, line, col});
                 end_index += 2;
             }else if(c == '*') {
                 tokens.push_back({TokenType::OPERATOR, std::string(1, c), line, col});
                 end_index++;
-
             }else if(c == '/' && next == "=") {
                 tokens.push_back({TokenType::OPERATOR, std::string(1, c) + next, line, col});
                 end_index += 2;

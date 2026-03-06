@@ -18,6 +18,7 @@ enum class NodeType {
     ASSIGNMENT,
     VAR_DECL,
     NUMBER,
+    PRINT,
     PROGRAM
 };
 
@@ -26,35 +27,31 @@ struct Parameter {
     std::string name;
 };
 
-class Node {
-public:
-
-    virtual ~Node() {}
-    virtual void print() const = 0;
-
-};
-
-
-//will the base node
 class MainNode : public Node {
 public:
-    //holds functions, loop and global variables
     std::vector<std::unique_ptr<Node>> globals;
 
     void print() const override {
-        
+        for (const auto& node : globals) {
+            node->print();
+        }
     }
+
+    void generate(CodeGenerator& gen) override;
 };
 
-//block of code e.g. in a function
 class BodyNode : public Node {
 public:
 
     std::vector<std::unique_ptr<Node>> statements;
     
     void print() const override {
-
+        for (const auto& statement : statements) {
+            statement->print();
+        }
     }
+
+    void generate(CodeGenerator& gen) override;
 };
 
 class FunctionNode : public Node {
@@ -63,29 +60,64 @@ public:
     std::string func_name;
     std::string return_type;
     
-    std::unique_ptr<BodyNode> body;//function body
+    std::unique_ptr<BodyNode> body;
     std::vector<Parameter> parameters;
 
     void print() const override {
-        std::cout << "\n" << "Function name: " << func_name
-                          << "Return type: "   << return_type
-                          << "\n";
+        std::cout << "func " << return_type << " " << func_name << "(";
+        for (size_t i = 0; i < parameters.size(); ++i) {
+            std::cout << parameters[i].type << " " << parameters[i].name;
+            if (i < parameters.size() - 1) std::cout << ", ";
+        }
+        std::cout << ") { \n";
+        if (body) body->print();
+        std::cout << "}\n";
     }
 
+    void generate(CodeGenerator& gen) override;
+
+};
+
+class FunctionCallNode : public Condition {
+public:
+
+    std::string function_name;
+    std::vector<std::unique_ptr<Condition>> arguments;
+
+    void print() const override {
+        std::cout << function_name << "(";
+        for (size_t i = 0; i < arguments.size(); ++i) {
+            arguments[i]->print();
+            if (i < arguments.size() - 1) std::cout << ", ";
+        }
+        std::cout << ")";
+    }
+
+    void generate(CodeGenerator& gen) override;
 };
 
 class ForNode : public Node {
 public:
 
-    std::optional<std::string> init;
-    std::optional<std::unique_ptr<Condition>> condition;
-    std::optional<std::unique_ptr<BinaryExpression>> incr;
+    std::unique_ptr<Node> initialization;
+    std::unique_ptr<Condition> condition;
+    std::unique_ptr<Node> increment;
 
     std::unique_ptr<BodyNode> body;
     
     void print() const override {
-
+        std::cout << "for (";
+        if (initialization) initialization->print();
+        std::cout << "; ";
+        if (condition) condition->print();
+        std::cout << "; ";
+        if (increment) increment->print();
+        std::cout << ") { \n";
+        if (body) body->print();
+        std::cout << "}\n";
     }
+
+    void generate(CodeGenerator& gen) override;
 
 };
 
@@ -93,11 +125,17 @@ class WhileNode : public Node {
 public:
 
     std::unique_ptr<Condition> condition;
-    std::unique_ptr<BodyNode> body;//while loop
+    std::unique_ptr<BodyNode> body;
 
     void print() const override {
-
+        std::cout << "while (";
+        if (condition) condition->print();
+        std::cout << ") { \n";
+        if (body) body->print();
+        std::cout << "}\n";
     }
+
+    void generate(CodeGenerator& gen) override;
 
 };
 
@@ -110,8 +148,15 @@ public:
     std::unique_ptr<Condition> init;
 
     void print() const override {
-
+        std::cout << type << " " << name;
+        if (init) {
+            std::cout << " = ";
+            init->print();
+        }
+        std::cout << ";\n";
     }
+
+    void generate(CodeGenerator& gen) override;
 };
 
 class InitVariable : public Node {
@@ -121,10 +166,27 @@ public:
     std::unique_ptr<Condition> init;
 
     void print() const override {
-
+        std::cout << name << " = ";
+        if (init) init->print();
+        std::cout << ";\n";
     }
+
+    void generate(CodeGenerator& gen) override;
 };
 
+class PrintNode : public Node {
+public:
+
+    std::unique_ptr<Condition> expression;
+
+    void print() const override {
+        std::cout << "print(";
+        if (expression) expression->print();
+        std::cout << ");\n";
+    }
+
+    void generate(CodeGenerator& gen) override;
+};
 
 class NumberNode : public Node {
 public:
@@ -134,22 +196,23 @@ public:
     NumberNode(int v) : value(v) {}
 
     void print() const override {
-
+        std::cout << value;
     }
+
+    void generate(CodeGenerator& gen) override;
 
 };
 
-// class StringNode : public Node {
+class ReturnNode : public Node {
+public:
 
-//     std::string value;
+    std::unique_ptr<Condition> expression;
 
-//     StringNode(std::string v) : value(v) {}
+    void print() const override {
+        std::cout << "return ";
+        if (expression) expression->print();
+        std::cout << ";\n";
+    }
 
-//     void print() const override {
-
-//     }
-// };
-
-
-
-
+    void generate(CodeGenerator& gen) override;
+};

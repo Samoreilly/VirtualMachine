@@ -12,6 +12,7 @@ class Parser {
 
     std::vector<Token> tokens;
     int t_index;
+    std::unique_ptr<MainNode> root;
 
 public:
 
@@ -19,13 +20,18 @@ public:
         "void", "int", "string", "bool"
     };
 
-    Parser(std::vector<Token>& t) : tokens(t), t_index(0) {}
+    Parser(const std::vector<Token>& t) : tokens(t), t_index(0) {}
 
     void construct_node();
+    void print_ast() const;
+    MainNode* get_root() const { return root.get(); }
     
     std::unique_ptr<FunctionNode> parse_function();
+    std::unique_ptr<Condition> parse_function_call();
+    std::unique_ptr<Node> parse_return();
     std::unique_ptr<ForNode> parse_for();
     std::unique_ptr<WhileNode> parse_while();
+    std::unique_ptr<Node> parse_print();
     std::unique_ptr<Node> parse_global();
     std::unique_ptr<Condition> parse_condition();
     std::unique_ptr<BodyNode> parse_body();

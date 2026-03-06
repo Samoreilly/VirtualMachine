@@ -1,15 +1,27 @@
 #pragma once
 
 #include "../lexer/lexer.h"
-
 #include <string>
+#include <iostream>
 #include <memory>
 
-class Condition {
+class CodeGenerator;
+
+class Node {
 public:
 
-    virtual ~Condition() = 0;
+    virtual ~Node() = default;
     virtual void print() const = 0;
+    virtual void generate(CodeGenerator& gen) = 0;
+
+};
+
+class Condition : public Node {
+public:
+
+    virtual ~Condition() = default;
+    virtual void print() const = 0;
+    virtual void generate(CodeGenerator& gen) = 0;
 };
 
 class BinaryExpression : public Condition {
@@ -20,8 +32,13 @@ public:
     std::unique_ptr<Condition> right;
 
     void print() const override {
-
+        if (left) left->print();
+        std::cout << " " << op << " ";
+        if (right) right->print();
     }
+
+    void generate(CodeGenerator& gen) override;
+
 };
 
 class ValueCondition : public Condition {
@@ -34,6 +51,8 @@ public:
         std::cout << token.value;
     }
     
+    void generate(CodeGenerator& gen) override;
+
     ~ValueCondition() override = default;
 };
 
@@ -47,5 +66,7 @@ public:
         std::cout << token.value;
     }
     
+    void generate(CodeGenerator& gen) override;
+
     ~BooleanCondition() override = default;
 };

@@ -9,5 +9,6 @@ add_executable(
   Assembler.cpp 
   compiler/lexer/lexer.cpp
   compiler/ast/node.cpp
-  compiler/generator/generate.cpp
+  compiler/ast/parser.cpp
+  compiler/codegen/codegen.cpp
 )

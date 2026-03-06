@@ -53,8 +53,8 @@ class Assembler {
 
 public:
 
-    Assembler(const std::string& f) : file_name(f) {
-        load();
+    Assembler(const std::string& f, std::vector<uint8_t>& t) : file_name(f), tokens(t) {
+        //load();
         labels();
     }
 

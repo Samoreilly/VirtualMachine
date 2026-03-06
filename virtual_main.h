@@ -44,6 +44,9 @@ enum Instruction : uint8_t {
 
     PRINT = 0xFA,
     PRINT_REG = 0xFB,
+    STORE = 0x22,
+    LOAD_REG_OFF = 0x23,
+    STORE_REG_OFF = 0x24,
     HALT = 0xFF
     
 };
