@@ -1,110 +1,48 @@
-# Virtual Machine Architecture
+# Virtual Machine and Compiler
 
-This project is a custom virtual machine written in C++.
+This project features a custom virtual machine and a dedicated compiler for a structured programming language. The software translates high level source code into bytecode that executes on a simulated processor.
 
-## Memory
-The machine has one block of memory. It stores 4096 integers. 
-The program instructions start at index 0 and grow upwards. 
-The stack starts at the end of memory and grows downwards.
+# Architecture
 
-## CPU State
-The CPU has 6 registers for storing numbers.
-It has a program counter to track the current instruction.
-It has a stack pointer to track the top of the stack.
+The system architecture is designed for simplicity and efficiency. The virtual machine utilizes 65536 bytes of memory for storage and execution. There are six primary registers used for data manipulation and local storage. Register 5 is specifically designated as the frame pointer to manage local variable scopes and function calls. 
 
-## Operations
-The machine handles two main ways of doing math.
-1. Stack math. Numbers are pushed to the stack. Math operations pop the top two numbers and push the result back.
-2. Register math. Numbers are loaded into registers. Math operations happen directly inside the registers.
+The memory model uses a stack that begins at the highest memory address and grows downward toward lower addresses. A program counter tracks the location of the current instruction to maintain the execution flow. Each bytecode instruction is stored as a single byte for compact program representation.
 
-## Execution Loop
-The machine runs a continuous loop to function.
-1. Read the instruction at the program counter.
-2. Move the program counter forward.
-3. Figure out what the instruction means.
-4. Perform the action.U
-5. Stop when a halt instruction is read.
+# Instruction Set Architecture
 
+The virtual machine runs on a diverse set of opcodes that handle different computational tasks.
 
+1. Arithmetic and Logic
+The machine supports basic math through instructions like ADD, SUB, MUL, and DIV. These operations can be performed using either registers or values stored on the stack. The CMP instruction compares two register values to assist with logical decisions.
 
-# Assembler
-The assembler converts a text file into byte code. 
-1. It reads the instructions from an asm file.
-2. it converts the text to bytes
-3. later will be deassembled and pass into vm
+2. Memory and Data Transfer
+Data movement is handled by several commands. The LOAD instruction moves immediate values into registers while MOV copies data between registers. The PUSH and POP instructions facilitate interaction with the stack. Direct memory access is supported through STORE and offset based loading via LOAD_REG_OFF.
 
-# Lexer
-The lexer processes the raw text.
-1. It identifies the keywords and numbers.
-2. It maps the keywords to the instruction set.
-3. It ignores whitespace and commas.
+3. Control Flow
+The execution path can be redirected using JUMP instructions. Conditional branching is achieved through JZ and JNZ which jump based on the result of the previous operation. Subroutine management is handled by CALL and RET which allow the program to jump to functions and return to the correct location afterward.
 
-4. Then passed onto the Virtual Machine.
+4. System Operations
+The PRINT and PRINT_REG instructions provide a way to output data directly to the console for debugging or user interaction. The HALT instruction identifies the end of the program and stops the virtual machine.
 
+# Supported Language Features
 
+The compiler recognizes a specific subset of language constructs that enable complex program logic.
 
-# Implementing stack frames (to avoid using a seperate call stack)
+1. Function Definitions
+Programs can define functions with specific return types and parameter lists. This allows for modular code and reusable logic across the application.
 
-## allocate a register to store the frame pointer - the pc value when a CALL is made
-## let function run, handle operations, RET  | All values from CALL TO RET must be popped off stack
-## when RET is called, fetch frame pointer - pc = frame pointer + 1, for thenext instruction
+2. Variable Management
+The language supports variable declarations and assignments for integer data. Variables can be managed within local scopes during function execution.
 
+3. Control Structures
+Iterative logic is implemented through while loops and for loops. These structures allow programs to execute blocks of code multiple times based on specific conditions.
 
+4. Expressions and Operations
+The compiler processes arithmetic expressions and relational comparisons. It also supports unary operations like incrementing values for loop counters.
 
-# Compiler for a generic language - java-esque
-## loops
-## variables
-## function
+5. Built In Output
+The system includes a print function that can output the results of expressions and variable values to the user interface.
 
+# Implementation Process
 
-### example snippet of what it might look like
-
-```
-
-function int mul_by_two(int a) {
-    return a * 2;
-} 
-
-int i = 0;
-
-while(i < 10) {
-    print(mul_by_two(i));
-    i++;
-}
-
-```
-
-
-# Compiler will produce an Abstract Syntax Tree
-## Walk ast and translate it to .asm
-## Pass to virtual machine
-
-# Compiler will double pass, first pass filling out its type
-
-
-# Lexer
-1. Building a simple lexical analyser
-
-
-# Abstract Syntax Tree
-1. Nodes for each construct e.g. WhileNode, FunctionNode pointing to eachother
-
-
-
-# My language: explicit, simple
-## for loop will be as basic as possible 
-
-```
-for(int i = 0;i < 10;i++) {
-    
-}
-for(int i = 0;i < 10 && something is true;i++) {
-    
-}
-```
-```
-int i = 0;
-for(;i < 10;i++) {
-
-}
-
+The project follows a modular compilation pipeline. The lexer converts source text into a series of tokens. The parser then organizes these tokens into an abstract syntax tree to represent the program structure. The code generator traverses this tree to produce executable bytecode while managing memory offsets through a symbol table. Finally the virtual machine executes the resulting instructions within its managed memory environment.
