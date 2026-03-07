@@ -8,6 +8,10 @@ The system architecture is designed for simplicity and efficiency. The virtual m
 
 The memory model uses a stack that begins at the highest memory address and grows downward toward lower addresses. A program counter tracks the location of the current instruction to maintain the execution flow. Each bytecode instruction is stored as a single byte for compact program representation.
 
+<img width="1063" height="586" alt="image" src="https://github.com/user-attachments/assets/522b5e58-a9ff-4517-a31a-e797dd64231d" />
+
+
+
 # Instruction Set Architecture
 
 The virtual machine runs on a diverse set of opcodes that handle different computational tasks.
