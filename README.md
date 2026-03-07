@@ -4,9 +4,35 @@ This project features a custom virtual machine and a dedicated compiler for a st
 
 # Architecture
 
-The system architecture is designed for simplicity and efficiency. The virtual machine utilizes 65536 bytes of memory for storage and execution. There are six primary registers used for data manipulation and local storage. Register 5 is specifically designated as the frame pointer to manage local variable scopes and function calls. 
+The system supports two independent execution paths that both produce the same bytecode format for the virtual machine.
 
-The memory model uses a stack that begins at the highest memory address and grows downward toward lower addresses. A program counter tracks the location of the current instruction to maintain the execution flow. Each bytecode instruction is stored as a single byte for compact program representation.
+### Execution Paths
+
+**Path 1 — High-Level Compiler (`.sam` source files)**
+
+Source code written in the custom language is processed through a multi-stage compilation pipeline. The Lexer tokenizes the source text, the Parser constructs an abstract syntax tree, and the Code Generator emits bytecode directly. This path handles functions, loops, variables, and expressions automatically.
+
+```
+code.sam → Lexer → Parser → Code Generator → Bytecode → VM
+```
+
+**Path 2 — Assembler (`.asm` assembly files)**
+
+Assembly files written using the instruction set mnemonics are processed by the Assembler. The Assembler resolves labels to calculate jump offsets and translates each mnemonic into its corresponding opcode. This path provides direct low-level control over the virtual machine.
+
+```
+data.asm → Assembler (load → labels → lexer) → Bytecode → VM
+```
+
+Both paths output a `vector<uint8_t>` of bytecode that is loaded into the virtual machine's memory for execution. The virtual machine is agnostic to how the bytecode was produced, enforcing a clean separation between the frontend and the execution engine.
+
+### Memory and Registers
+
+The virtual machine utilizes 65536 bytes of unified memory for both instruction storage and the stack. Bytecode instructions are loaded starting from address 0 and the stack begins at the highest memory address, growing downward. A program counter (PC) tracks the current instruction and a stack pointer (SP) tracks the top of the stack.
+
+There are six general-purpose registers. R0 serves as the accumulator for arithmetic results and return values. R1 acts as an auxiliary register for the second operand in binary operations. R2 through R4 are reserved for future use. R5 is designated as the frame pointer (FP) to manage function call frames and local variable access.
+
+Each bytecode instruction is stored as a single byte for compact program representation.
 
 <img width="1063" height="586" alt="image" src="https://github.com/user-attachments/assets/522b5e58-a9ff-4517-a31a-e797dd64231d" />
 

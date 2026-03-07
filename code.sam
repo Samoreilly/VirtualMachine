@@ -1,15 +1,19 @@
+function int double_val(int x) {
+    return x + x;
+}
+
 function int square(int x) {
     return x * x;
 }
 
-function int add_five(int n) {
-    return n + 5;
-}
+int n = 8;
 
-int count = 10;
-
-for (int i = 8; i < count; i++) {
+for (int i = 1; i < n; i++) {
     print(square(i));
 }
 
-
+int j = 1;
+while (j < n) {
+    print(double_val(j));
+    j++;
+}
