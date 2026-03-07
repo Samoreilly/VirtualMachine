@@ -59,7 +59,11 @@ std::unique_ptr<Node> Parser::parse_statement() {
     else if(peek().value == "print") return parse_print();
     else if(check(KEYWORD, "return")) return parse_return();
     else if(check(KEYWORD, "if")) return parse_if();
-    else if(check(IDENTIFIER) && peek_next() && peek_next()->value == "(") return parse_function_call();
+    else if(check(IDENTIFIER) && peek_next() && peek_next()->value == "(") {
+        auto call = parse_function_call();
+        consume(SYMBOL, ";");
+        return call;
+    }
 
     return parse_assignment();
 }
@@ -90,17 +94,7 @@ std::unique_ptr<DeclareVariable> Parser::parse_declare() {
     advance();
 
     if(match(OPERATOR, "=")) {
-        Token curr = advance();
-        
-        std::unique_ptr<Condition> init;
-    
-        if(curr.value == "true" || curr.value == "false") {
-            init = std::make_unique<BooleanCondition>(curr);
-            dec->init = std::move(init);
-        }else {
-            init = std::make_unique<ValueCondition>(curr);
-            dec->init = std::move(init);
-        }        
+        dec->init = parse_condition();
     }
     consume(SYMBOL, ";");
 
@@ -117,9 +111,6 @@ std::unique_ptr<Condition> Parser::parse_function_call() {
         } while (match(SYMBOL, ","));
     }
     consume(SYMBOL, ")");
-    if (check(SYMBOL, ";")) {
-        consume(SYMBOL, ";");
-    }
     return call;
 }
 
@@ -264,56 +255,33 @@ std::unique_ptr<Node> Parser::parse_print() {
     consume(SYMBOL, ";");
     return p;
 }
-
-//will handle single condition for now.. for e.g. i < 10
 std::unique_ptr<Condition> Parser::parse_condition() {
-    
-    auto expr = std::make_unique<BinaryExpression>();
-    
-    Token var = peek();
+    std::unique_ptr<Condition> left;
 
-    if (peek_next() && peek_next()->value == "(") {
-        return parse_function_call();
-    }
-   
-    bool string_of_digit = string_of_digits(var.value);
-   
-    if(peek_next() && peek_next()->value == ")") {
-        advance();
-
-        if(string_of_digit) {
-            return std::make_unique<BooleanCondition>(var);
-        }else {
-            return std::make_unique<ValueCondition>(var);
+    if (peek().type == IDENTIFIER && peek_next() && peek_next()->value == "(") {
+        left = parse_function_call();
+    } else {
+        Token var = advance();
+        if (string_of_digits(var.value)) {
+            left = std::make_unique<BooleanCondition>(var);
+        } else {
+            left = std::make_unique<ValueCondition>(var);
         }
-        
     }
 
-    advance();
-
-    auto bin = std::make_unique<BinaryExpression>();
-
-    if(string_of_digit) {
-        bin->left = std::make_unique<BooleanCondition>(var);
-    }else {
-        bin->left = std::make_unique<ValueCondition>(var);  
-    }
-    
-    bin->op = peek().value;
-    advance();
-
-    Token right = peek();
-    
-    if(string_of_digits(right.value)) {
-        bin->right = std::make_unique<BooleanCondition>(right);
-    }else {
-        bin->right = std::make_unique<ValueCondition>(right);  
+    if (check(OPERATOR)) {
+        Token op = advance();
+        auto bin = std::make_unique<BinaryExpression>();
+        bin->left = std::move(left);
+        bin->op = op.value;
+        bin->right = parse_condition();
+        return bin;
     }
 
-    advance();
-    
-    return bin;
+    return left;
 }
+
+
 
 bool Parser::string_of_digits(std::string_view str) const {
     

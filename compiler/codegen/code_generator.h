@@ -16,6 +16,10 @@ class CodeGenerator {
     SymbolTable symbols;
     std::unordered_map<std::string, int> function_labels;
     int current_label = 0;
+    // When a BinaryExpression with op "==" generates its condition,
+    // CMP produces 0 when equal. IfNode must then use JNZ (skip when NOT equal)
+    // instead of the default JZ (skip when zero/false).
+    bool equality_condition = false;
 
 public:
 
@@ -56,6 +60,13 @@ public:
 
     int get_pos() const {
         return bytecode.size();
+    }
+
+    void set_equality_condition(bool val) { equality_condition = val; }
+    bool consume_equality_condition() {
+        bool val = equality_condition;
+        equality_condition = false;
+        return val;
     }
 
 };

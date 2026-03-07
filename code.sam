@@ -1,28 +1,26 @@
-function int double_val(int x) {
-    return x + x;
+function int fibonacci(int n) {
+    if(n == 1) {
+        return n;
+    }
+    if(n == 0) {
+        return n;
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
-function int square(int x) {
-    return x * x;
-}
+print(fibonacci(0));
+print(fibonacci(1));
+print(fibonacci(5));
+print(fibonacci(10));
+print(fibonacci(12));
 
 int n = 8;
-
 for (int i = 1; i < n; i++) {
-    print(square(i));
-}
-
-if(n > 5) {
-    print(n);
-    print(n);
-    print(n);
-    print(n);
-    print(n);
-    print(n);
+    print(i);
 }
 
 int j = 1;
-while (j < n) {
-    print(double_val(j));
+while (j < 4) {
+    print(j);
     j++;
 }
