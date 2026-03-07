@@ -12,6 +12,15 @@ for (int i = 1; i < n; i++) {
     print(square(i));
 }
 
+if(n > 5) {
+    print(n);
+    print(n);
+    print(n);
+    print(n);
+    print(n);
+    print(n);
+}
+
 int j = 1;
 while (j < n) {
     print(double_val(j));

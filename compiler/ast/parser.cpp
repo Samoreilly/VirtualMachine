@@ -14,8 +14,6 @@ void Parser::construct_node() {
     while(in_bounds()) {
         root->globals.push_back(parse_statement());
     }
-
-    print_ast();
 }
 
 void Parser::print_ast() const {
@@ -39,6 +37,19 @@ std::unique_ptr<BodyNode> Parser::parse_body() {
     return body;
 }
 
+std::unique_ptr<IfNode> Parser::parse_if() {
+    consume(KEYWORD, "if");
+    auto if_node = std::make_unique<IfNode>();
+
+    consume(SYMBOL, "(");
+    if_node->condition = parse_condition();
+    consume(SYMBOL, ")");
+    if_node->body = parse_body();
+
+
+    return if_node;
+}
+
 std::unique_ptr<Node> Parser::parse_statement() {
    
     if(check(FUNCTION)) return parse_function();
@@ -47,6 +58,7 @@ std::unique_ptr<Node> Parser::parse_statement() {
     else if(is_return_type(peek().value)) return parse_declare();
     else if(peek().value == "print") return parse_print();
     else if(check(KEYWORD, "return")) return parse_return();
+    else if(check(KEYWORD, "if")) return parse_if();
     else if(check(IDENTIFIER) && peek_next() && peek_next()->value == "(") return parse_function_call();
 
     return parse_assignment();

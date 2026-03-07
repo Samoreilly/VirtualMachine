@@ -38,6 +38,7 @@ public:
     std::unique_ptr<Node> parse_statement();
     std::unique_ptr<DeclareVariable> parse_declare();
     std::unique_ptr<InitVariable> parse_assignment();
+    std::unique_ptr<IfNode> parse_if();
 
     bool string_of_digits(std::string_view) const;    
 

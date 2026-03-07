@@ -10,7 +10,7 @@ The system supports two independent execution paths that both produce the same b
 
 **Path 1 — High-Level Compiler (`.sam` source files)**
 
-Source code written in the custom language is processed through a multi-stage compilation pipeline. The Lexer tokenizes the source text, the Parser constructs an abstract syntax tree, and the Code Generator emits bytecode directly. This path handles functions, loops, variables, and expressions automatically.
+Source code written in the custom language is processed through a multi stage compilation pipeline. The Lexer tokenizes the source text, the Parser constructs an abstract syntax tree, and the Code Generator emits bytecode directly. This path handles functions, loops, variables, and expressions automatically.
 
 ```
 code.sam → Lexer → Parser → Code Generator → Bytecode → VM

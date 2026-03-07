@@ -38,7 +38,7 @@ void Lexer::lex() {
                 tokens.push_back({TokenType::FUNCTION, data, line, col});
             }else if(data == "for" || data == "while") {
                 tokens.push_back({TokenType::LOOP, data, line, col});
-            }else if(data == "return") {
+            }else if(data == "return" || data == "if") {
                 tokens.push_back({TokenType::KEYWORD, data, line, col});
             }else {
                 tokens.push_back({TokenType::IDENTIFIER, data, line, col});
@@ -135,8 +135,7 @@ void Lexer::lex() {
         }
         
         if(end_index > start_index) {
-            std::cout << std::string(std::string_view(content.data() + start_index, end_index - start_index));
-            std::cout << "Line:" << line << "col:" << col;
+
             
             std::string_view dat(content.data() + start_index, end_index - start_index);
             std::string data(dat);
@@ -148,7 +147,7 @@ void Lexer::lex() {
             continue;
         }
 
-        std::cout << std::string(std::string_view(content.data() + start_index, end_index - start_index));
+
 
     }
 }

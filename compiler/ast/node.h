@@ -96,6 +96,24 @@ public:
     void generate(CodeGenerator& gen) override;
 };
 
+class IfNode : public Node {
+public:
+
+    std::unique_ptr<Condition> condition;
+    std::unique_ptr<BodyNode> body;
+
+    void print() const override {
+        std::cout << "if (";
+        if (condition) condition->print();
+        std::cout << ") { \n";
+        if (body) body->print();
+        std::cout << "}\n";
+    }
+
+    void generate(CodeGenerator& gen) override;
+};
+
+
 class ForNode : public Node {
 public:
 

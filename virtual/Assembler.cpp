@@ -22,7 +22,7 @@ void Assembler::load() {
         content += (line + "\n");
     }
     
-    std::cout << "File Content: \n" << content << "\n";
+
     
     file.close();
 
@@ -55,7 +55,7 @@ void Assembler::labels() {
                 std::string_view func(content.data() + s_index, index - s_index);
 
                 label_counter[std::string(func)] = counter;
-                std::cout << "Label Found: " << func << " at index " << counter << "\n";
+
                 
                 index++;
             }
@@ -87,7 +87,7 @@ void Assembler::labels() {
 
 void Assembler::lexer() {
 
-    std::cout << "Debug: Entered lexer";
+
 
     while(end_index < content.length()) {
 
@@ -160,11 +160,11 @@ void Assembler::lexer() {
 
             if(label_counter.find(std::string(curr)) != label_counter.end()) {
                 tokens.push_back(label_counter[std::string(curr)]);
-                std::cout << "Label: " << std::string(curr) << label_counter[std::string(curr)];
+
                 continue;
             }
 
-            std::cout << "Printed string: [" << curr << "]" << std::endl;
+
             int opcode = INSTRUCTIONS.at(op);
             tokens.push_back(opcode);
         

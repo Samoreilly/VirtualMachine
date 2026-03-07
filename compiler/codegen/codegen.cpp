@@ -118,6 +118,8 @@ void BinaryExpression::generate(CodeGenerator& gen) {
         gen.emit(Instruction::DIV_REG, (uint8_t)0, (uint8_t)1);
     } else if (op == "<") {
         gen.emit(Instruction::CMP, (uint8_t)0, (uint8_t)1);
+    } else if (op == ">") {
+        gen.emit(Instruction::CMP, (uint8_t)1, (uint8_t)0);
     } else if (op == "++") {
         gen.emit(Instruction::LOAD, (uint8_t)1, 1);
         gen.emit(Instruction::ADD_REG, (uint8_t)0, (uint8_t)1);
@@ -154,6 +156,18 @@ void BooleanCondition::generate(CodeGenerator& gen) {
             gen.emit(Instruction::LOAD, (uint8_t)0, (uint8_t)0);
         }
     }
+}
+
+void IfNode::generate(CodeGenerator& gen) {
+    if (condition) condition->generate(gen);
+    
+    int jump_pos = gen.get_pos();
+    gen.emit(Instruction::JZ, (uint8_t)0);
+    
+    if (body) body->generate(gen);
+    
+    int end_label = gen.get_pos();
+    gen.write_at(jump_pos + 1, (uint8_t)end_label);
 }
 
 void WhileNode::generate(CodeGenerator& gen) {

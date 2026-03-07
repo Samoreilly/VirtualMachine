@@ -20,23 +20,14 @@ void Virtual::add(Instruction opcode) {
         }
 
         int valA = cpu.stack[cpu.sp + 1];
-        std::cout << "Value here: " << valA << "\n";
-
         int valB = cpu.stack[cpu.sp + 2];
-        std::cout << "Value above: " << valB << "\n";
 
         cpu.stack[cpu.sp + 2] = (valA + valB);
 
         cpu.last_value = cpu.stack[cpu.sp + 2];
-
-        std::cout << "Added value sp: " << cpu.sp + 2 << "\n";
             
         cpu.stack[cpu.sp + 1] = 0;
         cpu.sp++;
-
-        
-        std::cout << "Printed add value prior: " << cpu.stack[cpu.sp] << "\n";
-        std::cout << "Printed add value: " << cpu.stack[cpu.sp + 1] << "\n";
     
     }else {
         //register addtion - expects two register
@@ -59,12 +50,7 @@ void Virtual::mul(Instruction opcode) {
             throw std::runtime_error("Stack Overflow");
         }
         
-        std::cout << "Before multiplication on stack: " << "\n";
-        std::cout << "First value" << cpu.stack[cpu.sp + 2] << "\n";
-        std::cout << "Second value" << cpu.stack[cpu.sp + 1] << "\n";
-
         cpu.stack[cpu.sp + 2] *= cpu.stack[cpu.sp + 1];
-        std::cout << "After: " << cpu.stack[cpu.sp + 2];
         
         cpu.last_value = cpu.stack[cpu.sp + 2];
 
@@ -94,14 +80,14 @@ void Virtual::sub(Instruction opcode) {
         int firstVal = cpu.stack[cpu.sp + 2];
         int secVal = cpu.stack[cpu.sp + 1];
      
-        std::cout << "First value: " << firstVal << "Second value: " << secVal << "\n";
+
 
         cpu.stack[cpu.sp + 2] = firstVal - secVal;
         cpu.stack[cpu.sp + 1] = 0;
 
         cpu.last_value = cpu.stack[cpu.sp + 2];
         
-        std::cout << "Subtraction: " << cpu.stack[cpu.sp + 2];
+
         cpu.sp++;
 
     }else {
@@ -154,7 +140,7 @@ void Virtual::div(Instruction opcode) {
 
 void Virtual::printStack() {
 
-    std::cout << "Print stack\n";
+
 
     for(int i = MEM_SIZE - 1;i >= MEM_SIZE - 47;i--) {
         std::cout << cpu.stack[i] << "\n";
@@ -190,7 +176,7 @@ int Virtual::pop(Instruction opcode) {
         //get the value to be popped
         int value = cpu.stack[++cpu.sp];
 
-        std::cout << "Popped value: " << value << "\n";
+
         cpu.reg[reg_idx] = value;
         return -1;
     }else {
@@ -393,7 +379,7 @@ int Virtual::init_vm() {
 
                         int reg_value = cpu.reg[reg_index];
 
-                        std::cout << "Register: " << reg_index << " value: " << reg_value << "\n";
+                        std::cout << reg_value << "\n";
                     }
 
                     break;
@@ -424,6 +410,7 @@ int main(void) {
     Lexer lexer{code_file};
 
     auto compile_start = std::chrono::high_resolution_clock::now();
+    
     lexer.lex();
     const std::vector<Token>& tt = lexer.get_tokens();
     Parser p{tt};

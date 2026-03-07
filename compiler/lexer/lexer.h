@@ -56,7 +56,6 @@ public:
 
     Lexer(std::ifstream& file_name) {
         load(file_name);
-        std::cout << "Content: \n" << content;
     }
 
     void load(std::ifstream& file_name);
