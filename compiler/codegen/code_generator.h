@@ -1,7 +1,7 @@
 #pragma once
 
 #include "symbol_table.h"
-#include "../../virtual_main.h"
+#include "virtual_main.h"
 #include <vector>
 #include <string>
 #include <memory>
